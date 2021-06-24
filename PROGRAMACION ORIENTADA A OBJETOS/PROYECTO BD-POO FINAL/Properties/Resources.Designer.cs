@@ -73,6 +73,26 @@ namespace PROYECTO_BD_POO_FINAL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_spinner {
+            get {
+                object obj = ResourceManager.GetObject("icons8-spinner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_spinner1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-spinner1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SELECCIONA_UNA_OPCION {
             get {
                 object obj = ResourceManager.GetObject("SELECCIONA UNA OPCION", resourceCulture);

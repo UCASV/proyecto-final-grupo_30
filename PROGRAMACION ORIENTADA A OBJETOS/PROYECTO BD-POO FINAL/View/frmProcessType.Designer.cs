@@ -45,6 +45,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnAppointmentTracking.TabIndex = 0;
             this.btnAppointmentTracking.Text = "Seguimiento de cita";
             this.btnAppointmentTracking.UseVisualStyleBackColor = false;
+            this.btnAppointmentTracking.Click += new System.EventHandler(this.btnAppointmentTracking_Click);
             // 
             // button1
             // 
@@ -70,7 +71,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.Controls.Add(this.btnAppointmentTracking);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "frmProcessType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProcessType";
             this.ResumeLayout(false);
 
