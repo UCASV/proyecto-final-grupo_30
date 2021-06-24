@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Tipo de proceso - Gil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Tipo de proceso - Gil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Background Proceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background Proceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,10 +127,19 @@
   <data name="icons8-spinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-spinner.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icons8-spinner1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icons8-spinner.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SELECCIONA UNA OPCION" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SELECCIONA UNA OPCION.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icons8-spinner1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icons8-spinner.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LeftImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LeftImage2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Tipo de proceso - Gil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tipo de proceso - Gil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Background Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background Image1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
