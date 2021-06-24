@@ -22,7 +22,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void btnAppointmentTracking_Click(object sender, EventArgs e)
         {
-            frmLoading loadingScreen = new frmLoading(2000, "Abriendo seguimiento de citas");
+            frmLoading loadingScreen = new frmLoading(3000, "Abriendo seguimiento de citas");
             loadingScreen.ShowDialog();
         }
 
