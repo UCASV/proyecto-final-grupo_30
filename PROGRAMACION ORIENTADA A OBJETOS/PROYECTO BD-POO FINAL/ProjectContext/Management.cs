@@ -11,9 +11,15 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
         public int IdEmployee { get; set; }
         public int IdBooth { get; set; }
         public DateTime? DateTimeLogin { get; set; }
-        public DateTime? DateTimeLogout { get; set; }
 
         public virtual Booth IdBoothNavigation { get; set; }
         public virtual Employee IdEmployeeNavigation { get; set; }
+
+        public Management(int idEmployee, int idBooth, DateTime? dateTimeLogin)
+        {
+            IdEmployee = idEmployee;
+            IdBooth = idBooth;
+            DateTimeLogin = dateTimeLogin;
+        }
     }
 }

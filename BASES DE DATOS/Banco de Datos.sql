@@ -32,7 +32,6 @@ CREATE TABLE MANAGEMENT(
 	id_employee INT NOT NULL,
 	id_booth INT NOT NULL,
 	date_time_login DATETIME,
-	date_time_logout DATETIME
 );
 
 CREATE TABLE APPOINTMENT(
@@ -52,10 +51,10 @@ CREATE TABLE VACCINATION_PLACE(
 
 CREATE TABLE CITIZEN(
 	id_citizen INT PRIMARY KEY IDENTITY,
-	dui INT NOT NULL,
+	dui VARCHAR(15) NOT NULL,
 	citizen_name VARCHAR(50) NOT NULL,
 	citizen_address VARCHAR(50) NOT NULL,
-	telephone INT NOT NULL,
+	telephone VARCHAR(15) NOT NULL,
 	email VARCHAR(50),
 	id_institution INT NOT NULL,
 	disability BIT DEFAULT(0)

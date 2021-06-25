@@ -15,10 +15,10 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
         }
 
         public int IdCitizen { get; set; }
-        public int Dui { get; set; }
+        public string Dui { get; set; }
         public string CitizenName { get; set; }
         public string CitizenAddress { get; set; }
-        public int Telephone { get; set; }
+        public string Telephone { get; set; }
         public string Email { get; set; }
         public int IdInstitution { get; set; }
         public bool? Disability { get; set; }

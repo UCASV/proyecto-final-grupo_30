@@ -39,7 +39,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnAppointmentTracking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAppointmentTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAppointmentTracking.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAppointmentTracking.Location = new System.Drawing.Point(52, 240);
+            this.btnAppointmentTracking.Location = new System.Drawing.Point(77, 250);
             this.btnAppointmentTracking.Name = "btnAppointmentTracking";
             this.btnAppointmentTracking.Size = new System.Drawing.Size(269, 43);
             this.btnAppointmentTracking.TabIndex = 0;
@@ -52,7 +52,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(176)))), ((int)(((byte)(176)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(34, 333);
+            this.button1.Location = new System.Drawing.Point(59, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(302, 43);
             this.button1.TabIndex = 0;
@@ -65,8 +65,8 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.Background_Proceso;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(387, 641);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(418, 641);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAppointmentTracking);
             this.DoubleBuffered = true;
