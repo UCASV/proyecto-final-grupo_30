@@ -37,7 +37,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // picBoxLoadingGif
             // 
             this.picBoxLoadingGif.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picBoxLoadingGif.Image = global::PROYECTO_BD_POO_FINAL.Properties.Resources.icons8_spinner1;
+            this.picBoxLoadingGif.Image = global::PROYECTO_BD_POO_FINAL.Properties.Resources.icons8_spinner;
             this.picBoxLoadingGif.Location = new System.Drawing.Point(0, 0);
             this.picBoxLoadingGif.Name = "picBoxLoadingGif";
             this.picBoxLoadingGif.Size = new System.Drawing.Size(128, 128);

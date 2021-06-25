@@ -66,9 +66,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.LeftImage;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(458, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(401, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(419, 627);
+            this.pictureBox1.Size = new System.Drawing.Size(366, 471);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -83,10 +84,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(880, 633);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(770, 475);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -94,7 +96,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.16767F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.83234F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel2.Controls.Add(this.label8, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label4, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label1, 1, 4);
@@ -110,37 +112,38 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel2.Controls.Add(this.lbIdentificador, 1, 19);
             this.tableLayoutPanel2.Controls.Add(this.tbIdentificador, 1, 20);
             this.tableLayoutPanel2.Controls.Add(this.button1, 1, 22);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 27;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 18F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 12F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(392, 627);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 9F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(343, 470);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // label8
@@ -151,9 +154,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label8.Location = new System.Drawing.Point(57, 0);
+            this.label8.Location = new System.Drawing.Point(48, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(276, 1);
+            this.label8.Size = new System.Drawing.Size(231, 1);
             this.label8.TabIndex = 11;
             this.label8.Text = "Enfermedades crónicas *";
             // 
@@ -167,7 +170,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label4.Location = new System.Drawing.Point(3, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 1);
+            this.label4.Size = new System.Drawing.Size(39, 1);
             this.label4.TabIndex = 4;
             this.label4.Text = "Dui *";
             // 
@@ -180,9 +183,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel2.SetColumnSpan(this.label1, 2);
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(57, 30);
+            this.label1.Location = new System.Drawing.Point(48, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(332, 37);
+            this.label1.Size = new System.Drawing.Size(292, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Datos del Ciudadano";
             // 
@@ -191,9 +194,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label2.AutoSize = true;
             this.tableLayoutPanel2.SetColumnSpan(this.label2, 2);
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(57, 67);
+            this.label2.Location = new System.Drawing.Point(48, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(322, 20);
+            this.label2.Size = new System.Drawing.Size(255, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ingresa los datos necesarios para la vacunación";
             // 
@@ -203,9 +206,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbDui.BackColor = System.Drawing.Color.DimGray;
-            this.tbDui.Location = new System.Drawing.Point(57, 140);
+            this.tbDui.Location = new System.Drawing.Point(48, 102);
+            this.tbDui.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbDui.Name = "tbDui";
-            this.tbDui.Size = new System.Drawing.Size(276, 27);
+            this.tbDui.Size = new System.Drawing.Size(231, 23);
             this.tbDui.TabIndex = 3;
             // 
             // lbDui
@@ -216,9 +220,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lbDui.AutoSize = true;
             this.lbDui.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbDui.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbDui.Location = new System.Drawing.Point(57, 111);
+            this.lbDui.Location = new System.Drawing.Point(48, 80);
             this.lbDui.Name = "lbDui";
-            this.lbDui.Size = new System.Drawing.Size(276, 26);
+            this.lbDui.Size = new System.Drawing.Size(231, 20);
             this.lbDui.TabIndex = 2;
             this.lbDui.Text = "Dui *";
             // 
@@ -228,9 +232,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbDomicilio.BackColor = System.Drawing.Color.DimGray;
-            this.tbDomicilio.Location = new System.Drawing.Point(57, 216);
+            this.tbDomicilio.Location = new System.Drawing.Point(48, 160);
+            this.tbDomicilio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbDomicilio.Name = "tbDomicilio";
-            this.tbDomicilio.Size = new System.Drawing.Size(276, 27);
+            this.tbDomicilio.Size = new System.Drawing.Size(231, 23);
             this.tbDomicilio.TabIndex = 6;
             // 
             // lbDomicilio
@@ -241,9 +246,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lbDomicilio.AutoSize = true;
             this.lbDomicilio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbDomicilio.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbDomicilio.Location = new System.Drawing.Point(57, 187);
+            this.lbDomicilio.Location = new System.Drawing.Point(48, 138);
             this.lbDomicilio.Name = "lbDomicilio";
-            this.lbDomicilio.Size = new System.Drawing.Size(276, 26);
+            this.lbDomicilio.Size = new System.Drawing.Size(231, 20);
             this.lbDomicilio.TabIndex = 5;
             this.lbDomicilio.Text = "Domicilio *";
             // 
@@ -255,9 +260,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lbEmail.AutoSize = true;
             this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbEmail.Location = new System.Drawing.Point(57, 267);
+            this.lbEmail.Location = new System.Drawing.Point(48, 199);
             this.lbEmail.Name = "lbEmail";
-            this.lbEmail.Size = new System.Drawing.Size(276, 25);
+            this.lbEmail.Size = new System.Drawing.Size(231, 19);
             this.lbEmail.TabIndex = 7;
             this.lbEmail.Text = "E-mail";
             // 
@@ -267,9 +272,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbEmail.BackColor = System.Drawing.Color.DimGray;
-            this.tbEmail.Location = new System.Drawing.Point(57, 295);
+            this.tbEmail.Location = new System.Drawing.Point(48, 220);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(276, 27);
+            this.tbEmail.Size = new System.Drawing.Size(231, 23);
             this.tbEmail.TabIndex = 8;
             // 
             // lbEnfermedades
@@ -280,9 +286,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lbEnfermedades.AutoSize = true;
             this.lbEnfermedades.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbEnfermedades.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbEnfermedades.Location = new System.Drawing.Point(57, 352);
+            this.lbEnfermedades.Location = new System.Drawing.Point(48, 263);
             this.lbEnfermedades.Name = "lbEnfermedades";
-            this.lbEnfermedades.Size = new System.Drawing.Size(276, 30);
+            this.lbEnfermedades.Size = new System.Drawing.Size(231, 22);
             this.lbEnfermedades.TabIndex = 9;
             this.lbEnfermedades.Text = "Enfermedades crónicas *";
             // 
@@ -294,28 +300,30 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.39336F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.60664F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 90F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
             this.tableLayoutPanel3.Controls.Add(this.cbDiabetes, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.cbArtritis, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.cbCancer, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.cbAsma, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.cbEpilepsia, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.cbNone, 2, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(57, 385);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(48, 287);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(276, 49);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(231, 37);
             this.tableLayoutPanel3.TabIndex = 10;
             // 
             // cbDiabetes
             // 
             this.cbDiabetes.AutoSize = true;
             this.cbDiabetes.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbDiabetes.Location = new System.Drawing.Point(3, 3);
+            this.cbDiabetes.Location = new System.Drawing.Point(3, 2);
+            this.cbDiabetes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDiabetes.Name = "cbDiabetes";
-            this.cbDiabetes.Size = new System.Drawing.Size(82, 18);
+            this.cbDiabetes.Size = new System.Drawing.Size(60, 14);
             this.cbDiabetes.TabIndex = 0;
             this.cbDiabetes.Text = "Diabetes";
             this.cbDiabetes.UseVisualStyleBackColor = true;
@@ -324,9 +332,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.cbArtritis.AutoSize = true;
             this.cbArtritis.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbArtritis.Location = new System.Drawing.Point(91, 3);
+            this.cbArtritis.Location = new System.Drawing.Point(69, 2);
+            this.cbArtritis.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbArtritis.Name = "cbArtritis";
-            this.cbArtritis.Size = new System.Drawing.Size(71, 18);
+            this.cbArtritis.Size = new System.Drawing.Size(60, 14);
             this.cbArtritis.TabIndex = 1;
             this.cbArtritis.Text = "Artritis";
             this.cbArtritis.UseVisualStyleBackColor = true;
@@ -335,9 +344,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.cbCancer.AutoSize = true;
             this.cbCancer.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbCancer.Location = new System.Drawing.Point(188, 3);
+            this.cbCancer.Location = new System.Drawing.Point(142, 2);
+            this.cbCancer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbCancer.Name = "cbCancer";
-            this.cbCancer.Size = new System.Drawing.Size(71, 18);
+            this.cbCancer.Size = new System.Drawing.Size(60, 14);
             this.cbCancer.TabIndex = 2;
             this.cbCancer.Text = "Cáncer";
             this.cbCancer.UseVisualStyleBackColor = true;
@@ -346,9 +356,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.cbAsma.AutoSize = true;
             this.cbAsma.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbAsma.Location = new System.Drawing.Point(3, 27);
+            this.cbAsma.Location = new System.Drawing.Point(3, 20);
+            this.cbAsma.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbAsma.Name = "cbAsma";
-            this.cbAsma.Size = new System.Drawing.Size(64, 19);
+            this.cbAsma.Size = new System.Drawing.Size(54, 15);
             this.cbAsma.TabIndex = 3;
             this.cbAsma.Text = "Asma";
             this.cbAsma.UseVisualStyleBackColor = true;
@@ -357,9 +368,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.cbEpilepsia.AutoSize = true;
             this.cbEpilepsia.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbEpilepsia.Location = new System.Drawing.Point(91, 27);
+            this.cbEpilepsia.Location = new System.Drawing.Point(69, 20);
+            this.cbEpilepsia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbEpilepsia.Name = "cbEpilepsia";
-            this.cbEpilepsia.Size = new System.Drawing.Size(82, 19);
+            this.cbEpilepsia.Size = new System.Drawing.Size(67, 15);
             this.cbEpilepsia.TabIndex = 4;
             this.cbEpilepsia.Text = "Epilepsia";
             this.cbEpilepsia.UseVisualStyleBackColor = true;
@@ -368,9 +380,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.cbNone.AutoSize = true;
             this.cbNone.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbNone.Location = new System.Drawing.Point(188, 27);
+            this.cbNone.Location = new System.Drawing.Point(142, 20);
+            this.cbNone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbNone.Name = "cbNone";
-            this.cbNone.Size = new System.Drawing.Size(82, 19);
+            this.cbNone.Size = new System.Drawing.Size(68, 15);
             this.cbNone.TabIndex = 5;
             this.cbNone.Text = "Ninguna";
             this.cbNone.UseVisualStyleBackColor = true;
@@ -383,9 +396,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lbIdentificador.AutoSize = true;
             this.lbIdentificador.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbIdentificador.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbIdentificador.Location = new System.Drawing.Point(57, 458);
+            this.lbIdentificador.Location = new System.Drawing.Point(48, 342);
             this.lbIdentificador.Name = "lbIdentificador";
-            this.lbIdentificador.Size = new System.Drawing.Size(276, 29);
+            this.lbIdentificador.Size = new System.Drawing.Size(231, 22);
             this.lbIdentificador.TabIndex = 12;
             this.lbIdentificador.Text = "No. Identificador Gubernamental";
             // 
@@ -395,9 +408,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbIdentificador.BackColor = System.Drawing.Color.DimGray;
-            this.tbIdentificador.Location = new System.Drawing.Point(57, 490);
+            this.tbIdentificador.Location = new System.Drawing.Point(48, 366);
+            this.tbIdentificador.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbIdentificador.Name = "tbIdentificador";
-            this.tbIdentificador.Size = new System.Drawing.Size(276, 27);
+            this.tbIdentificador.Size = new System.Drawing.Size(231, 23);
             this.tbIdentificador.TabIndex = 14;
             // 
             // button1
@@ -408,20 +422,22 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(57, 549);
+            this.button1.Location = new System.Drawing.Point(48, 411);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(276, 36);
+            this.button1.Size = new System.Drawing.Size(231, 28);
             this.button1.TabIndex = 15;
             this.button1.Text = "Ingresar datos";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // frmDateFollowUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 633);
+            this.ClientSize = new System.Drawing.Size(770, 475);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDateFollowUp";
             this.Text = "frmDateFollowUp";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
