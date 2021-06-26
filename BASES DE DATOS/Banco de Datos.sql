@@ -120,27 +120,27 @@ ALTER TABLE VACCINATIONxSIDE_EFFECT ADD FOREIGN KEY (id_side_effect) REFERENCES 
 ALTER TABLE VACCINATIONxSIDE_EFFECT ADD FOREIGN KEY (id_vaccination) REFERENCES VACCINATION (id_vaccination);
 
 -- Seeding Data in Chronic Disease
-INSERT INTO CHRONIC_DISEASE VALUES ('Lung Problems', 'Can include COPD, cystic fibrosis, pulmonary fibrosis or asthma');
-INSERT INTO CHRONIC_DISEASE VALUES ('Heart Disease', 'Can include Cardiomyopathy, Pulmonary hypertension, Congenital heart disease, Heart failure, Coronary artery disease');
-INSERT INTO CHRONIC_DISEASE VALUES ('Diabetes', 'Is the condition in which the body does not properly process food for use as energy');
-INSERT INTO CHRONIC_DISEASE VALUES ('Obesity', 'Means having too much body fat');
-INSERT INTO CHRONIC_DISEASE VALUES ('Weakened Immune System', 'A person with a weak immune system may be more prone to frequent infections');
-INSERT INTO CHRONIC_DISEASE VALUES ('Kidney or Liver Disease', 'Cirrhosis, Hepatities, etc');
-INSERT INTO CHRONIC_DISEASE VALUES ('Downs Syndrome', 'Condition in which a person has an extra chromosome')
+INSERT INTO CHRONIC_DISEASE VALUES ('Problemas Pulmonares', 'Tales como EPOC, Cancer de Pulmon, Fibrosis Quistica, Fibrosis Pulmonar, Asma');
+INSERT INTO CHRONIC_DISEASE VALUES ('Enfermedad Cardiaca', 'Tales como Miocardiopatia, Hipertension Pulmonar, Enfermedad Cardiaca Congenita, Insuficiencia Cardiac, Enfermedad de las Arterias Coronoarias');
+INSERT INTO CHRONIC_DISEASE VALUES ('Diabetes', 'Enfermedad en la que los niveles de glucosa (azúcar) de la sangre están muy altos');
+INSERT INTO CHRONIC_DISEASE VALUES ('Obesidad', 'Estado patológico que se caracteriza por un exceso o una acumulación excesiva y general de grasa en el cuerpo');
+INSERT INTO CHRONIC_DISEASE VALUES ('Sistema Inmunitario Debilitado', 'Trasplante de Organos, Tratamientos Oncologicos, Transplante de Medula Osea, VIH/SIDA');
+INSERT INTO CHRONIC_DISEASE VALUES ('Enfermedad Renal o Hepatica', 'Insuficiencia Hepatica Aguda, Hepatitis Alcoholica, Cirrosis, Liquido Abdominal Infectado');
+INSERT INTO CHRONIC_DISEASE VALUES ('Sindrome de Down', 'Es una afeccion en la que la persona tiene un cromosoma extra')
 
 -- Seeding Data in Side Effects
-INSERT INTO SIDE_EFFECT VALUES ('Redness', 'Redness at the injection site');
-INSERT INTO SIDE_EFFECT VALUES ('Fatigue', 'Is a term used to describe an overall feeling of tiredness or lack of energy');
-INSERT INTO SIDE_EFFECT VALUES ('Headache', 'Is a very common condition that causes pain and discomfort in the head, scalp, or neck');
-INSERT INTO SIDE_EFFECT VALUES ('Fever', 'Is also known as hyperthermia, pyrexia, or elevated temperature. It describes a body temperature that’s higher than normal');
-INSERT INTO SIDE_EFFECT VALUES ('Myalgia', 'Describes muscle aches and pain, which can involve ligaments, tendons and fascia, the soft tissues that connect muscles, bones and organs');
-INSERT INTO SIDE_EFFECT VALUES ('Arthralgia', 'Describes joint stiffness. Among its many causes are overuse, sprains, injury, gout, tendonitis and a number of infectious diseases, including rheumatic fever and chickenpox');
-INSERT INTO SIDE_EFFECT VALUES ('Anaphylaxis', 'Is a severe, potentially life-threatening allergic reaction');
+INSERT INTO SIDE_EFFECT VALUES ('Enrojecimiento', 'Enrojecimiento en la zona donde fue aplicada la vacuna');
+INSERT INTO SIDE_EFFECT VALUES ('Fatiga', 'Falta de energia y motivacion');
+INSERT INTO SIDE_EFFECT VALUES ('Dolor de Cabeza', 'Dolor o molestia en la cabeza, el cuero cabelludo o el cuello');
+INSERT INTO SIDE_EFFECT VALUES ('Fiebre', 'Temperatura del cuerpo mas elevada de lo normal');
+INSERT INTO SIDE_EFFECT VALUES ('Mialgia', 'Tambien llamados dolores musculares, consisten en dolores o molestias que puede afecta a uno o varios musculos del cuerpo');
+INSERT INTO SIDE_EFFECT VALUES ('Artralgia', 'Presencia de dolor en una zona articular, suele ir acompañado de inflamacion, rigidez articular, enrojecimiento de la piel');
+INSERT INTO SIDE_EFFECT VALUES ('Anafilaxia', 'Reaccion alergica grave que puede poner en riesgo la vida');
 
 -- Seeding Data in Employee Type
-INSERT INTO EMPLOYEE_TYPE VALUES ('Manager');
-INSERT INTO EMPLOYEE_TYPE VALUES ('Vaccinator');
-INSERT INTO EMPLOYEE_TYPE VALUES ('Health Assistant');
+INSERT INTO EMPLOYEE_TYPE VALUES ('Gestor');
+INSERT INTO EMPLOYEE_TYPE VALUES ('Vacunador');
+INSERT INTO EMPLOYEE_TYPE VALUES ('Asistente de Salud');
 INSERT INTO EMPLOYEE_TYPE VALUES ('Supervisor');
 
 -- Seeding Data in Institution
