@@ -43,20 +43,20 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.cbHigado = new System.Windows.Forms.CheckBox();
             this.cbSID = new System.Windows.Forms.CheckBox();
             this.cbDiabetes = new System.Windows.Forms.CheckBox();
             this.cbCorazon = new System.Windows.Forms.CheckBox();
             this.cbPulmones = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.textBox16 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.cbSi = new System.Windows.Forms.CheckBox();
             this.cbNo = new System.Windows.Forms.CheckBox();
+            this.cbSi = new System.Windows.Forms.CheckBox();
             this.btnIngresarD = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -67,7 +67,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.Proceso_cita_leftImage_background;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(436, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(425, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(443, 568);
             this.pictureBox1.TabIndex = 0;
@@ -207,15 +207,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(366, 23);
             this.textBox13.TabIndex = 13;
-            this.textBox13.Text = "No. de Identificación Gubernamental";
-            // 
-            // textBox14
-            // 
-            this.textBox14.BackColor = System.Drawing.Color.DimGray;
-            this.textBox14.Location = new System.Drawing.Point(12, 512);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(366, 27);
-            this.textBox14.TabIndex = 14;
+            this.textBox13.Text = "Entidad Gubernamental";
             // 
             // textBox15
             // 
@@ -227,14 +219,14 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.textBox15.Name = "textBox15";
             this.textBox15.Size = new System.Drawing.Size(366, 23);
             this.textBox15.TabIndex = 15;
-            this.textBox15.Text = "Enfermedades Crónicas *";
+            this.textBox15.Text = "Enfermedades Crónicas ";
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.19763F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.80237F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
             this.tableLayoutPanel1.Controls.Add(this.checkBox2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbHigado, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbSID, 0, 1);
@@ -249,6 +241,20 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel1.Size = new System.Drawing.Size(393, 60);
             this.tableLayoutPanel1.TabIndex = 16;
             // 
+            // checkBox2
+            // 
+            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBox2.Location = new System.Drawing.Point(3, 33);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(112, 24);
+            this.checkBox2.TabIndex = 5;
+            this.checkBox2.Text = "Obesidad";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // cbHigado
             // 
             this.cbHigado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -256,9 +262,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbHigado.AutoSize = true;
             this.cbHigado.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbHigado.Location = new System.Drawing.Point(240, 33);
+            this.cbHigado.Location = new System.Drawing.Point(238, 33);
             this.cbHigado.Name = "cbHigado";
-            this.cbHigado.Size = new System.Drawing.Size(150, 24);
+            this.cbHigado.Size = new System.Drawing.Size(152, 24);
             this.cbHigado.TabIndex = 4;
             this.cbHigado.Text = "Renal/Hepática";
             this.cbHigado.UseVisualStyleBackColor = true;
@@ -270,9 +276,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSID.AutoSize = true;
             this.cbSID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbSID.Location = new System.Drawing.Point(122, 33);
+            this.cbSID.Location = new System.Drawing.Point(121, 33);
             this.cbSID.Name = "cbSID";
-            this.cbSID.Size = new System.Drawing.Size(112, 24);
+            this.cbSID.Size = new System.Drawing.Size(111, 24);
             this.cbSID.TabIndex = 3;
             this.cbSID.Text = "S. I. Débil";
             this.cbSID.UseVisualStyleBackColor = true;
@@ -284,9 +290,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbDiabetes.AutoSize = true;
             this.cbDiabetes.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbDiabetes.Location = new System.Drawing.Point(240, 3);
+            this.cbDiabetes.Location = new System.Drawing.Point(238, 3);
             this.cbDiabetes.Name = "cbDiabetes";
-            this.cbDiabetes.Size = new System.Drawing.Size(150, 24);
+            this.cbDiabetes.Size = new System.Drawing.Size(152, 24);
             this.cbDiabetes.TabIndex = 2;
             this.cbDiabetes.Text = "Diabetes";
             this.cbDiabetes.UseVisualStyleBackColor = true;
@@ -298,9 +304,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCorazon.AutoSize = true;
             this.cbCorazon.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbCorazon.Location = new System.Drawing.Point(122, 3);
+            this.cbCorazon.Location = new System.Drawing.Point(121, 3);
             this.cbCorazon.Name = "cbCorazon";
-            this.cbCorazon.Size = new System.Drawing.Size(112, 24);
+            this.cbCorazon.Size = new System.Drawing.Size(111, 24);
             this.cbCorazon.TabIndex = 1;
             this.cbCorazon.Text = "Cardíaca";
             this.cbCorazon.UseVisualStyleBackColor = true;
@@ -314,24 +320,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbPulmones.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cbPulmones.Location = new System.Drawing.Point(3, 3);
             this.cbPulmones.Name = "cbPulmones";
-            this.cbPulmones.Size = new System.Drawing.Size(113, 24);
+            this.cbPulmones.Size = new System.Drawing.Size(112, 24);
             this.cbPulmones.TabIndex = 0;
             this.cbPulmones.Text = "Pulmonar";
             this.cbPulmones.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(3, 33);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(113, 24);
-            this.checkBox2.TabIndex = 5;
-            this.checkBox2.Text = "Obesidad";
-            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // textBox16
             // 
@@ -359,20 +351,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel2.Size = new System.Drawing.Size(366, 35);
             this.tableLayoutPanel2.TabIndex = 18;
             // 
-            // cbSi
-            // 
-            this.cbSi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbSi.AutoSize = true;
-            this.cbSi.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbSi.Location = new System.Drawing.Point(3, 3);
-            this.cbSi.Name = "cbSi";
-            this.cbSi.Size = new System.Drawing.Size(177, 29);
-            this.cbSi.TabIndex = 0;
-            this.cbSi.Text = "Sí";
-            this.cbSi.UseVisualStyleBackColor = true;
-            // 
             // cbNo
             // 
             this.cbNo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -387,17 +365,42 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbNo.Text = "No";
             this.cbNo.UseVisualStyleBackColor = true;
             // 
+            // cbSi
+            // 
+            this.cbSi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbSi.AutoSize = true;
+            this.cbSi.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cbSi.Location = new System.Drawing.Point(3, 3);
+            this.cbSi.Name = "cbSi";
+            this.cbSi.Size = new System.Drawing.Size(177, 29);
+            this.cbSi.TabIndex = 0;
+            this.cbSi.Text = "Sí";
+            this.cbSi.UseVisualStyleBackColor = true;
+            // 
             // btnIngresarD
             // 
             this.btnIngresarD.BackColor = System.Drawing.Color.Black;
             this.btnIngresarD.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnIngresarD.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnIngresarD.Location = new System.Drawing.Point(436, 579);
+            this.btnIngresarD.Location = new System.Drawing.Point(425, 579);
             this.btnIngresarD.Name = "btnIngresarD";
-            this.btnIngresarD.Size = new System.Drawing.Size(432, 42);
+            this.btnIngresarD.Size = new System.Drawing.Size(443, 42);
             this.btnIngresarD.TabIndex = 19;
             this.btnIngresarD.Text = "Ingresar datos";
             this.btnIngresarD.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.DimGray;
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.Window;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(12, 512);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(366, 28);
+            this.comboBox1.TabIndex = 20;
             // 
             // frmDateFollowUp
             // 
@@ -405,12 +408,12 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(880, 633);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnIngresarD);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.textBox16);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox12);
             this.Controls.Add(this.textBox11);
@@ -455,7 +458,6 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.CheckBox cbHigado;
@@ -469,5 +471,6 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.CheckBox cbNo;
         private System.Windows.Forms.CheckBox cbSi;
         private System.Windows.Forms.Button btnIngresarD;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
