@@ -45,19 +45,19 @@ namespace PROYECTO_BD_POO_FINAL
                 MessageBox.Show("Welcome", "Vacunación Covid",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                frmProcessType window = new frmProcessType();
-                window.ShowDialog();
-                txtUser.Text = "";
-                txtPassword.Text = "";
-
                 int idEmployee = result[0].IdEmployee;
-                int idBooth = ((Booth) cmbBooth.SelectedItem).IdBooth;
+                int idBooth = ((Booth)cmbBooth.SelectedItem).IdBooth;
                 DateTime localDateTime = DateTime.Now;
 
                 Management aManagement = new Management(idEmployee, idBooth, localDateTime);
 
                 db.Add(aManagement);
                 db.SaveChanges();
+
+                frmProcessType window = new frmProcessType();
+                window.ShowDialog();
+                txtUser.Text = "";
+                txtPassword.Text = "";
             }
         }
 

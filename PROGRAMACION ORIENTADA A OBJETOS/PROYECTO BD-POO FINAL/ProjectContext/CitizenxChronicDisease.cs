@@ -12,5 +12,11 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
 
         public virtual ChronicDisease IdChronicDiseaseNavigation { get; set; }
         public virtual Citizen IdCitizenNavigation { get; set; }
+
+        public CitizenxChronicDisease(int idChronicDisease, int idCitizen)
+        {
+            IdChronicDisease = idChronicDisease;
+            IdCitizen = idCitizen;
+        }
     }
 }

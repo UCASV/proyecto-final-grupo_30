@@ -126,7 +126,6 @@ INSERT INTO CHRONIC_DISEASE VALUES ('Diabetes', 'Enfermedad en la que los nivele
 INSERT INTO CHRONIC_DISEASE VALUES ('Obesidad', 'Estado patológico que se caracteriza por un exceso o una acumulación excesiva y general de grasa en el cuerpo');
 INSERT INTO CHRONIC_DISEASE VALUES ('Sistema Inmunitario Debilitado', 'Trasplante de Organos, Tratamientos Oncologicos, Transplante de Medula Osea, VIH/SIDA');
 INSERT INTO CHRONIC_DISEASE VALUES ('Enfermedad Renal o Hepatica', 'Insuficiencia Hepatica Aguda, Hepatitis Alcoholica, Cirrosis, Liquido Abdominal Infectado');
-INSERT INTO CHRONIC_DISEASE VALUES ('Sindrome de Down', 'Es una afeccion en la que la persona tiene un cromosoma extra')
 
 -- Seeding Data in Side Effects
 INSERT INTO SIDE_EFFECT VALUES ('Enrojecimiento', 'Enrojecimiento en la zona donde fue aplicada la vacuna');
@@ -153,9 +152,9 @@ INSERT INTO INSTITUTION VALUES ('Periodismo');
 
 -- Seeding Data in Booth
 INSERT INTO BOOTH VALUES ('(Galerias) Paseo Gral. Escalón 3700, San Salvador', 22505300, 'galerias@gmail.com');
-INSERT INTO BOOTH VALUES ('(Santa Rosa)Calle Real, Santa Tecla', 22293757, 'santarosa@gmail.com');
-INSERT INTO BOOTH VALUES ('(UCA)Bulevar Los Proceres', 22106600, 'uca@gmail.com');
-INSERT INTO BOOTH VALUES ('(Metrocentro)Calle Los Sisimiles, San Salvador', 25045555, 'metrocentro@gmail.com');
+INSERT INTO BOOTH VALUES ('(Santa Rosa) Calle Real, Santa Tecla', 22293757, 'santarosa@gmail.com');
+INSERT INTO BOOTH VALUES ('(UCA) Bulevar Los Proceres', 22106600, 'uca@gmail.com');
+INSERT INTO BOOTH VALUES ('(Metrocentro) Calle Los Sisimiles, San Salvador', 25045555, 'metrocentro@gmail.com');
 INSERT INTO BOOTH VALUES ('(Las Cascadas) Avenida Jerusalén y Carretera Panamericana', 25015400, 'cascadas@gmail.com');
 
 -- Seeding Data in Vaccination Place

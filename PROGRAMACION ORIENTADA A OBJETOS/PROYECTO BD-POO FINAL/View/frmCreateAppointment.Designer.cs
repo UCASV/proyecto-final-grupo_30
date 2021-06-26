@@ -130,7 +130,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.19763F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.80237F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 155F));
             this.tableLayoutPanel1.Controls.Add(this.cbObesity, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbLiver, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.cbSID, 0, 1);
@@ -156,7 +156,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbObesity.Location = new System.Drawing.Point(3, 24);
             this.cbObesity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbObesity.Name = "cbObesity";
-            this.cbObesity.Size = new System.Drawing.Size(89, 19);
+            this.cbObesity.Size = new System.Drawing.Size(88, 19);
             this.cbObesity.TabIndex = 5;
             this.cbObesity.Text = "Obesidad";
             this.cbObesity.UseVisualStyleBackColor = true;
@@ -168,10 +168,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbLiver.AutoSize = true;
             this.cbLiver.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbLiver.Location = new System.Drawing.Point(193, 24);
+            this.cbLiver.Location = new System.Drawing.Point(191, 24);
             this.cbLiver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLiver.Name = "cbLiver";
-            this.cbLiver.Size = new System.Drawing.Size(148, 19);
+            this.cbLiver.Size = new System.Drawing.Size(150, 19);
             this.cbLiver.TabIndex = 4;
             this.cbLiver.Text = "Renal/Hepática";
             this.cbLiver.UseVisualStyleBackColor = true;
@@ -183,10 +183,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSID.AutoSize = true;
             this.cbSID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbSID.Location = new System.Drawing.Point(98, 24);
+            this.cbSID.Location = new System.Drawing.Point(97, 24);
             this.cbSID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSID.Name = "cbSID";
-            this.cbSID.Size = new System.Drawing.Size(89, 19);
+            this.cbSID.Size = new System.Drawing.Size(88, 19);
             this.cbSID.TabIndex = 3;
             this.cbSID.Text = "S. I. Débil";
             this.cbSID.UseVisualStyleBackColor = true;
@@ -198,10 +198,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbDiabetes.AutoSize = true;
             this.cbDiabetes.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbDiabetes.Location = new System.Drawing.Point(193, 2);
+            this.cbDiabetes.Location = new System.Drawing.Point(191, 2);
             this.cbDiabetes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDiabetes.Name = "cbDiabetes";
-            this.cbDiabetes.Size = new System.Drawing.Size(148, 18);
+            this.cbDiabetes.Size = new System.Drawing.Size(150, 18);
             this.cbDiabetes.TabIndex = 2;
             this.cbDiabetes.Text = "Diabetes";
             this.cbDiabetes.UseVisualStyleBackColor = true;
@@ -213,10 +213,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbHeart.AutoSize = true;
             this.cbHeart.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbHeart.Location = new System.Drawing.Point(98, 2);
+            this.cbHeart.Location = new System.Drawing.Point(97, 2);
             this.cbHeart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbHeart.Name = "cbHeart";
-            this.cbHeart.Size = new System.Drawing.Size(89, 18);
+            this.cbHeart.Size = new System.Drawing.Size(88, 18);
             this.cbHeart.TabIndex = 1;
             this.cbHeart.Text = "Cardíaca";
             this.cbHeart.UseVisualStyleBackColor = true;
@@ -231,7 +231,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbLungs.Location = new System.Drawing.Point(3, 2);
             this.cbLungs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLungs.Name = "cbLungs";
-            this.cbLungs.Size = new System.Drawing.Size(89, 18);
+            this.cbLungs.Size = new System.Drawing.Size(88, 18);
             this.cbLungs.TabIndex = 0;
             this.cbLungs.Text = "Pulmonar";
             this.cbLungs.UseVisualStyleBackColor = true;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -62,6 +63,94 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 MessageBox.Show("Ciudadano Registrado Exitosamente", "Vacunacion Covid",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                var citizenList = db.Citizens
+                    .Where(c => c.Dui == dui)
+                    .ToList();
+
+                if (cbLungs.Checked)
+                {
+                    ChronicDisease cdDB = db.Set<ChronicDisease>()
+                        .SingleOrDefault(c => c.IdChronicDisease == 1);
+
+                    Citizen dbCitizen = db.Set<Citizen>()
+                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
+
+                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
+
+                    db.Add(acCitizenxChronicDisease);
+                    db.SaveChanges();
+                }
+
+                if (cbHeart.Checked)
+                {
+                    ChronicDisease cdDB = db.Set<ChronicDisease>()
+                        .SingleOrDefault(c => c.IdChronicDisease == 2);
+
+                    Citizen dbCitizen = db.Set<Citizen>()
+                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
+
+                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
+
+                    db.Add(acCitizenxChronicDisease);
+                    db.SaveChanges();
+                }
+
+                if (cbDiabetes.Checked)
+                {
+                    ChronicDisease cdDB = db.Set<ChronicDisease>()
+                        .SingleOrDefault(c => c.IdChronicDisease == 3);
+
+                    Citizen dbCitizen = db.Set<Citizen>()
+                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
+
+                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
+
+                    db.Add(acCitizenxChronicDisease);
+                    db.SaveChanges();
+                }
+
+                if (cbObesity.Checked)
+                {
+                    ChronicDisease cdDB = db.Set<ChronicDisease>()
+                        .SingleOrDefault(c => c.IdChronicDisease == 4);
+
+                    Citizen dbCitizen = db.Set<Citizen>()
+                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
+
+                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
+
+                    db.Add(acCitizenxChronicDisease);
+                    db.SaveChanges();
+                }
+
+                if (cbSID.Checked)
+                {
+                    ChronicDisease cdDB = db.Set<ChronicDisease>()
+                        .SingleOrDefault(c => c.IdChronicDisease == 5);
+
+                    Citizen dbCitizen = db.Set<Citizen>()
+                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
+
+                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
+
+                    db.Add(acCitizenxChronicDisease);
+                    db.SaveChanges();
+                }
+
+                if (cbLiver.Checked)
+                {
+                    ChronicDisease cdDB = db.Set<ChronicDisease>()
+                        .SingleOrDefault(c => c.IdChronicDisease == 6);
+
+                    Citizen dbCitizen = db.Set<Citizen>()
+                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
+
+                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
+
+                    db.Add(acCitizenxChronicDisease);
+                    db.SaveChanges();
+                }
             }
         }
     }

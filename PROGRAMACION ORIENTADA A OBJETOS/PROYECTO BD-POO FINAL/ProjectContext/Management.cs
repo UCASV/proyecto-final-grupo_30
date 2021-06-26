@@ -7,6 +7,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
 {
     public partial class Management
     {
+
         public int IdManagement { get; set; }
         public int IdEmployee { get; set; }
         public int IdBooth { get; set; }
@@ -14,6 +15,11 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
 
         public virtual Booth IdBoothNavigation { get; set; }
         public virtual Employee IdEmployeeNavigation { get; set; }
+
+        public Management()
+        {
+            
+        }
 
         public Management(int idEmployee, int idBooth, DateTime? dateTimeLogin)
         {
