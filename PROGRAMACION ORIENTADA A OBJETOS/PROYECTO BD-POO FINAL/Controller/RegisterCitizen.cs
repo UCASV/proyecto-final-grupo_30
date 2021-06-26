@@ -12,8 +12,8 @@ namespace PROYECTO_BD_POO_FINAL.Controller
         //Registering Citizen
         public static void Save(string name, string dui, string phoneNumber, string address, string email)
         {
+            //Creating New Citizen
             var db = new PROJECTContext();
-
             var newCitizen = new Citizen();
             newCitizen.CitizenName = name;
             newCitizen.CitizenAddress = address;
