@@ -260,7 +260,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbHigado.Name = "cbHigado";
             this.cbHigado.Size = new System.Drawing.Size(150, 24);
             this.cbHigado.TabIndex = 4;
-            this.cbHigado.Text = "De hígado/riñón";
+            this.cbHigado.Text = "Renal/Hepática";
             this.cbHigado.UseVisualStyleBackColor = true;
             // 
             // cbSID
@@ -302,7 +302,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbCorazon.Name = "cbCorazon";
             this.cbCorazon.Size = new System.Drawing.Size(112, 24);
             this.cbCorazon.TabIndex = 1;
-            this.cbCorazon.Text = "De corazón";
+            this.cbCorazon.Text = "Cardíaca";
             this.cbCorazon.UseVisualStyleBackColor = true;
             // 
             // cbPulmones
@@ -316,7 +316,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbPulmones.Name = "cbPulmones";
             this.cbPulmones.Size = new System.Drawing.Size(113, 24);
             this.cbPulmones.TabIndex = 0;
-            this.cbPulmones.Text = "De pulmón";
+            this.cbPulmones.Text = "Pulmonar";
             this.cbPulmones.UseVisualStyleBackColor = true;
             // 
             // checkBox2
