@@ -8,9 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Controller\" />
     <Folder Include="Model\" />
-    <Folder Include="Controller\" />
   </ItemGroup>
 
   <ItemGroup>
