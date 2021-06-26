@@ -46,7 +46,7 @@ namespace PROYECTO_BD_POO_FINAL
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 frmProcessType window = new frmProcessType();
-                window.Show();
+                window.ShowDialog();
                 txtUser.Text = "";
                 txtPassword.Text = "";
 

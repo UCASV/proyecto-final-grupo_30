@@ -6,13 +6,13 @@ SET LANGUAGE us_english;
 -- Tables section
 CREATE TABLE EMPLOYEE_TYPE(
 	id_type INT PRIMARY KEY IDENTITY,
-	typename VARCHAR(50)
+	typename VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE EMPLOYEE(
 	id_employee INT PRIMARY KEY IDENTITY,
 	employee_name VARCHAR(50) NOT NULL,
-	email VARCHAR(50) NOT NULL,
+	email VARCHAR(50) UNIQUE NOT NULL,
 	employee_address VARCHAR(50) NOT NULL,
 	employee_username VARCHAR(50),
 	employee_password VARCHAR(50),
@@ -23,7 +23,7 @@ CREATE TABLE EMPLOYEE(
 CREATE TABLE BOOTH(
 	id_booth INT PRIMARY KEY IDENTITY,
 	booth_address VARCHAR(50) NOT NULL,
-	telephone INT NOT NULL,
+	telephone INT UNIQUE NOT NULL,
 	email VARCHAR(50) NOT NULL
 );
 
@@ -51,10 +51,10 @@ CREATE TABLE VACCINATION_PLACE(
 
 CREATE TABLE CITIZEN(
 	id_citizen INT PRIMARY KEY IDENTITY,
-	dui VARCHAR(15) NOT NULL,
+	dui VARCHAR(15) UNIQUE NOT NULL,
 	citizen_name VARCHAR(50) NOT NULL,
 	citizen_address VARCHAR(50) NOT NULL,
-	telephone VARCHAR(15) NOT NULL,
+	telephone VARCHAR(15) UNIQUE NOT NULL,
 	email VARCHAR(50),
 	id_institution INT NOT NULL,
 	disability BIT DEFAULT(0)
@@ -152,11 +152,11 @@ INSERT INTO INSTITUTION VALUES ('Gobierno');
 INSERT INTO INSTITUTION VALUES ('Periodismo');
 
 -- Seeding Data in Booth
-INSERT INTO BOOTH VALUES ('Paseo Gral. Escalón 3700, San Salvador', 22505300, 'galerias@gmail.com');
-INSERT INTO BOOTH VALUES ('Calle Real, Santa Tecla', 22293757, 'santarosa@gmail.com');
-INSERT INTO BOOTH VALUES ('Bulevar Los Proceres', 22106600, 'uca@gmail.com');
-INSERT INTO BOOTH VALUES ('Calle Los Sisimiles, San Salvador', 25045555, 'metrocentro@gmail.com');
-INSERT INTO BOOTH VALUES ('Avenida Jerusalén y Carretera Panamericana', 25015400, 'cascadas@gmail.com');
+INSERT INTO BOOTH VALUES ('(Galerias) Paseo Gral. Escalón 3700, San Salvador', 22505300, 'galerias@gmail.com');
+INSERT INTO BOOTH VALUES ('(Santa Rosa)Calle Real, Santa Tecla', 22293757, 'santarosa@gmail.com');
+INSERT INTO BOOTH VALUES ('(UCA)Bulevar Los Proceres', 22106600, 'uca@gmail.com');
+INSERT INTO BOOTH VALUES ('(Metrocentro)Calle Los Sisimiles, San Salvador', 25045555, 'metrocentro@gmail.com');
+INSERT INTO BOOTH VALUES ('(Las Cascadas) Avenida Jerusalén y Carretera Panamericana', 25015400, 'cascadas@gmail.com');
 
 -- Seeding Data in Vaccination Place
 INSERT INTO VACCINATION_PLACE VALUES ('UCA', 'Bulevar Los Proceres');

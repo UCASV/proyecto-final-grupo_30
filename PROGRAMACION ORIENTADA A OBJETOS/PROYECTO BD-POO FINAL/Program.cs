@@ -18,7 +18,7 @@ namespace PROYECTO_BD_POO_FINAL
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDateFollowUp());
+            Application.Run(new frmLogin());
         }
     }
 }

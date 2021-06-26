@@ -58,6 +58,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.button1.TabIndex = 0;
             this.button1.Text = "Proceso para agendar cita";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmProcessType
             // 

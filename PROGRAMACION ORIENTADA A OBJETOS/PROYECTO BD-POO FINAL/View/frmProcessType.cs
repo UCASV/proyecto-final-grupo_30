@@ -26,5 +26,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             loadingScreen.ShowDialog();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmCreateAppointment window = new frmCreateAppointment();
+            window.ShowDialog();
+        }
     }
 }

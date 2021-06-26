@@ -109,5 +109,15 @@ namespace PROYECTO_BD_POO_FINAL.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon vacunacion_icono {
+            get {
+                object obj = ResourceManager.GetObject("vacunacion_icono", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }
