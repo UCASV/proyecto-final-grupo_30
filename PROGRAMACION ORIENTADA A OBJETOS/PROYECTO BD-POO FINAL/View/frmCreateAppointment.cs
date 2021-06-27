@@ -125,9 +125,10 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(v => v.IdVaccinationPlace == randomVaccinationPlace)
                     .ToList();
 
-                
-                lblPriorityGroupData.Text = refInstitution.Institution1;
 
+                lblName.Text = fullName;
+                lblDUI.Text = dui;
+                lblPriorityGroupData.Text = idb.Institution1;
                 displayDate = dateTime.ToShortDateString();
                 lblDateData.Text = displayDate;
                 displayTime = dateTime.ToString("HH:mm:ss tt");
