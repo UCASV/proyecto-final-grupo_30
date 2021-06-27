@@ -32,6 +32,8 @@ namespace PROYECTO_BD_POO_FINAL.View
             cmbInstitution.DataSource = institutionList;
             cmbInstitution.DisplayMember = "Institution1";
             cmbInstitution.ValueMember = "IdInstitution";
+
+            tabControl1.ItemSize = new Size(0, 1);
         }
 
         private void btnEnterData_Click(object sender, EventArgs e)
@@ -97,6 +99,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                     if(checkBoxes[i-1].Checked)
                         RegisterDisease.Add(citizenList[0].IdCitizen, i);
                 }
+                tabControl1.SelectedIndex = 1;
             }
         }
     }
