@@ -69,6 +69,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(c => c.Dui == dui)
                     .ToList();
 
+<<<<<<< HEAD
                 // Generating a Vaccination Place for an Appointment
                 var vaccinationPlaceList = db.VaccinationPlaces
                     .ToList();
@@ -111,67 +112,15 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                     Citizen dbCitizen = db.Set<Citizen>()
                         .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
+=======
+                CheckBox[] checkBoxes = new CheckBox[]{ cbLungs, cbHeart, cbDiabetes, cbObesity, cbSID, cbLiver };
+>>>>>>> 91bd337898b5da7d744cc84d8f5c439b2f05cb48
 
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
-                }
-
-                if (cbDiabetes.Checked)
+                for(int i = 1; i <= checkBoxes.Length; i++)
                 {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 3);
+                    if(checkBoxes[i-1].Checked)
+                        RegisterDisease.Add(citizenList[0].IdCitizen, i);
 
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
-                }
-
-                if (cbObesity.Checked)
-                {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 4);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
-                }
-
-                if (cbSID.Checked)
-                {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 5);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
-                }
-
-                if (cbLiver.Checked)
-                {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 6);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
                 }
             }
         }
