@@ -58,6 +58,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 if(resultado == DialogResult.OK)
                 {
+                    var db = new PROJECTContext();
                     tabControl1.SelectTab(1);
                     string time = DateTime.Now.ToString("h:mm:ss tt");
                     string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
@@ -121,10 +122,9 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 foreach (var user in query)
                 {
-                    Console.WriteLine("{0}\t{1}\t{2:d}\t{3}",
-                        lblName.Text = user.Nombre,
-                        lblDUI.Text = user.DUI,
-                        lblPriorityGroup.Text = "*********");
+                    lblName.Text = user.Nombre;
+                    lblDUI.Text = user.DUI;
+                    lblPriorityGroupData.Text = "*********";
                 }
             }
         }
