@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using PROYECTO_BD_POO_FINAL.Controller;
 using PROYECTO_BD_POO_FINAL.ProjectContext;
@@ -26,6 +27,7 @@ namespace PROYECTO_BD_POO_FINAL.View
         private string displayTime;
         private string displayPlace;
         private string displayAddress;
+        private DateTime dateTime;
 
         private Management aManagement { get; set; }
         public frmCreateAppointment(Management aManagement)
@@ -75,72 +77,111 @@ namespace PROYECTO_BD_POO_FINAL.View
                 Institution idb = db.Set<Institution>()
                     .SingleOrDefault(i => i.IdInstitution == refInstitution.IdInstitution);
 
-                RegisterCitizen.Save(dui, fullName, address, cellphoneNumber, email, refInstitution, disability);
-
-                MessageBox.Show("Ciudadano Registrado Exitosamente", "Vacunacion Covid",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var registerCitizen = RegisterCitizen.Save(dui, fullName, address, cellphoneNumber, email, refInstitution, disability);
 
                 var citizenList = db.Citizens
                     .Where(c => c.Dui == dui)
                     .ToList();
 
-                // Generating a Vaccination Place for an Appointment
-                var vaccinationPlaceList = db.VaccinationPlaces
-                    .ToList();
 
-                var count = vaccinationPlaceList.Count();
-
-                Random aRandom = new Random();
-
-                int randomVaccinationPlace = aRandom.Next(1, count);
-
-                // Generating a DateTime for an Appointment
-                DateTime dateTime = DateTime.Now;
-
-                // Generating Random hour an minute
-                int randomHour = aRandom.Next(7, 16);
-                int randomMinute = aRandom.Next(0, 59);
-
-                TimeSpan ts = new TimeSpan(randomHour, randomMinute, 0);
-
-                dateTime = dateTime.AddDays(7);
-                dateTime = dateTime.Date + ts;
-
-                Appointment anAppointment = new Appointment(dateTime, aManagement.IdEmployee, randomVaccinationPlace,
-                    citizenList[0].IdCitizen);
-
-                db.Add(anAppointment);
-                db.SaveChanges();
-
-                CheckBox[] checkBoxes = new CheckBox[]{ cbLungs, cbHeart, cbDiabetes, cbObesity, cbSID, cbLiver };
-
-                for(int i = 1; i <= checkBoxes.Length; i++)
+                if (registerCitizen)
                 {
-                    if(checkBoxes[i-1].Checked)
-                        RegisterDisease.Add(citizenList[0].IdCitizen, i);
+                    MessageBox.Show("Ciudadano Registrado Exitosamente", "Vacuna COVID-19",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Generating a Vaccination Place for an Appointment
+                    var vaccinationPlaceList = db.VaccinationPlaces
+                        .ToList();
+
+                    var count = vaccinationPlaceList.Count();
+
+                    var aRandom = new Random();
+
+                    var randomVaccinationPlace = aRandom.Next(1, count);
+
+                    // Generating a DateTime for an Appointment
+                    dateTime = DateTime.Now;
+
+                    // Generating Random hour an minute
+                    var randomHour = aRandom.Next(7, 16);
+                    var randomMinute = aRandom.Next(0, 59);
+
+                    var ts = new TimeSpan(randomHour, randomMinute, 0);
+
+                    dateTime = dateTime.AddDays(7);
+                    dateTime = dateTime.Date + ts;
+
+                    var anAppointment = new Appointment(dateTime, aManagement.IdEmployee, randomVaccinationPlace,
+                        citizenList[0].IdCitizen);
+
+                    db.Add(anAppointment);
+                    db.SaveChanges();
+
+                    CheckBox[] checkBoxes = new CheckBox[] { cbLungs, cbHeart, cbDiabetes, cbObesity, cbSID, cbLiver };
+
+                    for (int i = 1; i <= checkBoxes.Length; i++)
+                    {
+                        if (checkBoxes[i - 1].Checked)
+                            RegisterDisease.Add(citizenList[0].IdCitizen, i);
+                    }
+
+                    var resultVaccionation = vaccinationPlaceList
+                        .Where(v => v.IdVaccinationPlace == randomVaccinationPlace)
+                        .ToList();
+
+                    
+                    
+                    displayDate = dateTime.ToShortDateString();
+                    displayTime = dateTime.ToString("HH:mm:ss tt");
+                    displayPlace = resultVaccionation[0].VaccinationPlace1;
+                    displayAddress = resultVaccionation[0].VaccinationPlaceAddress;
+                    
                 }
-                tabControl1.SelectedIndex = 1;
+                else
+                {
+                    MessageBox.Show("Ya existe un ciudadano registrado con ese DUI o número de teléfono.", "Vacuna COVID-19",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                var resultVaccionation = vaccinationPlaceList
-                    .Where(v => v.IdVaccinationPlace == randomVaccinationPlace)
-                    .ToList();
+                    var appointmentList = db.Appointments
+                        .Where(c => c.IdCitizen == citizenList[0].IdCitizen)
+                        .ToList();
+
+                    var vaccinationPlaces = db.VaccinationPlaces
+                        .Where(p => p.IdVaccinationPlace == appointmentList[0].IdVaccinationPlace)
+                        .ToList();
+
+                    if (appointmentList[0].DateTimeAppointment2 is null)
+                    {
+                        displayDate = (Convert.ToDateTime((appointmentList[0].DateTimeAppointment1).ToString())).ToShortDateString();
+                        displayTime = (Convert.ToDateTime((appointmentList[0].DateTimeAppointment1).ToString())).ToString("HH:mm:ss tt");
+
+                    }
+                    else
+                    {
+                        displayDate = (Convert.ToDateTime((appointmentList[0].DateTimeAppointment2).ToString())).ToShortDateString();
+                        displayTime = (Convert.ToDateTime((appointmentList[0].DateTimeAppointment2).ToString())).ToString("HH:mm:ss tt");
+
+                    }
 
 
+                    displayPlace = vaccinationPlaces[0].VaccinationPlace1;
+                    displayAddress = vaccinationPlaces[0].VaccinationPlaceAddress;
+
+                }
+
+                lblPriorityGroupData.Text = idb.Institution1;
                 lblName.Text = fullName;
                 lblDUI.Text = dui;
-                lblPriorityGroupData.Text = idb.Institution1;
-                displayDate = dateTime.ToShortDateString();
                 lblDateData.Text = displayDate;
-                displayTime = dateTime.ToString("HH:mm:ss tt");
                 lblHourData.Text = displayTime;
-                displayPlace = resultVaccionation[0].VaccinationPlace1;
                 lblPlaceData.Text = displayPlace;
-                displayAddress = resultVaccionation[0].VaccinationPlaceAddress;
                 lblAddressData.Text = displayAddress;
+
+                tabControl1.SelectedIndex = 1;
             }
             else
             {
-                MessageBox.Show("Los campos requeridos no han sido llenados", "Vacunación Covid",
+                MessageBox.Show("Los campos requeridos no han sido llenados", "Vacuna COVID-19",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -148,7 +189,7 @@ namespace PROYECTO_BD_POO_FINAL.View
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
             CreatePdf.Save("1", this.fullName, this.dui, this.displayPlace, this.displayDate, this.displayTime, this.displayAddress);
-            MessageBox.Show("PDF Exportado con Éxito", "Vacunación Covid",
+            MessageBox.Show("PDF Exportado con Éxito", "Vacuna COVID-19",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
