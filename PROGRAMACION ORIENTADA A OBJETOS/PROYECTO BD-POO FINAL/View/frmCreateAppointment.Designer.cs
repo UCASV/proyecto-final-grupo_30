@@ -525,6 +525,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnExportPDF.TabIndex = 2;
             this.btnExportPDF.Text = "Exportar PDF";
             this.btnExportPDF.UseVisualStyleBackColor = false;
+            this.btnExportPDF.Click += new System.EventHandler(this.btnExportPDF_Click);
             // 
             // lblPriorityGroupData
             // 

@@ -17,6 +17,16 @@ namespace PROYECTO_BD_POO_FINAL.View
 {
     public partial class frmCreateAppointment : Form
     {
+        private string dui;
+        private string fullName;
+        private string address;
+        private string cellphoneNumber;
+        private string email;
+        private string displayDate;
+        private string displayTime;
+        private string displayPlace;
+        private string displayAddress;
+
         private Management aManagement { get; set; }
         public frmCreateAppointment(Management aManagement)
         {
@@ -47,11 +57,11 @@ namespace PROYECTO_BD_POO_FINAL.View
                           txtCellphoneNumber.Text != null;
             if (verify)
             {
-                string dui = txtDUI.Text;
-                string fullName = txtFullName.Text;
-                string address = txtAddress.Text;
-                string cellphoneNumber = txtCellphoneNumber.Text;
-                string email = txtEmail.Text;
+                this.dui = txtDUI.Text;
+                this.fullName = txtFullName.Text;
+                this.address = txtAddress.Text;
+                this.cellphoneNumber = txtCellphoneNumber.Text;
+                this.email = txtEmail.Text;
                 Institution refInstitution = (Institution) cmbInstitution.SelectedItem;
                 bool disability = false;
 
@@ -115,17 +125,30 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(v => v.IdVaccinationPlace == randomVaccinationPlace)
                     .ToList();
 
+                
                 lblPriorityGroupData.Text = refInstitution.Institution1;
-                lblDateData.Text = dateTime.ToShortDateString();
-                lblHourData.Text = dateTime.ToString("HH:mm:ss tt");
-                lblPlaceData.Text = resultVaccionation[0].VaccinationPlace1;
-                lblAddressData.Text = resultVaccionation[0].VaccinationPlaceAddress;
+
+                displayDate = dateTime.ToShortDateString();
+                lblDateData.Text = displayDate;
+                displayTime = dateTime.ToString("HH:mm:ss tt");
+                lblHourData.Text = displayTime;
+                displayPlace = resultVaccionation[0].VaccinationPlace1;
+                lblPlaceData.Text = displayPlace;
+                displayAddress = resultVaccionation[0].VaccinationPlaceAddress;
+                lblAddressData.Text = displayAddress;
             }
             else
             {
                 MessageBox.Show("Los campos requeridos no han sido llenados", "Vacunación Covid",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void btnExportPDF_Click(object sender, EventArgs e)
+        {
+            CreatePdf.Save("1", this.fullName, this.dui, this.displayPlace, this.displayDate, this.displayTime, this.displayAddress);
+            MessageBox.Show("PDF Exportado con Éxito", "Vacunación Covid",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
