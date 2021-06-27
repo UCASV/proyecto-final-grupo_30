@@ -70,86 +70,32 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 if (cbLungs.Checked)
                 {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 1);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
+                    RegisterDisease.Add(citizenList[0].IdCitizen, 1);
                 }
 
                 if (cbHeart.Checked)
                 {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 2);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
+                    RegisterDisease.Add(citizenList[0].IdCitizen, 2);
                 }
 
                 if (cbDiabetes.Checked)
                 {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 3);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
+                    RegisterDisease.Add(citizenList[0].IdCitizen, 3);
                 }
 
                 if (cbObesity.Checked)
                 {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 4);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
+                    RegisterDisease.Add(citizenList[0].IdCitizen, 4);
                 }
 
                 if (cbSID.Checked)
                 {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 5);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
+                    RegisterDisease.Add(citizenList[0].IdCitizen, 5);
                 }
 
                 if (cbLiver.Checked)
                 {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 6);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
+                    RegisterDisease.Add(citizenList[0].IdCitizen, 6);
                 }
             }
         }
