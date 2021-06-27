@@ -72,11 +72,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             }
         }
 
-        private void frmVaccinationProcess_Load(object sender, EventArgs e)
-        {
-            tabControl1.ItemSize = new Size(0, 1);
-        }
-
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             var db = new ProjectContext.PROJECTContext();
@@ -134,5 +129,55 @@ namespace PROYECTO_BD_POO_FINAL.View
             frmVaccinationProcess_Shown(sender, e);
             txtDUI.Text = "";
         }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var db = new ProjectContext.PROJECTContext();
+
+            /*var query = from c in db.Citizens
+                        join v in db.Vaccinations on c.IdCitizen equals v.IdCitizen
+                        join a in db.Appointments on v.IdVaccinationPlace equals a.IdVaccinationPlace
+                        join i in db.Institutions on c.IdInstitution equals i.IdInstitution
+                        let name = c.CitizenName
+                        let DUI = c.Dui
+                        let priorityGroup = i.Institution1
+
+                        select new
+                        {
+                            name, 
+                            DUI,
+                            priorityGroup
+                        };*/
+
+            var query = from a in db.Appointments
+                            join c in db.Citizens.Where(a=> a.Dui == txtDUI.Text) on a.IdCitizen equals c.IdCitizen
+                            join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace
+                            join i in db.Institutions on c.IdInstitution equals i.IdInstitution
+                            from vac in db.Vaccinations.DefaultIfEmpty()
+                            let DUI = c.Dui
+                            let Nombre = c.CitizenName
+                            let Cita_1 = a.DateTimeAppointment1
+                            let Cita_2 = a.DateTimeAppointment2
+                            let Lugar_Vacunacion = vp.VaccinationPlace1
+                            let Dosis_1 = vac.DateTimeVaccine1
+                            let Dosis_2 = vac.DateTimeVaccine2
+                            let priorityGroup = i.Institution1
+
+                        select new
+                            {
+                                DUI,
+                                Nombre,
+                                priorityGroup
+                            };
+
+            foreach (var user in query)
+            {
+                lblName.Text = user.Nombre;
+                lblDUI.Text = user.DUI;
+                lblPriorityGroupData.Text = user.priorityGroup;
+            }
+
+        }
+
     }
 }
