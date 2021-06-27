@@ -28,6 +28,8 @@ namespace PROYECTO_BD_POO_FINAL.View
         private string displayPlace;
         private string displayAddress;
         private DateTime dateTime;
+        private string displayFullName;
+        private string displayGroup;
 
         private Management aManagement { get; set; }
         public frmCreateAppointment(Management aManagement)
@@ -82,7 +84,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                 var citizenList = db.Citizens
                     .Where(c => c.Dui == dui)
                     .ToList();
-
+                
 
                 if (registerCitizen)
                 {
@@ -129,8 +131,6 @@ namespace PROYECTO_BD_POO_FINAL.View
                         .Where(v => v.IdVaccinationPlace == randomVaccinationPlace)
                         .ToList();
 
-                    
-                    
                     displayDate = dateTime.ToShortDateString();
                     displayTime = dateTime.ToString("HH:mm:ss tt");
                     displayPlace = resultVaccionation[0].VaccinationPlace1;
@@ -163,14 +163,19 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                     }
 
+                    var groupList = db.Institutions
+                        .Where(i => i.IdInstitution.Equals(citizenList[0].IdInstitution))
+                        .ToList();
 
+                    displayGroup = groupList[0].Institution1;
+                    displayFullName = citizenList[0].CitizenName;
                     displayPlace = vaccinationPlaces[0].VaccinationPlace1;
                     displayAddress = vaccinationPlaces[0].VaccinationPlaceAddress;
 
                 }
 
-                lblPriorityGroupData.Text = idb.Institution1;
-                lblName.Text = fullName;
+                lblPriorityGroupData.Text = displayGroup;
+                lblName.Text = displayFullName;
                 lblDUI.Text = dui;
                 lblDateData.Text = displayDate;
                 lblHourData.Text = displayTime;
