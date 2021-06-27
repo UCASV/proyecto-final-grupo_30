@@ -54,7 +54,7 @@ namespace PROYECTO_BD_POO_FINAL
                 db.Add(aManagement);
                 db.SaveChanges();
 
-                frmProcessType window = new frmProcessType();
+                frmProcessType window = new frmProcessType(aManagement);
                 window.ShowDialog();
                 txtUser.Text = "";
                 txtPassword.Text = "";
