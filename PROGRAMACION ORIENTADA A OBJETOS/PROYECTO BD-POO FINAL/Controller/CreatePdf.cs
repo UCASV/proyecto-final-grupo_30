@@ -16,7 +16,7 @@ namespace PROYECTO_BD_POO_FINAL.Controller
         public static void Save(string numDosis, string name, string dui, string place, string date,
             string time, string address)
         {
-            PdfWriter writer = new PdfWriter($"..\\..\\..\\PDFs\\{name}{numDosis}.pdf");
+            PdfWriter writer = new PdfWriter($"..\\..\\..\\PDFs\\{dui}n{numDosis}.pdf");
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
