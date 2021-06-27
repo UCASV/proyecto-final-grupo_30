@@ -58,7 +58,8 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 if(resultado == DialogResult.OK)
                 {
-                    var db = new PROJECTContext();
+                    var db = new ProjectContext.PROJECTContext();
+
                     tabControl1.SelectTab(1);
                     string time = DateTime.Now.ToString("h:mm:ss tt");
                     string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
@@ -133,6 +134,11 @@ namespace PROYECTO_BD_POO_FINAL.View
         {
             frmVaccinationProcess_Shown(sender, e);
             txtDUI.Text = "";
+        }
+
+        private void addToDatabase()
+        {
+            var db = new ProjectContext.PROJECTContext();
         }
     }
 }
