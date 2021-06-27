@@ -123,6 +123,16 @@ namespace PROYECTO_BD_POO_FINAL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap syringevaccinationg931114934_1435242_860x566 {
+            get {
+                object obj = ResourceManager.GetObject("syringevaccinationg931114934_1435242-860x566", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vaccine {
             get {
                 object obj = ResourceManager.GetObject("vaccine", resourceCulture);
