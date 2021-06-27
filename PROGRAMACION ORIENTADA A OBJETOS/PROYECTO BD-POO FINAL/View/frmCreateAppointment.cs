@@ -28,6 +28,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             var institutionList = db.Institutions
                 .ToList();
 
+            // Loading Institution Data in Combo Box
             cmbInstitution.DataSource = institutionList;
             cmbInstitution.DisplayMember = "Institution1";
             cmbInstitution.ValueMember = "IdInstitution";
@@ -67,6 +68,27 @@ namespace PROYECTO_BD_POO_FINAL.View
                 var citizenList = db.Citizens
                     .Where(c => c.Dui == dui)
                     .ToList();
+
+                // Generating a Vaccination Place for an Appointment
+                var vaccinationPlaceList = db.VaccinationPlaces
+                    .ToList();
+
+                var count = vaccinationPlaceList.Count();
+
+                Random aRandom = new Random();
+
+                int randomVaccinationPlace = aRandom.Next(1, count);
+
+                // Generating a DateTime for an Appointment
+                DateTime dateTime = DateTime.Now;
+
+                int randomHour = aRandom.Next(7, 16);
+                int randomMinute = aRandom.Next(0, 59);
+
+                TimeSpan ts = new TimeSpan(randomHour, randomMinute, 0);
+
+                dateTime = dateTime.AddDays(7);
+                dateTime = dateTime.Date + ts;
 
                 if (cbLungs.Checked)
                 {
