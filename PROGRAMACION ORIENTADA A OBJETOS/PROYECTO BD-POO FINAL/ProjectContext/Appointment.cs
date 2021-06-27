@@ -17,5 +17,13 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
         public virtual Citizen IdCitizenNavigation { get; set; }
         public virtual Employee IdEmployeeNavigation { get; set; }
         public virtual VaccinationPlace IdVaccinationPlaceNavigation { get; set; }
+
+        public Appointment(DateTime? dateTimeAppointment1, int idEmployee, int idVaccinationPlace, int idCitizen)
+        {
+            DateTimeAppointment1 = dateTimeAppointment1;
+            IdEmployee = idEmployee;
+            IdVaccinationPlace = idVaccinationPlace;
+            IdCitizen = idCitizen;
+        }
     }
 }

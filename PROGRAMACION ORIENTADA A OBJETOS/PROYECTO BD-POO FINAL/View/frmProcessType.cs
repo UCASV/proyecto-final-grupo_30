@@ -8,16 +8,17 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROYECTO_BD_POO_FINAL.ProjectContext;
 
 namespace PROYECTO_BD_POO_FINAL.View
 {
     public partial class frmProcessType : Form
     {
-        
-
-        public frmProcessType()
+        private Management aManagement { get; set; }
+        public frmProcessType(Management aManagement)
         {
             InitializeComponent();
+            this.aManagement = aManagement;
         }
 
         private void btnAppointmentTracking_Click(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmCreateAppointment window = new frmCreateAppointment();
+            frmCreateAppointment window = new frmCreateAppointment(aManagement);
             window.ShowDialog();
         }
     }

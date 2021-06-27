@@ -9,6 +9,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 using PROYECTO_BD_POO_FINAL.Controller;
 using PROYECTO_BD_POO_FINAL.ProjectContext;
 
@@ -16,9 +17,11 @@ namespace PROYECTO_BD_POO_FINAL.View
 {
     public partial class frmCreateAppointment : Form
     {
-        public frmCreateAppointment()
+        private Management aManagement { get; set; }
+        public frmCreateAppointment(Management aManagement)
         {
             InitializeComponent();
+            this.aManagement = aManagement;
         }
 
         private void frmDateFollowUp_Load(object sender, EventArgs e)
@@ -38,10 +41,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void btnEnterData_Click(object sender, EventArgs e)
         {
-            bool verify = txtDUI != null &&
-                          txtFullName != null &&
-                          txtAddress != null &&
-                          txtCellphoneNumber != null;
+            bool verify = txtDUI.Text != null &&
+                          txtFullName.Text != null &&
+                          txtAddress.Text != null &&
+                          txtCellphoneNumber.Text != null;
             if (verify)
             {
                 string dui = txtDUI.Text;
@@ -84,6 +87,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                 // Generating a DateTime for an Appointment
                 DateTime dateTime = DateTime.Now;
 
+                // Generating Random hour an minute
                 int randomHour = aRandom.Next(7, 16);
                 int randomMinute = aRandom.Next(0, 59);
 
@@ -91,6 +95,12 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 dateTime = dateTime.AddDays(7);
                 dateTime = dateTime.Date + ts;
+
+                Appointment anAppointment = new Appointment(dateTime, aManagement.IdEmployee, randomVaccinationPlace,
+                    citizenList[0].IdCitizen);
+
+                db.Add(anAppointment);
+                db.SaveChanges();
 
                 CheckBox[] checkBoxes = new CheckBox[]{ cbLungs, cbHeart, cbDiabetes, cbObesity, cbSID, cbLiver };
 
@@ -100,6 +110,11 @@ namespace PROYECTO_BD_POO_FINAL.View
                         RegisterDisease.Add(citizenList[0].IdCitizen, i);
                 }
                 tabControl1.SelectedIndex = 1;
+            }
+            else
+            {
+                MessageBox.Show("Los campos requeridos no han sido llenados", "Vacunación Covid",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
