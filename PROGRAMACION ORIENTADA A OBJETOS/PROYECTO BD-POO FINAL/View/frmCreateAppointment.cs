@@ -28,9 +28,12 @@ namespace PROYECTO_BD_POO_FINAL.View
             var institutionList = db.Institutions
                 .ToList();
 
+            // Loading Institution Data in Combo Box
             cmbInstitution.DataSource = institutionList;
             cmbInstitution.DisplayMember = "Institution1";
             cmbInstitution.ValueMember = "IdInstitution";
+
+            tabControl1.ItemSize = new Size(0, 1);
         }
 
         private void btnEnterData_Click(object sender, EventArgs e)
@@ -68,14 +71,35 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(c => c.Dui == dui)
                     .ToList();
 
+                // Generating a Vaccination Place for an Appointment
+                var vaccinationPlaceList = db.VaccinationPlaces
+                    .ToList();
+
+                var count = vaccinationPlaceList.Count();
+
+                Random aRandom = new Random();
+
+                int randomVaccinationPlace = aRandom.Next(1, count);
+
+                // Generating a DateTime for an Appointment
+                DateTime dateTime = DateTime.Now;
+
+                int randomHour = aRandom.Next(7, 16);
+                int randomMinute = aRandom.Next(0, 59);
+
+                TimeSpan ts = new TimeSpan(randomHour, randomMinute, 0);
+
+                dateTime = dateTime.AddDays(7);
+                dateTime = dateTime.Date + ts;
+
                 CheckBox[] checkBoxes = new CheckBox[]{ cbLungs, cbHeart, cbDiabetes, cbObesity, cbSID, cbLiver };
 
                 for(int i = 1; i <= checkBoxes.Length; i++)
                 {
                     if(checkBoxes[i-1].Checked)
                         RegisterDisease.Add(citizenList[0].IdCitizen, i);
-
                 }
+                tabControl1.SelectedIndex = 1;
             }
         }
     }
