@@ -70,9 +70,9 @@ namespace PROYECTO_BD_POO_FINAL
             // 
             // txtPassword
             // 
-            this.txtPassword.BackColor = System.Drawing.Color.DimGray;
+            this.txtPassword.BackColor = System.Drawing.Color.White;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPassword.ForeColor = System.Drawing.Color.White;
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.Location = new System.Drawing.Point(54, 232);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
@@ -94,9 +94,9 @@ namespace PROYECTO_BD_POO_FINAL
             // 
             // txtUser
             // 
-            this.txtUser.BackColor = System.Drawing.Color.DimGray;
+            this.txtUser.BackColor = System.Drawing.Color.White;
             this.txtUser.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUser.ForeColor = System.Drawing.Color.White;
+            this.txtUser.ForeColor = System.Drawing.Color.Black;
             this.txtUser.Location = new System.Drawing.Point(54, 177);
             this.txtUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser.Name = "txtUser";
