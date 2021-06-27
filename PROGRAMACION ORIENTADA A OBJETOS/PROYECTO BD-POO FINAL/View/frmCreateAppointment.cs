@@ -84,7 +84,8 @@ namespace PROYECTO_BD_POO_FINAL.View
                 var citizenList = db.Citizens
                     .Where(c => c.Dui == dui)
                     .ToList();
-                
+
+                displayFullName = citizenList[0].CitizenName;
 
                 if (registerCitizen)
                 {
