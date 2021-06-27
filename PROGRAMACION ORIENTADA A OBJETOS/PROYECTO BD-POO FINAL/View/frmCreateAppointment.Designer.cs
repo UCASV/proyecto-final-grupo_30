@@ -32,6 +32,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCreateAppointment));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnEnterData = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbInstitution = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
@@ -69,15 +70,12 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
-            this.cmbInstitution = new System.Windows.Forms.ComboBox();
-            this.btnEnterData = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.rbYes = new System.Windows.Forms.RadioButton();
             this.rbNo = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbObesity = new System.Windows.Forms.CheckBox();
             this.cbLiver = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -100,7 +98,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.tabPage1.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.Proceso_cita_leftImage_background;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnEnterData);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label8);
@@ -111,7 +109,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.cmbInstitution);
             this.tabPage1.Controls.Add(this.tableLayoutPanel3);
             this.tabPage1.Controls.Add(this.tableLayoutPanel4);
             this.tabPage1.Controls.Add(this.txtEmail);
@@ -127,6 +125,20 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnEnterData
+            // 
+            this.btnEnterData.BackColor = System.Drawing.Color.Black;
+            this.btnEnterData.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEnterData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnEnterData.Location = new System.Drawing.Point(28, 477);
+            this.btnEnterData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEnterData.Name = "btnEnterData";
+            this.btnEnterData.Size = new System.Drawing.Size(388, 32);
+            this.btnEnterData.TabIndex = 59;
+            this.btnEnterData.Text = "Ingresar datos";
+            this.btnEnterData.UseVisualStyleBackColor = false;
+            this.btnEnterData.Click += new System.EventHandler(this.btnEnterData_Click);
+            // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -139,7 +151,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(50, 378);
+            this.label9.Location = new System.Drawing.Point(50, 377);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(270, 21);
             this.label9.TabIndex = 75;
@@ -221,18 +233,18 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label1.TabIndex = 1;
             this.label1.Text = "Datos del Ciudadano";
             // 
-            // comboBox1
+            // cmbInstitution
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.ForeColor = System.Drawing.Color.Black;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(50, 401);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(321, 23);
-            this.comboBox1.TabIndex = 58;
+            this.cmbInstitution.BackColor = System.Drawing.Color.White;
+            this.cmbInstitution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbInstitution.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmbInstitution.ForeColor = System.Drawing.Color.Black;
+            this.cmbInstitution.FormattingEnabled = true;
+            this.cmbInstitution.Location = new System.Drawing.Point(50, 400);
+            this.cmbInstitution.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbInstitution.Name = "cmbInstitution";
+            this.cmbInstitution.Size = new System.Drawing.Size(321, 23);
+            this.cmbInstitution.TabIndex = 60;
             // 
             // tableLayoutPanel3
             // 
@@ -276,7 +288,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel4.ColumnCount = 3;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.19763F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.80237F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 159F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 161F));
             this.tableLayoutPanel4.Controls.Add(this.checkBox1, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.checkBox2, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.cbSID, 0, 1);
@@ -302,7 +314,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.checkBox1.Location = new System.Drawing.Point(3, 24);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(86, 19);
+            this.checkBox1.Size = new System.Drawing.Size(85, 19);
             this.checkBox1.TabIndex = 5;
             this.checkBox1.Text = "Obesidad";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -314,10 +326,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(187, 24);
+            this.checkBox2.Location = new System.Drawing.Point(185, 24);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(154, 19);
+            this.checkBox2.Size = new System.Drawing.Size(156, 19);
             this.checkBox2.TabIndex = 4;
             this.checkBox2.Text = "Renal/Hepática";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -329,10 +341,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSID.AutoSize = true;
             this.cbSID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbSID.Location = new System.Drawing.Point(95, 24);
+            this.cbSID.Location = new System.Drawing.Point(94, 24);
             this.cbSID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSID.Name = "cbSID";
-            this.cbSID.Size = new System.Drawing.Size(86, 19);
+            this.cbSID.Size = new System.Drawing.Size(85, 19);
             this.cbSID.TabIndex = 3;
             this.cbSID.Text = "S. I. Débil";
             this.cbSID.UseVisualStyleBackColor = true;
@@ -344,10 +356,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbDiabetes.AutoSize = true;
             this.cbDiabetes.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbDiabetes.Location = new System.Drawing.Point(187, 2);
+            this.cbDiabetes.Location = new System.Drawing.Point(185, 2);
             this.cbDiabetes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDiabetes.Name = "cbDiabetes";
-            this.cbDiabetes.Size = new System.Drawing.Size(154, 18);
+            this.cbDiabetes.Size = new System.Drawing.Size(156, 18);
             this.cbDiabetes.TabIndex = 2;
             this.cbDiabetes.Text = "Diabetes";
             this.cbDiabetes.UseVisualStyleBackColor = true;
@@ -359,10 +371,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cbHeart.AutoSize = true;
             this.cbHeart.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cbHeart.Location = new System.Drawing.Point(95, 2);
+            this.cbHeart.Location = new System.Drawing.Point(94, 2);
             this.cbHeart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbHeart.Name = "cbHeart";
-            this.cbHeart.Size = new System.Drawing.Size(86, 18);
+            this.cbHeart.Size = new System.Drawing.Size(85, 18);
             this.cbHeart.TabIndex = 1;
             this.cbHeart.Text = "Cardíaca";
             this.cbHeart.UseVisualStyleBackColor = true;
@@ -377,7 +389,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbLungs.Location = new System.Drawing.Point(3, 2);
             this.cbLungs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbLungs.Name = "cbLungs";
-            this.cbLungs.Size = new System.Drawing.Size(86, 18);
+            this.cbLungs.Size = new System.Drawing.Size(85, 18);
             this.cbLungs.TabIndex = 0;
             this.cbLungs.Text = "Pulmonar";
             this.cbLungs.UseVisualStyleBackColor = true;
@@ -385,7 +397,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.Info;
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(50, 283);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
@@ -395,7 +407,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // txtCellphoneNumber
             // 
             this.txtCellphoneNumber.BackColor = System.Drawing.Color.White;
-            this.txtCellphoneNumber.ForeColor = System.Drawing.Color.White;
+            this.txtCellphoneNumber.ForeColor = System.Drawing.Color.Black;
             this.txtCellphoneNumber.Location = new System.Drawing.Point(50, 237);
             this.txtCellphoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCellphoneNumber.Name = "txtCellphoneNumber";
@@ -405,7 +417,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // txtAddress
             // 
             this.txtAddress.BackColor = System.Drawing.Color.White;
-            this.txtAddress.ForeColor = System.Drawing.Color.White;
+            this.txtAddress.ForeColor = System.Drawing.Color.Black;
             this.txtAddress.Location = new System.Drawing.Point(50, 190);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
@@ -415,7 +427,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // txtFullName
             // 
             this.txtFullName.BackColor = System.Drawing.Color.White;
-            this.txtFullName.ForeColor = System.Drawing.Color.White;
+            this.txtFullName.ForeColor = System.Drawing.Color.Black;
             this.txtFullName.Location = new System.Drawing.Point(50, 144);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullName.Name = "txtFullName";
@@ -425,7 +437,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // txtDUI
             // 
             this.txtDUI.BackColor = System.Drawing.Color.White;
-            this.txtDUI.ForeColor = System.Drawing.Color.White;
+            this.txtDUI.ForeColor = System.Drawing.Color.Black;
             this.txtDUI.Location = new System.Drawing.Point(50, 97);
             this.txtDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDUI.Name = "txtDUI";
@@ -437,7 +449,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(445, 494);
+            this.tabPage2.Size = new System.Drawing.Size(445, 521);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -582,32 +594,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.textBox14.TabIndex = 61;
             this.textBox14.Text = "Datos del Ciudadano";
             // 
-            // cmbInstitution
-            // 
-            this.cmbInstitution.BackColor = System.Drawing.Color.White;
-            this.cmbInstitution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbInstitution.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cmbInstitution.ForeColor = System.Drawing.Color.Black;
-            this.cmbInstitution.FormattingEnabled = true;
-            this.cmbInstitution.Location = new System.Drawing.Point(-137, 422);
-            this.cmbInstitution.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbInstitution.Name = "cmbInstitution";
-            this.cmbInstitution.Size = new System.Drawing.Size(321, 23);
-            this.cmbInstitution.TabIndex = 60;
-            // 
-            // btnEnterData
-            // 
-            this.btnEnterData.BackColor = System.Drawing.Color.Black;
-            this.btnEnterData.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEnterData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEnterData.Location = new System.Drawing.Point(225, 472);
-            this.btnEnterData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEnterData.Name = "btnEnterData";
-            this.btnEnterData.Size = new System.Drawing.Size(388, 32);
-            this.btnEnterData.TabIndex = 59;
-            this.btnEnterData.Text = "Ingresar datos";
-            this.btnEnterData.UseVisualStyleBackColor = false;
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -690,19 +676,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbLiver.Text = "Renal/Hepática";
             this.cbLiver.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(25, 487);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(388, 32);
-            this.button1.TabIndex = 77;
-            this.button1.Text = "Ingresar datos";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // frmCreateAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -751,8 +724,6 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.ComboBox cmbInstitution;
-        private System.Windows.Forms.Button btnEnterData;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.RadioButton rbYes;
         private System.Windows.Forms.RadioButton rbNo;
@@ -769,7 +740,7 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbInstitution;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
@@ -785,6 +756,6 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.TextBox txtDUI;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEnterData;
     }
 }
