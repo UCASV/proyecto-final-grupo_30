@@ -60,6 +60,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtDUI = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblDUI = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.lblAddressData = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnExportPDF = new System.Windows.Forms.Button();
@@ -88,10 +92,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbObesity = new System.Windows.Forms.CheckBox();
             this.cbLiver = new System.Windows.Forms.CheckBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblDUI = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -117,8 +117,8 @@ namespace PROYECTO_BD_POO_FINAL.View
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Transparent;
-            this.tabPage1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("tabPage1.BackgroundImage")));
-            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.tabPage1.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.syringevaccinationg931114934_1435242_860x566;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.Controls.Add(this.btnEnterData);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
@@ -255,6 +255,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(50, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(244, 32);
@@ -475,7 +476,8 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             // tabPage2
             // 
-            this.tabPage2.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.gc62Iz;
+            this.tabPage2.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.syringevaccinationg931114934_1435242_860x566;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Controls.Add(this.lblName);
             this.tabPage2.Controls.Add(this.lblDUI);
             this.tabPage2.Controls.Add(this.label13);
@@ -501,13 +503,55 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // lblName
+            // 
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblName.Location = new System.Drawing.Point(155, 103);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(228, 21);
+            this.lblName.TabIndex = 8;
+            this.lblName.Text = "xxxxxxx";
+            // 
+            // lblDUI
+            // 
+            this.lblDUI.BackColor = System.Drawing.Color.Transparent;
+            this.lblDUI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDUI.Location = new System.Drawing.Point(121, 142);
+            this.lblDUI.Name = "lblDUI";
+            this.lblDUI.Size = new System.Drawing.Size(262, 21);
+            this.lblDUI.TabIndex = 7;
+            this.lblDUI.Text = "xxxxxxx";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(72, 142);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 21);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "DUI:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(72, 103);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 21);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Nombre:";
+            // 
             // lblAddressData
             // 
             this.lblAddressData.BackColor = System.Drawing.Color.Transparent;
             this.lblAddressData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblAddressData.Location = new System.Drawing.Point(165, 351);
             this.lblAddressData.Name = "lblAddressData";
-            this.lblAddressData.Size = new System.Drawing.Size(218, 86);
+            this.lblAddressData.Size = new System.Drawing.Size(164, 86);
             this.lblAddressData.TabIndex = 4;
             this.lblAddressData.Text = "DIRECCION";
             // 
@@ -853,48 +897,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbLiver.TabIndex = 4;
             this.cbLiver.Text = "Renal/Hepática";
             this.cbLiver.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(72, 103);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 21);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "Nombre:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(72, 142);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(43, 21);
-            this.label13.TabIndex = 6;
-            this.label13.Text = "DUI:";
-            // 
-            // lblDUI
-            // 
-            this.lblDUI.BackColor = System.Drawing.Color.Transparent;
-            this.lblDUI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDUI.Location = new System.Drawing.Point(121, 142);
-            this.lblDUI.Name = "lblDUI";
-            this.lblDUI.Size = new System.Drawing.Size(262, 21);
-            this.lblDUI.TabIndex = 7;
-            this.lblDUI.Text = "xxxxxxx";
-            // 
-            // lblName
-            // 
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(155, 103);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(228, 21);
-            this.lblName.TabIndex = 8;
-            this.lblName.Text = "xxxxxxx";
             // 
             // frmCreateAppointment
             // 
