@@ -88,6 +88,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbObesity = new System.Windows.Forms.CheckBox();
             this.cbLiver = new System.Windows.Forms.CheckBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblDUI = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -472,6 +476,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.gc62Iz;
+            this.tabPage2.Controls.Add(this.lblName);
+            this.tabPage2.Controls.Add(this.lblDUI);
+            this.tabPage2.Controls.Add(this.label13);
+            this.tabPage2.Controls.Add(this.label12);
             this.tabPage2.Controls.Add(this.lblAddressData);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.btnExportPDF);
@@ -484,6 +492,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage2.Controls.Add(this.lblDate);
             this.tabPage2.Controls.Add(this.lblPriorityGroup);
             this.tabPage2.Controls.Add(this.lblAppointment);
+            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -495,10 +504,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // lblAddressData
             // 
             this.lblAddressData.BackColor = System.Drawing.Color.Transparent;
-            this.lblAddressData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblAddressData.Location = new System.Drawing.Point(155, 347);
+            this.lblAddressData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAddressData.Location = new System.Drawing.Point(165, 351);
             this.lblAddressData.Name = "lblAddressData";
-            this.lblAddressData.Size = new System.Drawing.Size(251, 86);
+            this.lblAddressData.Size = new System.Drawing.Size(218, 86);
             this.lblAddressData.TabIndex = 4;
             this.lblAddressData.Text = "DIRECCION";
             // 
@@ -506,10 +515,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(42, 343);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(72, 351);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(107, 30);
+            this.label11.Size = new System.Drawing.Size(87, 21);
             this.label11.TabIndex = 3;
             this.label11.Text = "Dirección:";
             // 
@@ -525,13 +534,14 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnExportPDF.TabIndex = 2;
             this.btnExportPDF.Text = "Exportar PDF";
             this.btnExportPDF.UseVisualStyleBackColor = false;
+            this.btnExportPDF.Click += new System.EventHandler(this.btnExportPDF_Click);
             // 
             // lblPriorityGroupData
             // 
             this.lblPriorityGroupData.BackColor = System.Drawing.Color.Transparent;
-            this.lblPriorityGroupData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPriorityGroupData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPriorityGroupData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPriorityGroupData.Location = new System.Drawing.Point(252, 115);
+            this.lblPriorityGroupData.Location = new System.Drawing.Point(237, 182);
             this.lblPriorityGroupData.Name = "lblPriorityGroupData";
             this.lblPriorityGroupData.Size = new System.Drawing.Size(146, 30);
             this.lblPriorityGroupData.TabIndex = 1;
@@ -540,30 +550,30 @@ namespace PROYECTO_BD_POO_FINAL.View
             // lblDateData
             // 
             this.lblDateData.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDateData.Location = new System.Drawing.Point(121, 174);
+            this.lblDateData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDateData.Location = new System.Drawing.Point(129, 225);
             this.lblDateData.Name = "lblDateData";
-            this.lblDateData.Size = new System.Drawing.Size(172, 30);
+            this.lblDateData.Size = new System.Drawing.Size(254, 30);
             this.lblDateData.TabIndex = 1;
             this.lblDateData.Text = "DD/MM/YY";
             // 
             // lblHourData
             // 
             this.lblHourData.BackColor = System.Drawing.Color.Transparent;
-            this.lblHourData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHourData.Location = new System.Drawing.Point(113, 232);
+            this.lblHourData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHourData.Location = new System.Drawing.Point(129, 268);
             this.lblHourData.Name = "lblHourData";
-            this.lblHourData.Size = new System.Drawing.Size(147, 30);
+            this.lblHourData.Size = new System.Drawing.Size(254, 30);
             this.lblHourData.TabIndex = 1;
             this.lblHourData.Text = "HH/MM";
             // 
             // lblPlaceData
             // 
             this.lblPlaceData.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlaceData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPlaceData.Location = new System.Drawing.Point(121, 291);
+            this.lblPlaceData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPlaceData.Location = new System.Drawing.Point(136, 310);
             this.lblPlaceData.Name = "lblPlaceData";
-            this.lblPlaceData.Size = new System.Drawing.Size(307, 30);
+            this.lblPlaceData.Size = new System.Drawing.Size(247, 30);
             this.lblPlaceData.TabIndex = 1;
             this.lblPlaceData.Text = "DIRECCION";
             // 
@@ -571,10 +581,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.lblPlace.AutoSize = true;
             this.lblPlace.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlace.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPlace.Location = new System.Drawing.Point(42, 287);
+            this.lblPlace.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPlace.Location = new System.Drawing.Point(72, 310);
             this.lblPlace.Name = "lblPlace";
-            this.lblPlace.Size = new System.Drawing.Size(73, 30);
+            this.lblPlace.Size = new System.Drawing.Size(58, 21);
             this.lblPlace.TabIndex = 1;
             this.lblPlace.Text = "Lugar:";
             // 
@@ -582,10 +592,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.lblHour.AutoSize = true;
             this.lblHour.BackColor = System.Drawing.Color.Transparent;
-            this.lblHour.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHour.Location = new System.Drawing.Point(42, 228);
+            this.lblHour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHour.Location = new System.Drawing.Point(72, 268);
             this.lblHour.Name = "lblHour";
-            this.lblHour.Size = new System.Drawing.Size(65, 30);
+            this.lblHour.Size = new System.Drawing.Size(51, 21);
             this.lblHour.TabIndex = 1;
             this.lblHour.Text = "Hora:";
             // 
@@ -593,10 +603,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDate.Location = new System.Drawing.Point(42, 170);
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDate.Location = new System.Drawing.Point(72, 225);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(73, 30);
+            this.lblDate.Size = new System.Drawing.Size(58, 21);
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "Fecha:";
             // 
@@ -604,10 +614,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.lblPriorityGroup.AutoSize = true;
             this.lblPriorityGroup.BackColor = System.Drawing.Color.Transparent;
-            this.lblPriorityGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPriorityGroup.Location = new System.Drawing.Point(42, 111);
+            this.lblPriorityGroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPriorityGroup.Location = new System.Drawing.Point(72, 182);
             this.lblPriorityGroup.Name = "lblPriorityGroup";
-            this.lblPriorityGroup.Size = new System.Drawing.Size(204, 30);
+            this.lblPriorityGroup.Size = new System.Drawing.Size(159, 21);
             this.lblPriorityGroup.TabIndex = 1;
             this.lblPriorityGroup.Text = "Grupo de prioridad:";
             // 
@@ -616,7 +626,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblAppointment.AutoSize = true;
             this.lblAppointment.BackColor = System.Drawing.Color.Transparent;
             this.lblAppointment.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAppointment.Location = new System.Drawing.Point(131, 33);
+            this.lblAppointment.Location = new System.Drawing.Point(121, 18);
             this.lblAppointment.Name = "lblAppointment";
             this.lblAppointment.Size = new System.Drawing.Size(175, 32);
             this.lblAppointment.TabIndex = 0;
@@ -844,6 +854,48 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbLiver.Text = "Renal/Hepática";
             this.cbLiver.UseVisualStyleBackColor = true;
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(72, 103);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(77, 21);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "Nombre:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(72, 142);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(43, 21);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "DUI:";
+            // 
+            // lblDUI
+            // 
+            this.lblDUI.BackColor = System.Drawing.Color.Transparent;
+            this.lblDUI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDUI.Location = new System.Drawing.Point(121, 142);
+            this.lblDUI.Name = "lblDUI";
+            this.lblDUI.Size = new System.Drawing.Size(262, 21);
+            this.lblDUI.TabIndex = 7;
+            this.lblDUI.Text = "xxxxxxx";
+            // 
+            // lblName
+            // 
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblName.Location = new System.Drawing.Point(155, 103);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(228, 21);
+            this.lblName.TabIndex = 8;
+            this.lblName.Text = "xxxxxxx";
+            // 
             // frmCreateAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -939,5 +991,9 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.Button btnExportPDF;
         private System.Windows.Forms.Label lblAddressData;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblDUI;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }

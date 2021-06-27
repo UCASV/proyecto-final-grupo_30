@@ -16,7 +16,6 @@ namespace PROYECTO_BD_POO_FINAL.Controller
         public static void Save(string numDosis, string name, string dui, string place, string date,
             string time, string address)
         {
-            // Must have write permissions to the path folder
             PdfWriter writer = new PdfWriter($"..\\..\\..\\PDFs\\{name}{numDosis}.pdf");
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
@@ -36,6 +35,7 @@ namespace PROYECTO_BD_POO_FINAL.Controller
             LineSeparator ls = new LineSeparator(new SolidLine());
             document.Add(ls);
 
+            //defining display data
             var pName = new Paragraph($"Nombre: {name}");
             var pDui = new Paragraph($"DUI: {dui}");
             var pPlace = new Paragraph($"Lugar de Vacunación: {place}");
