@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace PROYECTO_BD_POO_FINAL.View
 {
-    public partial class frmDateFollowUpcs : Form
+    public partial class frmDateFollowUp : Form
     {
-        public frmDateFollowUpcs()
+        public frmDateFollowUp()
         {
             InitializeComponent();
+        }
+
+        private void frmDateFollowUpcs_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
