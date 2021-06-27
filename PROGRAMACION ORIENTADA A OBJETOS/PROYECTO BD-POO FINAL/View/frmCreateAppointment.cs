@@ -41,10 +41,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void btnEnterData_Click(object sender, EventArgs e)
         {
-            bool verify = txtDUI != null &&
-                          txtFullName != null &&
-                          txtAddress != null &&
-                          txtCellphoneNumber != null;
+            bool verify = txtDUI.Text != null &&
+                          txtFullName.Text != null &&
+                          txtAddress.Text != null &&
+                          txtCellphoneNumber.Text != null;
             if (verify)
             {
                 string dui = txtDUI.Text;
@@ -110,6 +110,11 @@ namespace PROYECTO_BD_POO_FINAL.View
                         RegisterDisease.Add(citizenList[0].IdCitizen, i);
                 }
                 tabControl1.SelectedIndex = 1;
+            }
+            else
+            {
+                MessageBox.Show("Los campos requeridos no han sido llenados", "Vacunación Covid",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
