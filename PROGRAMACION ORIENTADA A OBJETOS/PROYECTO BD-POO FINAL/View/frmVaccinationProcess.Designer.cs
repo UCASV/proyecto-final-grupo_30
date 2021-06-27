@@ -40,6 +40,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.dataGridAppointments = new System.Windows.Forms.DataGridView();
             this.txtDUI = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnAddWaitingInfo = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.lblDUI = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblDate = new System.Windows.Forms.Label();
             this.lblPriorityGroup = new System.Windows.Forms.Label();
             this.lblWaitingProcess = new System.Windows.Forms.Label();
-            this.btnAddWaitingInfo = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).BeginInit();
@@ -84,7 +84,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage1.Controls.Add(this.txtDUI);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage1.Size = new System.Drawing.Size(888, 441);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tabPage1";
@@ -199,11 +199,24 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage2.Controls.Add(this.lblWaitingProcess);
             this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPage2.Size = new System.Drawing.Size(888, 441);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnAddWaitingInfo
+            // 
+            this.btnAddWaitingInfo.BackColor = System.Drawing.Color.Black;
+            this.btnAddWaitingInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddWaitingInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddWaitingInfo.ForeColor = System.Drawing.Color.White;
+            this.btnAddWaitingInfo.Location = new System.Drawing.Point(288, 336);
+            this.btnAddWaitingInfo.Name = "btnAddWaitingInfo";
+            this.btnAddWaitingInfo.Size = new System.Drawing.Size(311, 49);
+            this.btnAddWaitingInfo.TabIndex = 20;
+            this.btnAddWaitingInfo.Text = "Agregar a lista de espera";
+            this.btnAddWaitingInfo.UseVisualStyleBackColor = false;
             // 
             // lblName
             // 
@@ -322,19 +335,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblWaitingProcess.TabIndex = 9;
             this.lblWaitingProcess.Text = "Lista de espera";
             // 
-            // btnAddWaitingInfo
-            // 
-            this.btnAddWaitingInfo.BackColor = System.Drawing.Color.Black;
-            this.btnAddWaitingInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddWaitingInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddWaitingInfo.ForeColor = System.Drawing.Color.White;
-            this.btnAddWaitingInfo.Location = new System.Drawing.Point(288, 336);
-            this.btnAddWaitingInfo.Name = "btnAddWaitingInfo";
-            this.btnAddWaitingInfo.Size = new System.Drawing.Size(311, 49);
-            this.btnAddWaitingInfo.TabIndex = 20;
-            this.btnAddWaitingInfo.Text = "Agregar a lista de espera";
-            this.btnAddWaitingInfo.UseVisualStyleBackColor = false;
-            // 
             // frmVaccinationProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -345,7 +345,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.Name = "frmVaccinationProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceso de Vacunación - Vacunación Covid";
-            this.Load += new System.EventHandler(this.frmVaccinationProcess_Load);
             this.Shown += new System.EventHandler(this.frmVaccinationProcess_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
