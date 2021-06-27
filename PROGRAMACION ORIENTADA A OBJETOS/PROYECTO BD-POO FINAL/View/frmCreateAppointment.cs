@@ -68,34 +68,13 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(c => c.Dui == dui)
                     .ToList();
 
-                if (cbLungs.Checked)
-                {
-                    RegisterDisease.Add(citizenList[0].IdCitizen, 1);
-                }
+                CheckBox[] checkBoxes = new CheckBox[]{ cbLungs, cbHeart, cbDiabetes, cbObesity, cbSID, cbLiver };
 
-                if (cbHeart.Checked)
+                for(int i = 1; i <= checkBoxes.Length; i++)
                 {
-                    RegisterDisease.Add(citizenList[0].IdCitizen, 2);
-                }
+                    if(checkBoxes[i-1].Checked)
+                        RegisterDisease.Add(citizenList[0].IdCitizen, i);
 
-                if (cbDiabetes.Checked)
-                {
-                    RegisterDisease.Add(citizenList[0].IdCitizen, 3);
-                }
-
-                if (cbObesity.Checked)
-                {
-                    RegisterDisease.Add(citizenList[0].IdCitizen, 4);
-                }
-
-                if (cbSID.Checked)
-                {
-                    RegisterDisease.Add(citizenList[0].IdCitizen, 5);
-                }
-
-                if (cbLiver.Checked)
-                {
-                    RegisterDisease.Add(citizenList[0].IdCitizen, 6);
                 }
             }
         }
