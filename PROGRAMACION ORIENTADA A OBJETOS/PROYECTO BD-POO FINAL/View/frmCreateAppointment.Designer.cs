@@ -60,6 +60,18 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.txtDUI = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblAddressData = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnExportPDF = new System.Windows.Forms.Button();
+            this.lblPriorityGroupData = new System.Windows.Forms.Label();
+            this.lblDateData = new System.Windows.Forms.Label();
+            this.lblHourData = new System.Windows.Forms.Label();
+            this.lblPlaceData = new System.Windows.Forms.Label();
+            this.lblPlace = new System.Windows.Forms.Label();
+            this.lblHour = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
+            this.lblPriorityGroup = new System.Windows.Forms.Label();
+            this.lblAppointment = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.textBox11 = new System.Windows.Forms.TextBox();
@@ -76,16 +88,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.cbObesity = new System.Windows.Forms.CheckBox();
             this.cbLiver = new System.Windows.Forms.CheckBox();
-            this.lblAppointment = new System.Windows.Forms.Label();
-            this.lblPriorityGroup = new System.Windows.Forms.Label();
-            this.lblPriorityGroupData = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
-            this.lblDateData = new System.Windows.Forms.Label();
-            this.lblHour = new System.Windows.Forms.Label();
-            this.lblHourData = new System.Windows.Forms.Label();
-            this.lblPlace = new System.Windows.Forms.Label();
-            this.lblPlaceData = new System.Windows.Forms.Label();
-            this.btnExportPDF = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -470,6 +472,8 @@ namespace PROYECTO_BD_POO_FINAL.View
             // tabPage2
             // 
             this.tabPage2.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.gc62Iz;
+            this.tabPage2.Controls.Add(this.lblAddressData);
+            this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.btnExportPDF);
             this.tabPage2.Controls.Add(this.lblPriorityGroupData);
             this.tabPage2.Controls.Add(this.lblDateData);
@@ -487,6 +491,136 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // lblAddressData
+            // 
+            this.lblAddressData.BackColor = System.Drawing.Color.Transparent;
+            this.lblAddressData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAddressData.Location = new System.Drawing.Point(155, 347);
+            this.lblAddressData.Name = "lblAddressData";
+            this.lblAddressData.Size = new System.Drawing.Size(251, 86);
+            this.lblAddressData.TabIndex = 4;
+            this.lblAddressData.Text = "DIRECCION";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(42, 343);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(107, 30);
+            this.label11.TabIndex = 3;
+            this.label11.Text = "Dirección:";
+            // 
+            // btnExportPDF
+            // 
+            this.btnExportPDF.BackColor = System.Drawing.Color.Black;
+            this.btnExportPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportPDF.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExportPDF.ForeColor = System.Drawing.Color.White;
+            this.btnExportPDF.Location = new System.Drawing.Point(72, 462);
+            this.btnExportPDF.Name = "btnExportPDF";
+            this.btnExportPDF.Size = new System.Drawing.Size(311, 43);
+            this.btnExportPDF.TabIndex = 2;
+            this.btnExportPDF.Text = "Exportar PDF";
+            this.btnExportPDF.UseVisualStyleBackColor = false;
+            // 
+            // lblPriorityGroupData
+            // 
+            this.lblPriorityGroupData.BackColor = System.Drawing.Color.Transparent;
+            this.lblPriorityGroupData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPriorityGroupData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPriorityGroupData.Location = new System.Drawing.Point(252, 115);
+            this.lblPriorityGroupData.Name = "lblPriorityGroupData";
+            this.lblPriorityGroupData.Size = new System.Drawing.Size(146, 30);
+            this.lblPriorityGroupData.TabIndex = 1;
+            this.lblPriorityGroupData.Text = "xxxxxxxx";
+            // 
+            // lblDateData
+            // 
+            this.lblDateData.BackColor = System.Drawing.Color.Transparent;
+            this.lblDateData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblDateData.Location = new System.Drawing.Point(121, 174);
+            this.lblDateData.Name = "lblDateData";
+            this.lblDateData.Size = new System.Drawing.Size(172, 30);
+            this.lblDateData.TabIndex = 1;
+            this.lblDateData.Text = "DD/MM/YY";
+            // 
+            // lblHourData
+            // 
+            this.lblHourData.BackColor = System.Drawing.Color.Transparent;
+            this.lblHourData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHourData.Location = new System.Drawing.Point(113, 232);
+            this.lblHourData.Name = "lblHourData";
+            this.lblHourData.Size = new System.Drawing.Size(147, 30);
+            this.lblHourData.TabIndex = 1;
+            this.lblHourData.Text = "HH/MM";
+            // 
+            // lblPlaceData
+            // 
+            this.lblPlaceData.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlaceData.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPlaceData.Location = new System.Drawing.Point(121, 291);
+            this.lblPlaceData.Name = "lblPlaceData";
+            this.lblPlaceData.Size = new System.Drawing.Size(307, 30);
+            this.lblPlaceData.TabIndex = 1;
+            this.lblPlaceData.Text = "DIRECCION";
+            // 
+            // lblPlace
+            // 
+            this.lblPlace.AutoSize = true;
+            this.lblPlace.BackColor = System.Drawing.Color.Transparent;
+            this.lblPlace.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPlace.Location = new System.Drawing.Point(42, 287);
+            this.lblPlace.Name = "lblPlace";
+            this.lblPlace.Size = new System.Drawing.Size(73, 30);
+            this.lblPlace.TabIndex = 1;
+            this.lblPlace.Text = "Lugar:";
+            // 
+            // lblHour
+            // 
+            this.lblHour.AutoSize = true;
+            this.lblHour.BackColor = System.Drawing.Color.Transparent;
+            this.lblHour.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHour.Location = new System.Drawing.Point(42, 228);
+            this.lblHour.Name = "lblHour";
+            this.lblHour.Size = new System.Drawing.Size(65, 30);
+            this.lblHour.TabIndex = 1;
+            this.lblHour.Text = "Hora:";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.BackColor = System.Drawing.Color.Transparent;
+            this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblDate.Location = new System.Drawing.Point(42, 170);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(73, 30);
+            this.lblDate.TabIndex = 1;
+            this.lblDate.Text = "Fecha:";
+            // 
+            // lblPriorityGroup
+            // 
+            this.lblPriorityGroup.AutoSize = true;
+            this.lblPriorityGroup.BackColor = System.Drawing.Color.Transparent;
+            this.lblPriorityGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblPriorityGroup.Location = new System.Drawing.Point(42, 111);
+            this.lblPriorityGroup.Name = "lblPriorityGroup";
+            this.lblPriorityGroup.Size = new System.Drawing.Size(204, 30);
+            this.lblPriorityGroup.TabIndex = 1;
+            this.lblPriorityGroup.Text = "Grupo de prioridad:";
+            // 
+            // lblAppointment
+            // 
+            this.lblAppointment.AutoSize = true;
+            this.lblAppointment.BackColor = System.Drawing.Color.Transparent;
+            this.lblAppointment.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblAppointment.Location = new System.Drawing.Point(131, 33);
+            this.lblAppointment.Name = "lblAppointment";
+            this.lblAppointment.Size = new System.Drawing.Size(175, 32);
+            this.lblAppointment.TabIndex = 0;
+            this.lblAppointment.Text = "Cita Agendada";
             // 
             // textBox13
             // 
@@ -710,119 +844,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.cbLiver.Text = "Renal/Hepática";
             this.cbLiver.UseVisualStyleBackColor = true;
             // 
-            // lblAppointment
-            // 
-            this.lblAppointment.AutoSize = true;
-            this.lblAppointment.BackColor = System.Drawing.Color.Transparent;
-            this.lblAppointment.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblAppointment.Location = new System.Drawing.Point(128, 70);
-            this.lblAppointment.Name = "lblAppointment";
-            this.lblAppointment.Size = new System.Drawing.Size(175, 32);
-            this.lblAppointment.TabIndex = 0;
-            this.lblAppointment.Text = "Cita Agendada";
-            // 
-            // lblPriorityGroup
-            // 
-            this.lblPriorityGroup.AutoSize = true;
-            this.lblPriorityGroup.BackColor = System.Drawing.Color.Transparent;
-            this.lblPriorityGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPriorityGroup.Location = new System.Drawing.Point(65, 141);
-            this.lblPriorityGroup.Name = "lblPriorityGroup";
-            this.lblPriorityGroup.Size = new System.Drawing.Size(204, 30);
-            this.lblPriorityGroup.TabIndex = 1;
-            this.lblPriorityGroup.Text = "Grupo de prioridad:";
-            // 
-            // lblPriorityGroupData
-            // 
-            this.lblPriorityGroupData.AutoSize = true;
-            this.lblPriorityGroupData.BackColor = System.Drawing.Color.Transparent;
-            this.lblPriorityGroupData.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPriorityGroupData.Location = new System.Drawing.Point(275, 141);
-            this.lblPriorityGroupData.Name = "lblPriorityGroupData";
-            this.lblPriorityGroupData.Size = new System.Drawing.Size(101, 30);
-            this.lblPriorityGroupData.TabIndex = 1;
-            this.lblPriorityGroupData.Text = "xxxxxxxx";
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.BackColor = System.Drawing.Color.Transparent;
-            this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDate.Location = new System.Drawing.Point(65, 200);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(73, 30);
-            this.lblDate.TabIndex = 1;
-            this.lblDate.Text = "Fecha:";
-            this.lblDate.Click += new System.EventHandler(this.lblDate_Click);
-            // 
-            // lblDateData
-            // 
-            this.lblDateData.AutoSize = true;
-            this.lblDateData.BackColor = System.Drawing.Color.Transparent;
-            this.lblDateData.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDateData.Location = new System.Drawing.Point(148, 200);
-            this.lblDateData.Name = "lblDateData";
-            this.lblDateData.Size = new System.Drawing.Size(123, 30);
-            this.lblDateData.TabIndex = 1;
-            this.lblDateData.Text = "DD/MM/YY";
-            // 
-            // lblHour
-            // 
-            this.lblHour.AutoSize = true;
-            this.lblHour.BackColor = System.Drawing.Color.Transparent;
-            this.lblHour.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHour.Location = new System.Drawing.Point(65, 256);
-            this.lblHour.Name = "lblHour";
-            this.lblHour.Size = new System.Drawing.Size(67, 30);
-            this.lblHour.TabIndex = 1;
-            this.lblHour.Text = "Hour:";
-            // 
-            // lblHourData
-            // 
-            this.lblHourData.AutoSize = true;
-            this.lblHourData.BackColor = System.Drawing.Color.Transparent;
-            this.lblHourData.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHourData.Location = new System.Drawing.Point(148, 256);
-            this.lblHourData.Name = "lblHourData";
-            this.lblHourData.Size = new System.Drawing.Size(90, 30);
-            this.lblHourData.TabIndex = 1;
-            this.lblHourData.Text = "HH/MM";
-            // 
-            // lblPlace
-            // 
-            this.lblPlace.AutoSize = true;
-            this.lblPlace.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlace.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPlace.Location = new System.Drawing.Point(65, 317);
-            this.lblPlace.Name = "lblPlace";
-            this.lblPlace.Size = new System.Drawing.Size(73, 30);
-            this.lblPlace.TabIndex = 1;
-            this.lblPlace.Text = "Lugar:";
-            // 
-            // lblPlaceData
-            // 
-            this.lblPlaceData.AutoSize = true;
-            this.lblPlaceData.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlaceData.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPlaceData.Location = new System.Drawing.Point(148, 317);
-            this.lblPlaceData.Name = "lblPlaceData";
-            this.lblPlaceData.Size = new System.Drawing.Size(121, 30);
-            this.lblPlaceData.TabIndex = 1;
-            this.lblPlaceData.Text = "DIRECCION";
-            // 
-            // btnExportPDF
-            // 
-            this.btnExportPDF.BackColor = System.Drawing.Color.Black;
-            this.btnExportPDF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportPDF.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExportPDF.ForeColor = System.Drawing.Color.White;
-            this.btnExportPDF.Location = new System.Drawing.Point(65, 379);
-            this.btnExportPDF.Name = "btnExportPDF";
-            this.btnExportPDF.Size = new System.Drawing.Size(311, 43);
-            this.btnExportPDF.TabIndex = 2;
-            this.btnExportPDF.Text = "Exportar PDF";
-            this.btnExportPDF.UseVisualStyleBackColor = false;
-            // 
             // frmCreateAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -916,5 +937,7 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.Label lblPriorityGroup;
         private System.Windows.Forms.Label lblAppointment;
         private System.Windows.Forms.Button btnExportPDF;
+        private System.Windows.Forms.Label lblAddressData;
+        private System.Windows.Forms.Label label11;
     }
 }

@@ -110,17 +110,22 @@ namespace PROYECTO_BD_POO_FINAL.View
                         RegisterDisease.Add(citizenList[0].IdCitizen, i);
                 }
                 tabControl1.SelectedIndex = 1;
+
+                var resultVaccionation = vaccinationPlaceList
+                    .Where(v => v.IdVaccinationPlace == randomVaccinationPlace)
+                    .ToList();
+
+                lblPriorityGroupData.Text = refInstitution.Institution1;
+                lblDateData.Text = dateTime.ToShortDateString();
+                lblHourData.Text = dateTime.ToString("HH:mm:ss tt");
+                lblPlaceData.Text = resultVaccionation[0].VaccinationPlace1;
+                lblAddressData.Text = resultVaccionation[0].VaccinationPlaceAddress;
             }
             else
             {
                 MessageBox.Show("Los campos requeridos no han sido llenados", "Vacunación Covid",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-        }
-
-        private void lblDate_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
