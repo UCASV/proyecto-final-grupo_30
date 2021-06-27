@@ -25,6 +25,9 @@ namespace PROYECTO_BD_POO_FINAL.View
         {
             frmLoading loadingScreen = new frmLoading(3000, "Abriendo seguimiento de citas");
             loadingScreen.ShowDialog();
+
+            frmVaccinationProcess window = new frmVaccinationProcess();
+            window.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
