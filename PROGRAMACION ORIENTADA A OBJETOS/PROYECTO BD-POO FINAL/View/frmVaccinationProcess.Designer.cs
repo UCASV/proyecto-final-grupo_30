@@ -105,11 +105,14 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             // dataGridAppointments
             // 
+            this.dataGridAppointments.AllowUserToAddRows = false;
+            this.dataGridAppointments.AllowUserToDeleteRows = false;
             this.dataGridAppointments.BackgroundColor = System.Drawing.Color.White;
             this.dataGridAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAppointments.Location = new System.Drawing.Point(6, 109);
             this.dataGridAppointments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridAppointments.Name = "dataGridAppointments";
+            this.dataGridAppointments.ReadOnly = true;
             this.dataGridAppointments.RowHeadersWidth = 51;
             this.dataGridAppointments.RowTemplate.Height = 29;
             this.dataGridAppointments.Size = new System.Drawing.Size(756, 237);
