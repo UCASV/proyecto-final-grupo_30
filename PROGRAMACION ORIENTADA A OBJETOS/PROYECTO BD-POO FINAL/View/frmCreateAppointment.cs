@@ -102,5 +102,10 @@ namespace PROYECTO_BD_POO_FINAL.View
                 tabControl1.SelectedIndex = 1;
             }
         }
+
+        private void lblDate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
