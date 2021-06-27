@@ -105,6 +105,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             // dataGridAppointments
             // 
+            this.dataGridAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAppointments.BackgroundColor = System.Drawing.Color.White;
             this.dataGridAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAppointments.Location = new System.Drawing.Point(6, 109);

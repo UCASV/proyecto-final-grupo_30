@@ -16,10 +16,5 @@ namespace PROYECTO_BD_POO_FINAL.View
         {
             InitializeComponent();
         }
-
-        private void frmDateFollowUpcs_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
