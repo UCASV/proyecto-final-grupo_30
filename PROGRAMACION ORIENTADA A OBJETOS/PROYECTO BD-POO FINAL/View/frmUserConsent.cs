@@ -18,5 +18,17 @@ namespace PROYECTO_BD_POO_FINAL.View
             InitializeComponent();
             richTextBox1.Text = AgreementText;
         }
+
+        private void btnAccept_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
     }
 }
