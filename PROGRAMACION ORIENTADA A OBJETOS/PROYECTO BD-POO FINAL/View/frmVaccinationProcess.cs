@@ -59,6 +59,10 @@ namespace PROYECTO_BD_POO_FINAL.View
                 if(resultado == DialogResult.OK)
                 {
                     tabControl1.SelectTab(1);
+                    string time = DateTime.Now.ToString("h:mm:ss tt");
+                    string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
+                    lblDateData.Text = date;
+                    lblHourData.Text = time;
                 }
                 else
                 {
@@ -114,6 +118,14 @@ namespace PROYECTO_BD_POO_FINAL.View
                             };
 
                 dataGridAppointments.DataSource = query.ToList();
+
+                foreach (var user in query)
+                {
+                    Console.WriteLine("{0}\t{1}\t{2:d}\t{3}",
+                        lblName.Text = user.Nombre,
+                        lblDUI.Text = user.DUI,
+                        lblPriorityGroup.Text = "*********");
+                }
             }
         }
 
