@@ -69,7 +69,6 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(c => c.Dui == dui)
                     .ToList();
 
-<<<<<<< HEAD
                 // Generating a Vaccination Place for an Appointment
                 var vaccinationPlaceList = db.VaccinationPlaces
                     .ToList();
@@ -91,36 +90,12 @@ namespace PROYECTO_BD_POO_FINAL.View
                 dateTime = dateTime.AddDays(7);
                 dateTime = dateTime.Date + ts;
 
-                if (cbLungs.Checked)
-                {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 1);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-
-                    CitizenxChronicDisease acCitizenxChronicDisease = new CitizenxChronicDisease(cdDB.IdChronicDisease, dbCitizen.IdCitizen);
-
-                    db.Add(acCitizenxChronicDisease);
-                    db.SaveChanges();
-                }
-
-                if (cbHeart.Checked)
-                {
-                    ChronicDisease cdDB = db.Set<ChronicDisease>()
-                        .SingleOrDefault(c => c.IdChronicDisease == 2);
-
-                    Citizen dbCitizen = db.Set<Citizen>()
-                        .SingleOrDefault(c => c.IdCitizen == citizenList[0].IdCitizen);
-=======
                 CheckBox[] checkBoxes = new CheckBox[]{ cbLungs, cbHeart, cbDiabetes, cbObesity, cbSID, cbLiver };
->>>>>>> 91bd337898b5da7d744cc84d8f5c439b2f05cb48
 
                 for(int i = 1; i <= checkBoxes.Length; i++)
                 {
                     if(checkBoxes[i-1].Checked)
                         RegisterDisease.Add(citizenList[0].IdCitizen, i);
-
                 }
             }
         }
