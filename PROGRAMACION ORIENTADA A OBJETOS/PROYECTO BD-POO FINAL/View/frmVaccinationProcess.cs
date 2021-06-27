@@ -25,19 +25,24 @@ namespace PROYECTO_BD_POO_FINAL.View
 
             var query = from a in db.Appointments
                 join c in db.Citizens on a.IdCitizen equals c.IdCitizen
-                join v in db.VaccinationPlaces on a.IdVaccinationPlace equals v.IdVaccinationPlace
-                let DUI = c.Dui 
+                join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace 
+                from vac in db.Vaccinations.DefaultIfEmpty()
+                let DUI = c.Dui
                 let Nombre = c.CitizenName
-                let Dosis_1 = a.DateTimeAppointment1
-                let Dosis_2 = a.DateTimeAppointment2
-                let Lugar_Vacunacion = v.VaccinationPlace1
-                select new
+                let Cita_1 = a.DateTimeAppointment1
+                let Cita_2 = a.DateTimeAppointment2
+                let Lugar_Vacunacion = vp.VaccinationPlace1
+                let Dosis_1 = vac.DateTimeVaccine1
+                let Dosis_2 = vac.DateTimeVaccine2
+            select new
                 {
                     DUI,
                     Nombre,
+                    Cita_1,
+                    Cita_2,
+                    Lugar_Vacunacion,
                     Dosis_1,
-                    Dosis_2,
-                    Lugar_Vacunacion
+                    Dosis_2
                 };
 
             dataGridAppointments.DataSource = query.ToList();
@@ -58,6 +63,62 @@ namespace PROYECTO_BD_POO_FINAL.View
                     MessageBox.Show("El usuario tiene que dar su consentimiento para poder vacunarse", "Consentimiento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+        }
+
+        private void frmVaccinationProcess_Load(object sender, EventArgs e)
+        {
+            tabControl1.ItemSize = new Size(0, 1);
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            var db = new ProjectContext.PROJECTContext();
+
+            var citizenList = db.Citizens
+                .ToList();
+
+            var result = citizenList.Where(
+                c => c.Dui.Equals(txtDUI.Text)
+            ).ToList();
+
+            if (result.Count == 0)
+            {
+                MessageBox.Show("No ha sido encontrada una cita que coincida con su número de DUI", "Vacunación Covid",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                var query = from a in db.Appointments
+                            join c in db.Citizens.Where(a=> a.Dui == txtDUI.Text) on a.IdCitizen equals c.IdCitizen
+                            join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace
+                            from vac in db.Vaccinations.DefaultIfEmpty()
+                            let DUI = c.Dui
+                            let Nombre = c.CitizenName
+                            let Cita_1 = a.DateTimeAppointment1
+                            let Cita_2 = a.DateTimeAppointment2
+                            let Lugar_Vacunacion = vp.VaccinationPlace1
+                            let Dosis_1 = vac.DateTimeVaccine1
+                            let Dosis_2 = vac.DateTimeVaccine2
+                           
+                            select new
+                            {
+                                DUI,
+                                Nombre,
+                                Cita_1,
+                                Cita_2,
+                                Lugar_Vacunacion,
+                                Dosis_1,
+                                Dosis_2
+                            };
+
+                dataGridAppointments.DataSource = query.ToList();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            frmVaccinationProcess_Shown(sender, e);
+            txtDUI.Text = "";
         }
     }
 }
