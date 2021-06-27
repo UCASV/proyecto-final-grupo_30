@@ -115,7 +115,9 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(v => v.IdVaccinationPlace == randomVaccinationPlace)
                     .ToList();
 
-                lblPriorityGroupData.Text = refInstitution.Institution1;
+                lblName.Text = fullName;
+                lblDUI.Text = dui;
+                lblPriorityGroupData.Text = idb.Institution1;
                 lblDateData.Text = dateTime.ToShortDateString();
                 lblHourData.Text = dateTime.ToString("HH:mm:ss tt");
                 lblPlaceData.Text = resultVaccionation[0].VaccinationPlace1;
