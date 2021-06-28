@@ -197,6 +197,28 @@ namespace PROYECTO_BD_POO_FINAL.View
         private void frmVaccinationProcess_Load(object sender, EventArgs e)
         {
             tabControl1.ItemSize = new Size(0, 1);
+
+            var db = new ProjectContext.PROJECTContext();
+
+            var query = from a in db.Appointments
+                        join c in db.Citizens on a.IdCitizen equals c.IdCitizen
+                        join v in db.VaccinationPlaces on a.IdVaccinationPlace equals v.IdVaccinationPlace
+                        let DUI = c.Dui
+                        let Nombre = c.CitizenName
+                        let Dosis_1 = a.DateTimeAppointment1
+                        let Dosis_2 = a.DateTimeAppointment2
+                        let Lugar_Vacunacion = v.VaccinationPlace1
+                        select new
+                        {
+                            DUI,
+                            Nombre,
+                            Dosis_1,
+                            Dosis_2,
+                            Lugar_Vacunacion
+                        };
+
+            dataGridAppointments.DataSource = null;
+            dataGridAppointments.DataSource = query.ToList();
         }
     }
 }
