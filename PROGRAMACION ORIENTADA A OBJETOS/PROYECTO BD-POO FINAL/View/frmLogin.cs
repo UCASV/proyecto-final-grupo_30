@@ -35,7 +35,7 @@ namespace PROYECTO_BD_POO_FINAL
 
             if (result.Count == 0)
             {
-                MessageBox.Show("The manager doesn't exist or username and password don't match", "Vacunación Covid",
+                MessageBox.Show("El gestor no existe o la contraseña y el usuario no coinciden", "Bienvenido a Vacunación Covid",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtUser.Text = "";
                 txtPassword.Text = "";
