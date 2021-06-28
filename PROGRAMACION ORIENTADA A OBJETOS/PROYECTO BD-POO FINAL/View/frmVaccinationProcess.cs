@@ -150,14 +150,24 @@ namespace PROYECTO_BD_POO_FINAL.View
             var appointment = db.Set<Appointment>()
                 .SingleOrDefault(m => m.IdCitizen == user.IdCitizen);
 
-            DateTime datetime = DateTime.Now;
+            var isInWaitingRoom = db.Set<Vaccination>()
+                .SingleOrDefault(v => v.IdCitizen == appointment.IdCitizen);
 
-            Vaccination vaccination = new Vaccination(datetime, appointment.IdCitizen, appointment.IdVaccinationPlace);
+            if(isInWaitingRoom == null)
+            {
+                DateTime datetime = DateTime.Now;
 
-            db.Add(vaccination);
-            db.SaveChanges();
+                Vaccination vaccination = new Vaccination(datetime, appointment.IdCitizen, appointment.IdVaccinationPlace);
 
-            showWaitingList();
+                db.Add(vaccination);
+                db.SaveChanges();
+
+                showWaitingList();
+            } else
+            {
+                showWaitingList();
+            }
+            
         }
 
         private void showWaitingList()
