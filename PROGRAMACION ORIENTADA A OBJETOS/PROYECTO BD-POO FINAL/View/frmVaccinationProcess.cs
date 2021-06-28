@@ -16,6 +16,13 @@ namespace PROYECTO_BD_POO_FINAL.View
     public partial class frmVaccinationProcess : Form
     {
 
+        struct patientData
+        {
+            public string name;
+            public string dosis;
+            public string hora_espera;
+        };
+
         public frmVaccinationProcess()
         {
             InitializeComponent();
@@ -58,7 +65,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 if(resultado == DialogResult.OK)
                 {
-                    tabControl1.SelectTab(1);
+                    tabControl1.SelectTab("tabPage2");
                     addToWaitingList();
                 }
                 else
@@ -179,6 +186,46 @@ namespace PROYECTO_BD_POO_FINAL.View
 
             db.Add(vaccination);
             db.SaveChanges();
+
+            tabControl1.SelectTab("tabPage3");
+            showSelectPatient();
+        }
+
+        private void showSelectPatient()
+        {
+            List<patientData> list = new List<patientData>();
+            patientData data;
+            var db = new ProjectContext.PROJECTContext();
+            var patientsList = db.Vaccinations
+                .ToList();
+
+            foreach(var patient in patientsList)
+            {
+                if(patient.DateTimeWait2 == null)
+                {
+                    var search = db.Set<Citizen>()
+                        .SingleOrDefault(m => m.IdCitizen == patient.IdCitizen);
+
+                    data.dosis = "1";
+                    data.hora_espera = patient.DateTimeWait1.ToString();
+                    data.name = search.CitizenName;
+
+                    list.Add(data);
+                } else
+                {
+                    var search = db.Set<Citizen>()
+                        .SingleOrDefault(m => m.IdCitizen == patient.IdCitizen);
+
+                    data.dosis = "2";
+                    data.hora_espera = patient.DateTimeWait1.ToString();
+                    data.name = search.CitizenName;
+
+                    list.Add(data);
+                }
+            }
+
+            dataGridPersonsReadyForVaccine.DataSource = null;
+            dataGridPersonsReadyForVaccine.DataSource = list;
         }
 
         private void frmVaccinationProcess_Load(object sender, EventArgs e)
