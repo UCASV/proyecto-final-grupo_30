@@ -122,8 +122,8 @@ ALTER TABLE VACCINATIONxSIDE_EFFECT ADD FOREIGN KEY (id_vaccination) REFERENCES 
 -- Seeding Data in Chronic Disease
 INSERT INTO CHRONIC_DISEASE VALUES ('Problemas Pulmonares', 'Tales como EPOC, Cancer de Pulmon, Fibrosis Quistica, Fibrosis Pulmonar, Asma');
 INSERT INTO CHRONIC_DISEASE VALUES ('Enfermedad Cardiaca', 'Tales como Miocardiopatia, Hipertension Pulmonar, Enfermedad Cardiaca Congenita, Insuficiencia Cardiac, Enfermedad de las Arterias Coronoarias');
-INSERT INTO CHRONIC_DISEASE VALUES ('Diabetes', 'Enfermedad en la que los niveles de glucosa (azúcar) de la sangre están muy altos');
-INSERT INTO CHRONIC_DISEASE VALUES ('Obesidad', 'Estado patológico que se caracteriza por un exceso o una acumulación excesiva y general de grasa en el cuerpo');
+INSERT INTO CHRONIC_DISEASE VALUES ('Diabetes', 'Enfermedad en la que los niveles de glucosa (azï¿½car) de la sangre estï¿½n muy altos');
+INSERT INTO CHRONIC_DISEASE VALUES ('Obesidad', 'Estado patolï¿½gico que se caracteriza por un exceso o una acumulaciï¿½n excesiva y general de grasa en el cuerpo');
 INSERT INTO CHRONIC_DISEASE VALUES ('Sistema Inmunitario Debilitado', 'Trasplante de Organos, Tratamientos Oncologicos, Transplante de Medula Osea, VIH/SIDA');
 INSERT INTO CHRONIC_DISEASE VALUES ('Enfermedad Renal o Hepatica', 'Insuficiencia Hepatica Aguda, Hepatitis Alcoholica, Cirrosis, Liquido Abdominal Infectado');
 
@@ -133,7 +133,7 @@ INSERT INTO SIDE_EFFECT VALUES ('Fatiga', 'Falta de energia y motivacion');
 INSERT INTO SIDE_EFFECT VALUES ('Dolor de Cabeza', 'Dolor o molestia en la cabeza, el cuero cabelludo o el cuello');
 INSERT INTO SIDE_EFFECT VALUES ('Fiebre', 'Temperatura del cuerpo mas elevada de lo normal');
 INSERT INTO SIDE_EFFECT VALUES ('Mialgia', 'Tambien llamados dolores musculares, consisten en dolores o molestias que puede afecta a uno o varios musculos del cuerpo');
-INSERT INTO SIDE_EFFECT VALUES ('Artralgia', 'Presencia de dolor en una zona articular, suele ir acompañado de inflamacion, rigidez articular, enrojecimiento de la piel');
+INSERT INTO SIDE_EFFECT VALUES ('Artralgia', 'Presencia de dolor en una zona articular, suele ir acompaï¿½ado de inflamacion, rigidez articular, enrojecimiento de la piel');
 INSERT INTO SIDE_EFFECT VALUES ('Anafilaxia', 'Reaccion alergica grave que puede poner en riesgo la vida');
 
 -- Seeding Data in Employee Type
@@ -152,18 +152,18 @@ INSERT INTO INSTITUTION VALUES ('Gobierno');
 INSERT INTO INSTITUTION VALUES ('Periodismo');
 
 -- Seeding Data in Booth
-INSERT INTO BOOTH VALUES ('(Galerias) Paseo Gral. Escalón 3700, San Salvador', 22505300, 'galerias@gmail.com');
+INSERT INTO BOOTH VALUES ('(Galerias) Paseo Gral. Escalï¿½n 3700, San Salvador', 22505300, 'galerias@gmail.com');
 INSERT INTO BOOTH VALUES ('(Santa Rosa) Calle Real, Santa Tecla', 22293757, 'santarosa@gmail.com');
 INSERT INTO BOOTH VALUES ('(UCA) Bulevar Los Proceres', 22106600, 'uca@gmail.com');
 INSERT INTO BOOTH VALUES ('(Metrocentro) Calle Los Sisimiles, San Salvador', 25045555, 'metrocentro@gmail.com');
-INSERT INTO BOOTH VALUES ('(Las Cascadas) Avenida Jerusalén y Carretera Panamericana', 25015400, 'cascadas@gmail.com');
+INSERT INTO BOOTH VALUES ('(Las Cascadas) Avenida Jerusalï¿½n y Carretera Panamericana', 25015400, 'cascadas@gmail.com');
 
 -- Seeding Data in Vaccination Place
 INSERT INTO VACCINATION_PLACE VALUES ('UCA', 'Bulevar Los Proceres');
 INSERT INTO VACCINATION_PLACE VALUES ('Megacentro', 'Salon Centro Americano, Avenida De La Revolucion 222, San Salvador');
-INSERT INTO VACCINATION_PLACE VALUES ('La Gran Via', 'Carretera Panamericana y Calle Chiltiupan Antiguo Cuscatlán, La Libertad Centroamérica, Cd Merliot');
-INSERT INTO VACCINATION_PLACE VALUES ('Policlinica MQ Santa Ana', '5ª Av Norte, entre 4ª y, 6a Calle Oriente # 9, Santa Ana');
-INSERT INTO VACCINATION_PLACE VALUES ('Hospital Nacional de La Union', 'Carretera Panamericana Km 180, Cantón Huisquil, Conchagua');
+INSERT INTO VACCINATION_PLACE VALUES ('La Gran Via', 'Carretera Panamericana y Calle Chiltiupan Antiguo Cuscatlï¿½n, La Libertad Centroamï¿½rica, Cd Merliot');
+INSERT INTO VACCINATION_PLACE VALUES ('Policlinica MQ Santa Ana', '5ï¿½ Av Norte, entre 4ï¿½ y, 6a Calle Oriente # 9, Santa Ana');
+INSERT INTO VACCINATION_PLACE VALUES ('Hospital Nacional de La Union', 'Carretera Panamericana Km 180, Cantï¿½n Huisquil, Conchagua');
 
 INSERT INTO EMPLOYEE VALUES ('Bruce Wayne', 'imnotbatman@salud.gob.sv', 'Gotham City', 'Batman', 'Joker', 1, 1);
 INSERT INTO EMPLOYEE (employee_name, email, employee_address, id_type) VALUES ('Clark Kent', 'imnotsuperman@salud.gob.sv', 'Metropolis', 2);

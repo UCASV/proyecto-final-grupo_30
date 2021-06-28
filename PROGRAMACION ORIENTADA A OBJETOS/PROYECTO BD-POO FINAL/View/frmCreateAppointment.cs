@@ -30,6 +30,7 @@ namespace PROYECTO_BD_POO_FINAL.View
         private DateTime dateTime;
         private string displayFullName;
         private string displayGroup;
+        private Citizen aCitizen;
 
         private Management aManagement { get; set; }
         public frmCreateAppointment(Management aManagement)
@@ -85,11 +86,13 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(c => c.Dui == dui)
                     .ToList();
 
+                aCitizen = citizenList[0];
+
                 var groupList = db.Institutions
-                    .Where(i => i.IdInstitution.Equals(citizenList[0].IdInstitution))
+                    .Where(i => i.IdInstitution.Equals(aCitizen.IdInstitution))
                     .ToList();
 
-                displayFullName = citizenList[0].CitizenName;
+                displayFullName = aCitizen.CitizenName;
 
                 if (registerCitizen)
                 {
@@ -119,7 +122,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                     dateTime = dateTime.Date + ts;
 
                     var anAppointment = new Appointment(dateTime, aManagement.IdEmployee, randomVaccinationPlace,
-                        citizenList[0].IdCitizen);
+                        aCitizen.IdCitizen);
 
                     db.Add(anAppointment);
                     db.SaveChanges();
@@ -129,7 +132,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                     for (int i = 1; i <= checkBoxes.Length; i++)
                     {
                         if (checkBoxes[i - 1].Checked)
-                            RegisterDisease.Add(citizenList[0].IdCitizen, i);
+                            RegisterDisease.Add(aCitizen.IdCitizen, i);
                     }
 
                     var resultVaccionation = vaccinationPlaceList
@@ -149,7 +152,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     var appointmentList = db.Appointments
-                        .Where(c => c.IdCitizen == citizenList[0].IdCitizen)
+                        .Where(c => c.IdCitizen == aCitizen.IdCitizen)
                         .ToList();
 
                     var vaccinationPlaces = db.VaccinationPlaces
@@ -170,15 +173,15 @@ namespace PROYECTO_BD_POO_FINAL.View
                     }
 
                     displayGroup = groupList[0].Institution1;
-                    displayFullName = citizenList[0].CitizenName;
+                    displayFullName = aCitizen.CitizenName;
                     displayPlace = vaccinationPlaces[0].VaccinationPlace1;
                     displayAddress = vaccinationPlaces[0].VaccinationPlaceAddress;
 
                 }
 
                 lblPriorityGroupData.Text = displayGroup;
-                lblName.Text = displayFullName;
-                lblDUI.Text = dui;
+                lblName.Text = aCitizen.CitizenName;
+                lblDUI.Text = aCitizen.Dui;
                 lblDateData.Text = displayDate;
                 lblHourData.Text = displayTime;
                 lblPlaceData.Text = displayPlace;
