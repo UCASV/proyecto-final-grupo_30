@@ -35,14 +35,14 @@ namespace PROYECTO_BD_POO_FINAL
 
             if (result.Count == 0)
             {
-                MessageBox.Show("El gestor no existe o la contraseña y el usuario no coinciden", "Bienvenido a Vacunación Covid",
+                MessageBox.Show("El gestor no existe o la contraseña y el usuario no coinciden", "Vacunación Covid",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtUser.Text = "";
                 txtPassword.Text = "";
             }
             else
             {
-                MessageBox.Show("Welcome", "Vacunación Covid",
+                MessageBox.Show("Bienvenido", "Vacunación Covid",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 int idEmployee = result[0].IdEmployee;
