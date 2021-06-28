@@ -23,32 +23,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void frmVaccinationProcess_Shown(object sender, EventArgs e)
         {
-            var db = new ProjectContext.PROJECTContext();
-
-            var query = from a in db.Appointments
-                join c in db.Citizens on a.IdCitizen equals c.IdCitizen
-                join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace 
-                from vac in db.Vaccinations.DefaultIfEmpty()
-                let DUI = c.Dui
-                let Nombre = c.CitizenName
-                let Cita_1 = a.DateTimeAppointment1
-                let Cita_2 = a.DateTimeAppointment2
-                let Lugar_Vacunacion = vp.VaccinationPlace1
-                let Dosis_1 = vac.DateTimeVaccine1
-                let Dosis_2 = vac.DateTimeVaccine2
-            select new
-                {
-                    DUI,
-                    Nombre,
-                    Cita_1,
-                    Cita_2,
-                    Lugar_Vacunacion,
-                    Dosis_1,
-                    Dosis_2
-                };
-
-            dataGridAppointments.DataSource = null;
-            dataGridAppointments.DataSource = query.ToList();
+            
         }
 
         private void btnProceedToStep2_Click(object sender, EventArgs e)
@@ -68,7 +43,6 @@ namespace PROYECTO_BD_POO_FINAL.View
                 }
             }
         }
-
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             var db = new ProjectContext.PROJECTContext();
@@ -199,6 +173,35 @@ namespace PROYECTO_BD_POO_FINAL.View
         private void frmVaccinationProcess_Load(object sender, EventArgs e)
         {
             tabControl1.ItemSize = new Size(0, 1);
+
+            var db = new ProjectContext.PROJECTContext();
+
+            var query = from a in db.Appointments
+                join c in db.Citizens on a.IdCitizen equals c.IdCitizen
+                join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace
+                from vac in db.Vaccinations.DefaultIfEmpty()
+                let DUI = c.Dui
+                let Nombre = c.CitizenName
+                let Cita_1 = a.DateTimeAppointment1
+                let Cita_2 = a.DateTimeAppointment2
+                let Lugar_Vacunacion = vp.VaccinationPlace1
+                let Dosis_1 = vac.DateTimeVaccine1
+                let Dosis_2 = vac.DateTimeVaccine2
+                select new
+                {
+                    DUI,
+                    Nombre,
+                    Cita_1,
+                    Cita_2,
+                    Lugar_Vacunacion,
+                    Dosis_1,
+                    Dosis_2
+                };
+
+            dataGridAppointments.Rows.Clear();
+            dataGridAppointments.RefreshEdit();
+            dataGridAppointments.DataSource = null;
+            dataGridAppointments.DataSource = query.ToList();
         }
     }
 }
