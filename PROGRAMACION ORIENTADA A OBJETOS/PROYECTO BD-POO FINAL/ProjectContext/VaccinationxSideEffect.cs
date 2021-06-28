@@ -9,9 +9,16 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
     {
         public int IdSideEffect { get; set; }
         public int IdVaccination { get; set; }
-        public int MinutesShowup { get; set; }
+        public int? MinutesShowup { get; set; }
 
         public virtual SideEffect IdSideEffectNavigation { get; set; }
         public virtual Vaccination IdVaccinationNavigation { get; set; }
+
+        public VaccinationxSideEffect(int idSideEffect, int idVaccination, int? minutesShowup)
+        {
+            IdSideEffect = idSideEffect;
+            IdVaccination = idVaccination;
+            MinutesShowup = minutesShowup;
+        }
     }
 }

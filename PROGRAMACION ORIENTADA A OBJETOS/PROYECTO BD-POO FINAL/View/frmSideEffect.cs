@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROYECTO_BD_POO_FINAL.ProjectContext;
 
 namespace PROYECTO_BD_POO_FINAL.View
 {
@@ -19,29 +20,48 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            numericUpDown1.Maximum = 30;
-            numericUpDown1.Minimum = 0;
+            nudBlush.Maximum = 30;
+            nudBlush.Minimum = 0;
         }
 
         private void btnEnterObervation_Click(object sender, EventArgs e)
         {
             var db = new ProjectContext.PROJECTContext();
-            
 
-            DataSet ds = new DataSet();
-
-            DataRow row = ds.Tables[0].NewRow();
-        
-            CheckBox[] checkBoxes = new CheckBox[] { cbBlush, cbFatigue, cbHeadache, cbFever, cbMialgia, cbArtralgia, cbAnafilaxia, cbNone};
-
-            for (int i = 1; i <= checkBoxes.Length; i++)
+            if (cbBlush.Checked)
             {
-
-                row[1] = i;
-                ds.Tables[0].Rows.Add(row);
+                //VaccinationxSideEffect vaccinationxSideEffect = new VaccinationxSideEffect()
             }
 
-            
+            if (cbHeadache.Checked)
+            {
+
+            }
+
+            if (cbMialgia.Checked)
+            {
+
+            }
+
+            if (cbAnafilaxia.Checked)
+            {
+
+            }
+
+            if (cbFatigue.Checked)
+            {
+
+            }
+
+            if (cbFever.Checked)
+            {
+
+            }
+
+            if (cbArtralgia.Checked)
+            {
+
+            }
         }
     }
 }
