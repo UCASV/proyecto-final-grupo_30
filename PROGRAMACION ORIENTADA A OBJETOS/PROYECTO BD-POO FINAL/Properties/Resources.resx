@@ -118,11 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Background_Proceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Background_Proceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gc62Iz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gc62Iz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Proceso_cita leftImage_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Proceso_cita leftImage_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="syringevaccinationg931114934_1435242-860x566" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\syringevaccinationg931114934_1435242-860x566.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +133,8 @@
   <data name="vaccine" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vaccine.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gc62Iz" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gc62Iz.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Background_Proceso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Background_Proceso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Seguimiento_cita_leftImage_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Seguimiento_cita_leftImage_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,7 +145,7 @@
   <data name="icons8_spinner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-spinner.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="syringevaccinationg931114934_1435242-860x566" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\syringevaccinationg931114934_1435242-860x566.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sideeffects" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sideeffects.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
