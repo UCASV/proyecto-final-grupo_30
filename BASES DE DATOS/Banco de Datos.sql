@@ -54,7 +54,7 @@ CREATE TABLE CITIZEN(
 	dui VARCHAR(15) UNIQUE NOT NULL,
 	citizen_name VARCHAR(50) NOT NULL,
 	citizen_address VARCHAR(50) NOT NULL,
-	telephone VARCHAR(15) UNIQUE NOT NULL,
+	telephone VARCHAR(15) NOT NULL,
 	email VARCHAR(50),
 	id_institution INT NOT NULL,
 	disability BIT DEFAULT(0)
@@ -171,3 +171,6 @@ INSERT INTO EMPLOYEE (employee_name, email, employee_address, id_type) VALUES ('
 INSERT INTO EMPLOYEE VALUES ('James Logan', 'imnotwolverine@salud.gob.sv', 'Canada', 'Wolverine', 'Lobezno', 1, 3);
 INSERT INTO EMPLOYEE VALUES ('Wade Winston', 'imnotdeadpool@salud.gob.sv', 'New York City', 'Deadpool', 'Chimichanga', 1, 2);
 INSERT INTO EMPLOYEE (employee_name, email, employee_address, id_type, id_booth) VALUES ('Lee Sang-Hyeok', 'imnotfaker@salud.gob.sv', 'South Korea', 4,3);
+
+select * from citizen;
+select * from INSTITUTION
