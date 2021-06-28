@@ -85,6 +85,10 @@ namespace PROYECTO_BD_POO_FINAL.View
                     .Where(c => c.Dui == dui)
                     .ToList();
 
+                var groupList = db.Institutions
+                    .Where(i => i.IdInstitution.Equals(citizenList[0].IdInstitution))
+                    .ToList();
+
                 displayFullName = citizenList[0].CitizenName;
 
                 if (registerCitizen)
@@ -132,6 +136,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                         .Where(v => v.IdVaccinationPlace == randomVaccinationPlace)
                         .ToList();
 
+                    displayGroup = groupList[0].Institution1;
                     displayDate = dateTime.ToShortDateString();
                     displayTime = dateTime.ToString("HH:mm:ss tt");
                     displayPlace = resultVaccionation[0].VaccinationPlace1;
@@ -163,10 +168,6 @@ namespace PROYECTO_BD_POO_FINAL.View
                         displayTime = (Convert.ToDateTime((appointmentList[0].DateTimeAppointment2).ToString())).ToString("HH:mm:ss tt");
 
                     }
-
-                    var groupList = db.Institutions
-                        .Where(i => i.IdInstitution.Equals(citizenList[0].IdInstitution))
-                        .ToList();
 
                     displayGroup = groupList[0].Institution1;
                     displayFullName = citizenList[0].CitizenName;

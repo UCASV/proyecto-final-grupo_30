@@ -164,5 +164,26 @@ namespace PROYECTO_BD_POO_FINAL.View
             lblHourData.Text = time;
         }
 
+        private void btnAddWaitingInfo_Click(object sender, EventArgs e)
+        {
+            var db = new ProjectContext.PROJECTContext();
+            var user = db.Set<Citizen>()
+                .SingleOrDefault(m => m.Dui == txtDUI.Text);
+
+            var appointment = db.Set<Appointment>()
+                .SingleOrDefault(m => m.IdCitizen == user.IdCitizen);
+
+            DateTime datetime = DateTime.Now;
+
+            Vaccination vaccination = new Vaccination(datetime, appointment.IdCitizen, appointment.IdVaccinationPlace);
+
+            db.Add(vaccination);
+            db.SaveChanges();
+        }
+
+        private void frmVaccinationProcess_Load(object sender, EventArgs e)
+        {
+            tabControl1.ItemSize = new Size(0, 1);
+        }
     }
 }
