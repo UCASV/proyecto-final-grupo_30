@@ -170,18 +170,20 @@ namespace PROYECTO_BD_POO_FINAL.View
             var user = db.Set<Citizen>()
                 .SingleOrDefault(m => m.Dui == txtDUI.Text);
 
-            var appointent = db.Set<Appointment>()
+            var appointment = db.Set<Appointment>()
                 .SingleOrDefault(m => m.IdCitizen == user.IdCitizen);
 
-            string time = DateTime.Now.ToString("h:mm:ss tt");
-            string date = DateTime.UtcNow.ToString("MM-dd-yyyy");
-            string dateTime = $"{date} {time}";
+            DateTime datetime = DateTime.Now;
 
-            Vaccination vaccination = new Vaccination();
+            Vaccination vaccination = new Vaccination(datetime, appointment.IdCitizen, appointment.IdVaccinationPlace);
 
             db.Add(vaccination);
             db.SaveChanges();
+        }
 
+        private void frmVaccinationProcess_Load(object sender, EventArgs e)
+        {
+            tabControl1.ItemSize = new Size(0, 1);
         }
     }
 }

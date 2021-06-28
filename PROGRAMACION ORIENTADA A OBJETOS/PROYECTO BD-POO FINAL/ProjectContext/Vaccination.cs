@@ -23,5 +23,12 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
         public virtual Citizen IdCitizenNavigation { get; set; }
         public virtual VaccinationPlace IdVaccinationPlaceNavigation { get; set; }
         public virtual ICollection<VaccinationxSideEffect> VaccinationxSideEffects { get; set; }
+
+        public Vaccination(DateTime? dateTimeWait1, int idCitizen, int idVaccinationPlace)
+        {
+            DateTimeWait1 = dateTimeWait1;
+            IdCitizen = idCitizen;
+            IdVaccinationPlace = idVaccinationPlace;
+        }
     }
 }
