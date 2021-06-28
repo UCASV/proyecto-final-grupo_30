@@ -52,10 +52,16 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblDate = new System.Windows.Forms.Label();
             this.lblPriorityGroup = new System.Windows.Forms.Label();
             this.lblWaitingProcess = new System.Windows.Forms.Label();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btnVaccinate = new System.Windows.Forms.Button();
+            this.lblVaccinationProcess = new System.Windows.Forms.Label();
+            this.dgvPersonsReadyForVaccine = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).BeginInit();
             this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersonsReadyForVaccine)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -63,12 +69,13 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(4, -11);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(914, 505);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 1;
+            this.tabControl1.TabIndex = 0;
             this.tabControl1.TabStop = false;
             // 
             // tabPage1
@@ -85,7 +92,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(888, 441);
+            this.tabPage1.Size = new System.Drawing.Size(906, 474);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -96,7 +103,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(6, 401);
+            this.btnClear.Location = new System.Drawing.Point(6, 428);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(165, 40);
             this.btnClear.TabIndex = 37;
@@ -126,7 +133,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnProceedToStep2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProceedToStep2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProceedToStep2.ForeColor = System.Drawing.Color.White;
-            this.btnProceedToStep2.Location = new System.Drawing.Point(770, 401);
+            this.btnProceedToStep2.Location = new System.Drawing.Point(785, 428);
             this.btnProceedToStep2.Name = "btnProceedToStep2";
             this.btnProceedToStep2.Size = new System.Drawing.Size(115, 40);
             this.btnProceedToStep2.TabIndex = 35;
@@ -162,13 +169,14 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.dataGridAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAppointments.BackgroundColor = System.Drawing.Color.White;
             this.dataGridAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridAppointments.GridColor = System.Drawing.Color.Black;
             this.dataGridAppointments.Location = new System.Drawing.Point(6, 109);
             this.dataGridAppointments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridAppointments.Name = "dataGridAppointments";
             this.dataGridAppointments.ReadOnly = true;
             this.dataGridAppointments.RowHeadersWidth = 51;
             this.dataGridAppointments.RowTemplate.Height = 29;
-            this.dataGridAppointments.Size = new System.Drawing.Size(879, 287);
+            this.dataGridAppointments.Size = new System.Drawing.Size(894, 314);
             this.dataGridAppointments.TabIndex = 32;
             // 
             // txtDUI
@@ -336,6 +344,55 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblWaitingProcess.TabIndex = 9;
             this.lblWaitingProcess.Text = "Lista de espera";
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.syringevaccinationg931114934_1435242_860x566;
+            this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage3.Controls.Add(this.btnVaccinate);
+            this.tabPage3.Controls.Add(this.lblVaccinationProcess);
+            this.tabPage3.Controls.Add(this.dgvPersonsReadyForVaccine);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(906, 474);
+            this.tabPage3.TabIndex = 4;
+            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btnVaccinate
+            // 
+            this.btnVaccinate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVaccinate.Location = new System.Drawing.Point(769, 413);
+            this.btnVaccinate.Name = "btnVaccinate";
+            this.btnVaccinate.Size = new System.Drawing.Size(131, 45);
+            this.btnVaccinate.TabIndex = 2;
+            this.btnVaccinate.Text = "Vacunar";
+            this.btnVaccinate.UseVisualStyleBackColor = true;
+            // 
+            // lblVaccinationProcess
+            // 
+            this.lblVaccinationProcess.AutoSize = true;
+            this.lblVaccinationProcess.BackColor = System.Drawing.Color.Transparent;
+            this.lblVaccinationProcess.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblVaccinationProcess.Location = new System.Drawing.Point(314, 45);
+            this.lblVaccinationProcess.Name = "lblVaccinationProcess";
+            this.lblVaccinationProcess.Size = new System.Drawing.Size(259, 32);
+            this.lblVaccinationProcess.TabIndex = 1;
+            this.lblVaccinationProcess.Text = "Personas para vacunar";
+            // 
+            // dgvPersonsReadyForVaccine
+            // 
+            this.dgvPersonsReadyForVaccine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPersonsReadyForVaccine.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPersonsReadyForVaccine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPersonsReadyForVaccine.GridColor = System.Drawing.Color.Black;
+            this.dgvPersonsReadyForVaccine.Location = new System.Drawing.Point(10, 106);
+            this.dgvPersonsReadyForVaccine.Name = "dgvPersonsReadyForVaccine";
+            this.dgvPersonsReadyForVaccine.RowTemplate.Height = 25;
+            this.dgvPersonsReadyForVaccine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPersonsReadyForVaccine.Size = new System.Drawing.Size(890, 301);
+            this.dgvPersonsReadyForVaccine.TabIndex = 3;
+            // 
             // frmVaccinationProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -354,6 +411,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPersonsReadyForVaccine)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,5 +442,9 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.Label lblPriorityGroup;
         private System.Windows.Forms.Label lblWaitingProcess;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label lblVaccinationProcess;
+        private System.Windows.Forms.DataGridView dgvPersonsReadyForVaccine;
+        private System.Windows.Forms.Button btnVaccinate;
     }
 }
