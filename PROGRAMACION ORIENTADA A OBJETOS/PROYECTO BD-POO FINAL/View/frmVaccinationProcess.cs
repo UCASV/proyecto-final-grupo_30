@@ -54,6 +54,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                     Dosis_2
                 };
 
+            dataGridAppointments.DataSource = null;
             dataGridAppointments.DataSource = query.ToList();
         }
 
@@ -93,7 +94,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             }
             else
             {
-                var query = from a in db.Appointments
+                var query2 = from a in db.Appointments
                             join c in db.Citizens.Where(a=> a.Dui == txtDUI.Text) on a.IdCitizen equals c.IdCitizen
                             join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace
                             from vac in db.Vaccinations.DefaultIfEmpty()
@@ -116,9 +117,10 @@ namespace PROYECTO_BD_POO_FINAL.View
                                 Dosis_2
                             };
 
-                dataGridAppointments.DataSource = query.ToList();
+                dataGridAppointments.DataSource = null;
+                dataGridAppointments.DataSource = query2.ToList();
 
-                foreach (var user in query)
+                foreach (var user in query2)
                 {
                     lblName.Text = user.Nombre;
                     lblDUI.Text = user.DUI;
@@ -169,6 +171,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
             lblDateData.Text = date;
             lblHourData.Text = time;
+
         }
 
         private void btnAddWaitingInfo_Click(object sender, EventArgs e)
@@ -188,20 +191,15 @@ namespace PROYECTO_BD_POO_FINAL.View
             db.SaveChanges();
 
             tabControl1.SelectTab("tabPage3");
-            showSelectPatient();
-        }
 
-        private void showSelectPatient()
-        {
-            List<patientData> list = new List<patientData>();
+            var list = new List<patientData>();
             patientData data;
-            var db = new ProjectContext.PROJECTContext();
             var patientsList = db.Vaccinations
                 .ToList();
 
-            foreach(var patient in patientsList)
+            foreach (var patient in patientsList)
             {
-                if(patient.DateTimeWait2 == null)
+                if (patient.DateTimeWait2 == null)
                 {
                     var search = db.Set<Citizen>()
                         .SingleOrDefault(m => m.IdCitizen == patient.IdCitizen);
@@ -211,7 +209,8 @@ namespace PROYECTO_BD_POO_FINAL.View
                     data.name = search.CitizenName;
 
                     list.Add(data);
-                } else
+                }
+                else
                 {
                     var search = db.Set<Citizen>()
                         .SingleOrDefault(m => m.IdCitizen == patient.IdCitizen);
@@ -223,9 +222,12 @@ namespace PROYECTO_BD_POO_FINAL.View
                     list.Add(data);
                 }
             }
+            dgvPersonsReadyForVaccine.DataSource = list;
+        }
 
-            dataGridPersonsReadyForVaccine.DataSource = null;
-            dataGridPersonsReadyForVaccine.DataSource = list;
+        private void showSelectPatient(object sender, EventArgs e)
+        {
+            
         }
 
         private void frmVaccinationProcess_Load(object sender, EventArgs e)

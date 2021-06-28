@@ -84,7 +84,7 @@ CREATE TABLE SIDE_EFFECT(
 CREATE TABLE VACCINATIONxSIDE_EFFECT(
 	id_side_effect INT NOT NULL,
 	id_vaccination INT NOT NULL,
-	date_time_showup DATETIME
+	minutes_showup INT
 );
 
 CREATE TABLE CHRONIC_DISEASE(
