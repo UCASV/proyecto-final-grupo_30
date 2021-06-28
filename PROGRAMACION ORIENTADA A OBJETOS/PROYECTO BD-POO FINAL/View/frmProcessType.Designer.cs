@@ -29,6 +29,7 @@ namespace PROYECTO_BD_POO_FINAL.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProcessType));
             this.btnAppointmentTracking = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -72,10 +73,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.Controls.Add(this.btnAppointmentTracking);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmProcessType";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmProcessType";
+            this.Text = "Procesos - Vacunación Covid";
             this.ResumeLayout(false);
 
         }
