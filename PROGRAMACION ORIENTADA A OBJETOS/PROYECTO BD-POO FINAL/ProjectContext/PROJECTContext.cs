@@ -47,7 +47,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Appointment>(entity =>
             {
                 entity.HasKey(e => e.IdAppointment)
-                    .HasName("PK__APPOINTM__F9CC20B781799654");
+                    .HasName("PK__APPOINTM__F9CC20B7E06F8ABA");
 
                 entity.ToTable("APPOINTMENT");
 
@@ -71,29 +71,29 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.IdCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__APPOINTME__id_ci__45F365D3");
+                    .HasConstraintName("FK__APPOINTME__id_ci__44FF419A");
 
                 entity.HasOne(d => d.IdEmployeeNavigation)
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.IdEmployee)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__APPOINTME__id_em__440B1D61");
+                    .HasConstraintName("FK__APPOINTME__id_em__4316F928");
 
                 entity.HasOne(d => d.IdVaccinationPlaceNavigation)
                     .WithMany(p => p.Appointments)
                     .HasForeignKey(d => d.IdVaccinationPlace)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__APPOINTME__id_va__44FF419A");
+                    .HasConstraintName("FK__APPOINTME__id_va__440B1D61");
             });
 
             modelBuilder.Entity<Booth>(entity =>
             {
                 entity.HasKey(e => e.IdBooth)
-                    .HasName("PK__BOOTH__16D433C1C04608D2");
+                    .HasName("PK__BOOTH__16D433C1550866EA");
 
                 entity.ToTable("BOOTH");
 
-                entity.HasIndex(e => e.Telephone, "UQ__BOOTH__61AE339B7BAC8A32")
+                entity.HasIndex(e => e.Telephone, "UQ__BOOTH__61AE339B28BB2B98")
                     .IsUnique();
 
                 entity.Property(e => e.IdBooth).HasColumnName("id_booth");
@@ -116,7 +116,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<ChronicDisease>(entity =>
             {
                 entity.HasKey(e => e.IdChronicDisease)
-                    .HasName("PK__CHRONIC___6BD38E97522EAC35");
+                    .HasName("PK__CHRONIC___6BD38E97453B9A57");
 
                 entity.ToTable("CHRONIC_DISEASE");
 
@@ -137,14 +137,11 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Citizen>(entity =>
             {
                 entity.HasKey(e => e.IdCitizen)
-                    .HasName("PK__CITIZEN__44393B86E290A019");
+                    .HasName("PK__CITIZEN__44393B865725444C");
 
                 entity.ToTable("CITIZEN");
 
-                entity.HasIndex(e => e.Telephone, "UQ__CITIZEN__61AE339B71DD9E2C")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.Dui, "UQ__CITIZEN__D876F1BFEBBC6164")
+                entity.HasIndex(e => e.Dui, "UQ__CITIZEN__D876F1BF1C450EFB")
                     .IsUnique();
 
                 entity.Property(e => e.IdCitizen).HasColumnName("id_citizen");
@@ -188,13 +185,13 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
                     .WithMany(p => p.Citizens)
                     .HasForeignKey(d => d.IdInstitution)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CITIZEN__id_inst__46E78A0C");
+                    .HasConstraintName("FK__CITIZEN__id_inst__45F365D3");
             });
 
             modelBuilder.Entity<CitizenxChronicDisease>(entity =>
             {
                 entity.HasKey(e => new { e.IdChronicDisease, e.IdCitizen })
-                    .HasName("PK__CITIZENx__1F901D2FAB6FE23B");
+                    .HasName("PK__CITIZENx__1F901D2F92015BAC");
 
                 entity.ToTable("CITIZENxCHRONIC_DISEASE");
 
@@ -206,23 +203,23 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
                     .WithMany(p => p.CitizenxChronicDiseases)
                     .HasForeignKey(d => d.IdChronicDisease)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CITIZENxC__id_ch__4AB81AF0");
+                    .HasConstraintName("FK__CITIZENxC__id_ch__49C3F6B7");
 
                 entity.HasOne(d => d.IdCitizenNavigation)
                     .WithMany(p => p.CitizenxChronicDiseases)
                     .HasForeignKey(d => d.IdCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CITIZENxC__id_ci__49C3F6B7");
+                    .HasConstraintName("FK__CITIZENxC__id_ci__48CFD27E");
             });
 
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.HasKey(e => e.IdEmployee)
-                    .HasName("PK__EMPLOYEE__F807679C19E9E6B8");
+                    .HasName("PK__EMPLOYEE__F807679CEC6E4325");
 
                 entity.ToTable("EMPLOYEE");
 
-                entity.HasIndex(e => e.Email, "UQ__EMPLOYEE__AB6E616456188D6F")
+                entity.HasIndex(e => e.Email, "UQ__EMPLOYEE__AB6E6164610C2656")
                     .IsUnique();
 
                 entity.Property(e => e.IdEmployee).HasColumnName("id_employee");
@@ -262,19 +259,19 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
                 entity.HasOne(d => d.IdBoothNavigation)
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.IdBooth)
-                    .HasConstraintName("FK__EMPLOYEE__id_boo__412EB0B6");
+                    .HasConstraintName("FK__EMPLOYEE__id_boo__403A8C7D");
 
                 entity.HasOne(d => d.IdTypeNavigation)
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.IdType)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__EMPLOYEE__id_typ__403A8C7D");
+                    .HasConstraintName("FK__EMPLOYEE__id_typ__3F466844");
             });
 
             modelBuilder.Entity<EmployeeType>(entity =>
             {
                 entity.HasKey(e => e.IdType)
-                    .HasName("PK__EMPLOYEE__C3F091E049F897C9");
+                    .HasName("PK__EMPLOYEE__C3F091E03C3A0B16");
 
                 entity.ToTable("EMPLOYEE_TYPE");
 
@@ -290,7 +287,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Institution>(entity =>
             {
                 entity.HasKey(e => e.IdInstitution)
-                    .HasName("PK__INSTITUT__512A185CF59EC21D");
+                    .HasName("PK__INSTITUT__512A185C1A9936D8");
 
                 entity.ToTable("INSTITUTION");
 
@@ -306,7 +303,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Management>(entity =>
             {
                 entity.HasKey(e => e.IdManagement)
-                    .HasName("PK__MANAGEME__33C4FBFC25BCBFB0");
+                    .HasName("PK__MANAGEME__33C4FBFC7754A2A2");
 
                 entity.ToTable("MANAGEMENT");
 
@@ -324,19 +321,19 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
                     .WithMany(p => p.Managements)
                     .HasForeignKey(d => d.IdBooth)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MANAGEMEN__id_bo__4222D4EF");
+                    .HasConstraintName("FK__MANAGEMEN__id_bo__412EB0B6");
 
                 entity.HasOne(d => d.IdEmployeeNavigation)
                     .WithMany(p => p.Managements)
                     .HasForeignKey(d => d.IdEmployee)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MANAGEMEN__id_em__4316F928");
+                    .HasConstraintName("FK__MANAGEMEN__id_em__4222D4EF");
             });
 
             modelBuilder.Entity<SideEffect>(entity =>
             {
                 entity.HasKey(e => e.IdSideEffect)
-                    .HasName("PK__SIDE_EFF__1301EE9AD4F06F5E");
+                    .HasName("PK__SIDE_EFF__1301EE9AA2A82675");
 
                 entity.ToTable("SIDE_EFFECT");
 
@@ -357,7 +354,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Vaccination>(entity =>
             {
                 entity.HasKey(e => e.IdVaccination)
-                    .HasName("PK__VACCINAT__6F9C338C5E9A9B74");
+                    .HasName("PK__VACCINAT__6F9C338C1ABA3FEB");
 
                 entity.ToTable("VACCINATION");
 
@@ -387,19 +384,19 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
                     .WithMany(p => p.Vaccinations)
                     .HasForeignKey(d => d.IdCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__VACCINATI__id_ci__47DBAE45");
+                    .HasConstraintName("FK__VACCINATI__id_ci__46E78A0C");
 
                 entity.HasOne(d => d.IdVaccinationPlaceNavigation)
                     .WithMany(p => p.Vaccinations)
                     .HasForeignKey(d => d.IdVaccinationPlace)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__VACCINATI__id_va__48CFD27E");
+                    .HasConstraintName("FK__VACCINATI__id_va__47DBAE45");
             });
 
             modelBuilder.Entity<VaccinationPlace>(entity =>
             {
                 entity.HasKey(e => e.IdVaccinationPlace)
-                    .HasName("PK__VACCINAT__5C434F1A2EA590F2");
+                    .HasName("PK__VACCINAT__5C434F1A904CBE08");
 
                 entity.ToTable("VACCINATION_PLACE");
 
@@ -421,7 +418,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<VaccinationxSideEffect>(entity =>
             {
                 entity.HasKey(e => new { e.IdSideEffect, e.IdVaccination })
-                    .HasName("PK__VACCINAT__C5F82DA296F8E486");
+                    .HasName("PK__VACCINAT__C5F82DA2B2FD0546");
 
                 entity.ToTable("VACCINATIONxSIDE_EFFECT");
 
@@ -429,21 +426,19 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
 
                 entity.Property(e => e.IdVaccination).HasColumnName("id_vaccination");
 
-                entity.Property(e => e.DateTimeShowup)
-                    .HasColumnType("datetime")
-                    .HasColumnName("date_time_showup");
+                entity.Property(e => e.MinutesShowup).HasColumnName("minutes_showup");
 
                 entity.HasOne(d => d.IdSideEffectNavigation)
                     .WithMany(p => p.VaccinationxSideEffects)
                     .HasForeignKey(d => d.IdSideEffect)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__VACCINATI__id_si__4BAC3F29");
+                    .HasConstraintName("FK__VACCINATI__id_si__4AB81AF0");
 
                 entity.HasOne(d => d.IdVaccinationNavigation)
                     .WithMany(p => p.VaccinationxSideEffects)
                     .HasForeignKey(d => d.IdVaccination)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__VACCINATI__id_va__4CA06362");
+                    .HasConstraintName("FK__VACCINATI__id_va__4BAC3F29");
             });
 
             OnModelCreatingPartial(modelBuilder);
