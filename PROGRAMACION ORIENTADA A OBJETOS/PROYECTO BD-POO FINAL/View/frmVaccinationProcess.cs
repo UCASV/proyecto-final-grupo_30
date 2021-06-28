@@ -168,44 +168,35 @@ namespace PROYECTO_BD_POO_FINAL.View
             {
                 showWaitingList();
             }
-            
+            tabControl1.SelectTab("tabPage3");
         }
 
         private void showWaitingList()
         {
             var db = new ProjectContext.PROJECTContext();
-            var patientsList = db.Vaccinations
-                .ToList();
+            var query = from a in db.Appointments
+                        join c in db.Citizens.Where(a => a.Dui == txtDUI.Text) on a.IdCitizen equals c.IdCitizen
+                        join vac in db.Vaccinations on c.IdCitizen equals vac.IdCitizen
+                        let DUI = c.Dui
+                        let Nombre = c.CitizenName
+                        let Inicio_Tiempo_Espera = vac.DateTimeVaccine2.HasValue ? vac.DateTimeWait2 : vac.DateTimeWait1
+                        let Numero_Dosis = vac.DateTimeVaccine2.HasValue ? "Segunda dosis" : "Primera dosis"
+                        select new
+                        {
+                            DUI,
+                            Nombre,
+                            Inicio_Tiempo_Espera,
+                            Numero_Dosis
+                        };
 
-            dgvPersonsReadyForVaccine.DataSource = patientsList;
-            tabControl1.SelectTab("tabPage3");
+            dgvPeopleReadyForVaccine.DataSource = null;
+            dgvPeopleReadyForVaccine.DataSource = query.ToList();
+
         }
 
         private void frmVaccinationProcess_Load(object sender, EventArgs e)
         {
             tabControl1.ItemSize = new Size(0, 1);
-
-            var db = new ProjectContext.PROJECTContext();
-
-            var query = from a in db.Appointments
-                        join c in db.Citizens on a.IdCitizen equals c.IdCitizen
-                        join v in db.VaccinationPlaces on a.IdVaccinationPlace equals v.IdVaccinationPlace
-                        let DUI = c.Dui
-                        let Nombre = c.CitizenName
-                        let Dosis_1 = a.DateTimeAppointment1
-                        let Dosis_2 = a.DateTimeAppointment2
-                        let Lugar_Vacunacion = v.VaccinationPlace1
-                        select new
-                        {
-                            DUI,
-                            Nombre,
-                            Dosis_1,
-                            Dosis_2,
-                            Lugar_Vacunacion
-                        };
-
-            dataGridAppointments.DataSource = null;
-            dataGridAppointments.DataSource = query.ToList();
         }
     }
 }
