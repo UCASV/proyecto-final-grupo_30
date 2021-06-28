@@ -217,6 +217,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnAddWaitingInfo.TabIndex = 20;
             this.btnAddWaitingInfo.Text = "Agregar a lista de espera";
             this.btnAddWaitingInfo.UseVisualStyleBackColor = false;
+            this.btnAddWaitingInfo.Click += new System.EventHandler(this.btnAddWaitingInfo_Click);
             // 
             // lblName
             // 
