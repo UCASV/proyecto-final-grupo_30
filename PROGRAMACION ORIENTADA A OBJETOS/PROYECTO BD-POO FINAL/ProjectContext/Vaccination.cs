@@ -30,5 +30,13 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             IdCitizen = idCitizen;
             IdVaccinationPlace = idVaccinationPlace;
         }
+
+        public Vaccination(DateTime? dateTimeWait1, int idCitizen, int idVaccinationPlace, DateTime? dateTimeVaccine1)
+        {
+            DateTimeWait1 = dateTimeWait1;
+            IdCitizen = idCitizen;
+            IdVaccinationPlace = idVaccinationPlace;
+            DateTimeVaccine1 = dateTimeVaccine1;
+        }
     }
 }

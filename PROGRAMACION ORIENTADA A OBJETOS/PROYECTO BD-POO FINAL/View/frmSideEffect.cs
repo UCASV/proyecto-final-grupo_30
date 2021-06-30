@@ -13,9 +13,11 @@ namespace PROYECTO_BD_POO_FINAL.View
 {
     public partial class frmSideEffect : Form
     {
-        public frmSideEffect()
+        private Vaccination aVaccination { get; set; }
+        public frmSideEffect(Vaccination aVaccination)
         {
             InitializeComponent();
+            this.aVaccination = aVaccination;
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -30,38 +32,109 @@ namespace PROYECTO_BD_POO_FINAL.View
 
             if (cbBlush.Checked)
             {
-                //VaccinationxSideEffect vaccinationxSideEffect = new VaccinationxSideEffect()
-            }
+                var sideEffect = db.SideEffects
+                    .Where(s => s.IdSideEffect.Equals(1))
+                    .ToList();
 
-            if (cbHeadache.Checked)
-            {
+                var minutes = nudBlush.Text;
 
-            }
+                VaccinationxSideEffect aVaccinationxSideEffect =
+                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
 
-            if (cbMialgia.Checked)
-            {
-
-            }
-
-            if (cbAnafilaxia.Checked)
-            {
-
+                db.Add(aVaccinationxSideEffect);
+                db.SaveChanges();
             }
 
             if (cbFatigue.Checked)
             {
+                var sideEffect = db.SideEffects
+                    .Where(s => s.IdSideEffect.Equals(2))
+                    .ToList();
 
+                var minutes = nudBlush.Text;
+
+                VaccinationxSideEffect aVaccinationxSideEffect =
+                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+
+                db.Add(aVaccinationxSideEffect);
+                db.SaveChanges();
+            }
+
+            if (cbHeadache.Checked)
+            {
+                var sideEffect = db.SideEffects
+                    .Where(s => s.IdSideEffect.Equals(3))
+                    .ToList();
+
+                var minutes = nudBlush.Text;
+
+                VaccinationxSideEffect aVaccinationxSideEffect =
+                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+
+                db.Add(aVaccinationxSideEffect);
+                db.SaveChanges();
             }
 
             if (cbFever.Checked)
             {
+                var sideEffect = db.SideEffects
+                    .Where(s => s.IdSideEffect.Equals(3))
+                    .ToList();
 
+                var minutes = nudBlush.Text;
+
+                VaccinationxSideEffect aVaccinationxSideEffect =
+                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+
+                db.Add(aVaccinationxSideEffect);
+                db.SaveChanges();
+            }
+
+            if (cbMialgia.Checked)
+            {
+                var sideEffect = db.SideEffects
+                    .Where(s => s.IdSideEffect.Equals(4))
+                    .ToList();
+
+                var minutes = nudBlush.Text;
+
+                VaccinationxSideEffect aVaccinationxSideEffect =
+                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+
+                db.Add(aVaccinationxSideEffect);
+                db.SaveChanges();
             }
 
             if (cbArtralgia.Checked)
             {
+                var sideEffect = db.SideEffects
+                    .Where(s => s.IdSideEffect.Equals(5))
+                    .ToList();
 
+                var minutes = nudBlush.Text;
+
+                VaccinationxSideEffect aVaccinationxSideEffect =
+                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+
+                db.Add(aVaccinationxSideEffect);
+                db.SaveChanges();
             }
+
+            if (cbAnafilaxia.Checked)
+            {
+                var sideEffect = db.SideEffects
+                    .Where(s => s.IdSideEffect.Equals(6))
+                    .ToList();
+
+                var minutes = nudBlush.Text;
+
+                VaccinationxSideEffect aVaccinationxSideEffect =
+                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+
+                db.Add(aVaccinationxSideEffect);
+                db.SaveChanges();
+            }
+            this.Close();
         }
     }
 }

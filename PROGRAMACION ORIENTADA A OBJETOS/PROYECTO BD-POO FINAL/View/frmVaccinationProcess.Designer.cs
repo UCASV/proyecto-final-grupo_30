@@ -70,11 +70,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(5, -15);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabControl1.Location = new System.Drawing.Point(4, -11);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1045, 673);
+            this.tabControl1.Size = new System.Drawing.Size(914, 505);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl1.TabIndex = 0;
             this.tabControl1.TabStop = false;
@@ -90,11 +89,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage1.Controls.Add(this.lblFollowUpAppointment);
             this.tabPage1.Controls.Add(this.dataGridAppointments);
             this.tabPage1.Controls.Add(this.txtDUI);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(1037, 637);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(906, 474);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -105,10 +103,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(7, 571);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClear.Location = new System.Drawing.Point(6, 428);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(189, 53);
+            this.btnClear.Size = new System.Drawing.Size(165, 40);
             this.btnClear.TabIndex = 37;
             this.btnClear.Text = "Limpiar Busqueda";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -121,10 +118,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnBrowse.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnBrowse.ForeColor = System.Drawing.Color.White;
             this.btnBrowse.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBrowse.Location = new System.Drawing.Point(749, 85);
-            this.btnBrowse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnBrowse.Location = new System.Drawing.Point(655, 64);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(131, 35);
+            this.btnBrowse.Size = new System.Drawing.Size(115, 26);
             this.btnBrowse.TabIndex = 36;
             this.btnBrowse.Text = "Buscar";
             this.btnBrowse.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -137,10 +133,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnProceedToStep2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProceedToStep2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnProceedToStep2.ForeColor = System.Drawing.Color.White;
-            this.btnProceedToStep2.Location = new System.Drawing.Point(897, 571);
-            this.btnProceedToStep2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnProceedToStep2.Location = new System.Drawing.Point(785, 428);
             this.btnProceedToStep2.Name = "btnProceedToStep2";
-            this.btnProceedToStep2.Size = new System.Drawing.Size(131, 53);
+            this.btnProceedToStep2.Size = new System.Drawing.Size(115, 40);
             this.btnProceedToStep2.TabIndex = 35;
             this.btnProceedToStep2.Text = "Continuar";
             this.btnProceedToStep2.UseVisualStyleBackColor = false;
@@ -151,9 +146,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblCitizenDUI.BackColor = System.Drawing.Color.Transparent;
             this.lblCitizenDUI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblCitizenDUI.ForeColor = System.Drawing.Color.White;
-            this.lblCitizenDUI.Location = new System.Drawing.Point(152, 83);
+            this.lblCitizenDUI.Location = new System.Drawing.Point(133, 62);
             this.lblCitizenDUI.Name = "lblCitizenDUI";
-            this.lblCitizenDUI.Size = new System.Drawing.Size(280, 35);
+            this.lblCitizenDUI.Size = new System.Drawing.Size(245, 26);
             this.lblCitizenDUI.TabIndex = 34;
             this.lblCitizenDUI.Text = "Ingrese el DUI del Ciudadano:";
             // 
@@ -163,9 +158,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblFollowUpAppointment.BackColor = System.Drawing.Color.Transparent;
             this.lblFollowUpAppointment.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblFollowUpAppointment.ForeColor = System.Drawing.Color.White;
-            this.lblFollowUpAppointment.Location = new System.Drawing.Point(336, 27);
+            this.lblFollowUpAppointment.Location = new System.Drawing.Point(294, 20);
             this.lblFollowUpAppointment.Name = "lblFollowUpAppointment";
-            this.lblFollowUpAppointment.Size = new System.Drawing.Size(317, 41);
+            this.lblFollowUpAppointment.Size = new System.Drawing.Size(255, 32);
             this.lblFollowUpAppointment.TabIndex = 33;
             this.lblFollowUpAppointment.Text = "Seguimiento de Citas";
             // 
@@ -175,21 +170,23 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.dataGridAppointments.BackgroundColor = System.Drawing.Color.White;
             this.dataGridAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAppointments.GridColor = System.Drawing.Color.Black;
-            this.dataGridAppointments.Location = new System.Drawing.Point(7, 145);
+            this.dataGridAppointments.Location = new System.Drawing.Point(6, 109);
+            this.dataGridAppointments.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridAppointments.Name = "dataGridAppointments";
             this.dataGridAppointments.ReadOnly = true;
             this.dataGridAppointments.RowHeadersWidth = 51;
             this.dataGridAppointments.RowTemplate.Height = 29;
-            this.dataGridAppointments.Size = new System.Drawing.Size(1022, 419);
+            this.dataGridAppointments.Size = new System.Drawing.Size(894, 314);
             this.dataGridAppointments.TabIndex = 32;
             // 
             // txtDUI
             // 
             this.txtDUI.BackColor = System.Drawing.Color.White;
             this.txtDUI.ForeColor = System.Drawing.Color.Black;
-            this.txtDUI.Location = new System.Drawing.Point(439, 85);
+            this.txtDUI.Location = new System.Drawing.Point(384, 64);
+            this.txtDUI.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(302, 27);
+            this.txtDUI.Size = new System.Drawing.Size(265, 23);
             this.txtDUI.TabIndex = 31;
             // 
             // tabPage2
@@ -208,11 +205,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage2.Controls.Add(this.lblDate);
             this.tabPage2.Controls.Add(this.lblPriorityGroup);
             this.tabPage2.Controls.Add(this.lblWaitingProcess);
-            this.tabPage2.Location = new System.Drawing.Point(4, 32);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(1037, 637);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(906, 474);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -223,10 +219,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnAddWaitingInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddWaitingInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddWaitingInfo.ForeColor = System.Drawing.Color.White;
-            this.btnAddWaitingInfo.Location = new System.Drawing.Point(329, 448);
-            this.btnAddWaitingInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddWaitingInfo.Location = new System.Drawing.Point(288, 336);
             this.btnAddWaitingInfo.Name = "btnAddWaitingInfo";
-            this.btnAddWaitingInfo.Size = new System.Drawing.Size(355, 65);
+            this.btnAddWaitingInfo.Size = new System.Drawing.Size(311, 49);
             this.btnAddWaitingInfo.TabIndex = 20;
             this.btnAddWaitingInfo.Text = "Agregar a lista de espera";
             this.btnAddWaitingInfo.UseVisualStyleBackColor = false;
@@ -236,9 +231,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.lblName.BackColor = System.Drawing.Color.Transparent;
             this.lblName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblName.Location = new System.Drawing.Point(424, 164);
+            this.lblName.Location = new System.Drawing.Point(371, 123);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(261, 28);
+            this.lblName.Size = new System.Drawing.Size(228, 21);
             this.lblName.TabIndex = 19;
             this.lblName.Text = "xxxxxxx";
             // 
@@ -246,9 +241,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.lblDUI.BackColor = System.Drawing.Color.Transparent;
             this.lblDUI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDUI.Location = new System.Drawing.Point(385, 216);
+            this.lblDUI.Location = new System.Drawing.Point(337, 162);
             this.lblDUI.Name = "lblDUI";
-            this.lblDUI.Size = new System.Drawing.Size(299, 28);
+            this.lblDUI.Size = new System.Drawing.Size(262, 21);
             this.lblDUI.TabIndex = 18;
             this.lblDUI.Text = "xxxxxxx";
             // 
@@ -257,9 +252,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(329, 216);
+            this.label13.Location = new System.Drawing.Point(288, 162);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(52, 28);
+            this.label13.Size = new System.Drawing.Size(43, 21);
             this.label13.TabIndex = 17;
             this.label13.Text = "DUI:";
             // 
@@ -268,9 +263,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(329, 164);
+            this.label12.Location = new System.Drawing.Point(288, 123);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(94, 28);
+            this.label12.Size = new System.Drawing.Size(77, 21);
             this.label12.TabIndex = 16;
             this.label12.Text = "Nombre:";
             // 
@@ -279,9 +274,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblPriorityGroupData.BackColor = System.Drawing.Color.Transparent;
             this.lblPriorityGroupData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblPriorityGroupData.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPriorityGroupData.Location = new System.Drawing.Point(518, 269);
+            this.lblPriorityGroupData.Location = new System.Drawing.Point(453, 202);
             this.lblPriorityGroupData.Name = "lblPriorityGroupData";
-            this.lblPriorityGroupData.Size = new System.Drawing.Size(167, 40);
+            this.lblPriorityGroupData.Size = new System.Drawing.Size(146, 30);
             this.lblPriorityGroupData.TabIndex = 10;
             this.lblPriorityGroupData.Text = "xxxxxxxx";
             // 
@@ -289,9 +284,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.lblDateData.BackColor = System.Drawing.Color.Transparent;
             this.lblDateData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDateData.Location = new System.Drawing.Point(394, 327);
+            this.lblDateData.Location = new System.Drawing.Point(345, 245);
             this.lblDateData.Name = "lblDateData";
-            this.lblDateData.Size = new System.Drawing.Size(290, 40);
+            this.lblDateData.Size = new System.Drawing.Size(254, 30);
             this.lblDateData.TabIndex = 11;
             this.lblDateData.Text = "DD/MM/YY";
             // 
@@ -299,9 +294,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.lblHourData.BackColor = System.Drawing.Color.Transparent;
             this.lblHourData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblHourData.Location = new System.Drawing.Point(394, 384);
+            this.lblHourData.Location = new System.Drawing.Point(345, 288);
             this.lblHourData.Name = "lblHourData";
-            this.lblHourData.Size = new System.Drawing.Size(290, 40);
+            this.lblHourData.Size = new System.Drawing.Size(254, 30);
             this.lblHourData.TabIndex = 12;
             this.lblHourData.Text = "HH/MM";
             // 
@@ -310,9 +305,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblHour.AutoSize = true;
             this.lblHour.BackColor = System.Drawing.Color.Transparent;
             this.lblHour.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHour.Location = new System.Drawing.Point(329, 384);
+            this.lblHour.Location = new System.Drawing.Point(288, 288);
             this.lblHour.Name = "lblHour";
-            this.lblHour.Size = new System.Drawing.Size(63, 28);
+            this.lblHour.Size = new System.Drawing.Size(51, 21);
             this.lblHour.TabIndex = 13;
             this.lblHour.Text = "Hora:";
             // 
@@ -321,9 +316,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblDate.AutoSize = true;
             this.lblDate.BackColor = System.Drawing.Color.Transparent;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDate.Location = new System.Drawing.Point(329, 327);
+            this.lblDate.Location = new System.Drawing.Point(288, 245);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(71, 28);
+            this.lblDate.Size = new System.Drawing.Size(58, 21);
             this.lblDate.TabIndex = 14;
             this.lblDate.Text = "Fecha:";
             // 
@@ -332,9 +327,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblPriorityGroup.AutoSize = true;
             this.lblPriorityGroup.BackColor = System.Drawing.Color.Transparent;
             this.lblPriorityGroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPriorityGroup.Location = new System.Drawing.Point(329, 269);
+            this.lblPriorityGroup.Location = new System.Drawing.Point(288, 202);
             this.lblPriorityGroup.Name = "lblPriorityGroup";
-            this.lblPriorityGroup.Size = new System.Drawing.Size(197, 28);
+            this.lblPriorityGroup.Size = new System.Drawing.Size(159, 21);
             this.lblPriorityGroup.TabIndex = 15;
             this.lblPriorityGroup.Text = "Grupo de prioridad:";
             // 
@@ -343,9 +338,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.lblWaitingProcess.AutoSize = true;
             this.lblWaitingProcess.BackColor = System.Drawing.Color.Transparent;
             this.lblWaitingProcess.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblWaitingProcess.Location = new System.Drawing.Point(385, 51);
+            this.lblWaitingProcess.Location = new System.Drawing.Point(337, 38);
             this.lblWaitingProcess.Name = "lblWaitingProcess";
-            this.lblWaitingProcess.Size = new System.Drawing.Size(221, 41);
+            this.lblWaitingProcess.Size = new System.Drawing.Size(177, 32);
             this.lblWaitingProcess.TabIndex = 9;
             this.lblWaitingProcess.Text = "Lista de espera";
             // 
@@ -356,11 +351,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage3.Controls.Add(this.btnVaccinate);
             this.tabPage3.Controls.Add(this.lblVaccinationProcess);
             this.tabPage3.Controls.Add(this.dgvPeopleReadyForVaccine);
-            this.tabPage3.Location = new System.Drawing.Point(4, 32);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 27);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage3.Size = new System.Drawing.Size(1037, 637);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(906, 474);
             this.tabPage3.TabIndex = 4;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -368,22 +362,22 @@ namespace PROYECTO_BD_POO_FINAL.View
             // btnVaccinate
             // 
             this.btnVaccinate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnVaccinate.Location = new System.Drawing.Point(879, 551);
-            this.btnVaccinate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnVaccinate.Location = new System.Drawing.Point(769, 413);
             this.btnVaccinate.Name = "btnVaccinate";
-            this.btnVaccinate.Size = new System.Drawing.Size(150, 60);
+            this.btnVaccinate.Size = new System.Drawing.Size(131, 45);
             this.btnVaccinate.TabIndex = 2;
             this.btnVaccinate.Text = "Vacunar";
             this.btnVaccinate.UseVisualStyleBackColor = true;
+            this.btnVaccinate.Click += new System.EventHandler(this.btnVaccinate_Click);
             // 
             // lblVaccinationProcess
             // 
             this.lblVaccinationProcess.AutoSize = true;
             this.lblVaccinationProcess.BackColor = System.Drawing.Color.Transparent;
             this.lblVaccinationProcess.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblVaccinationProcess.Location = new System.Drawing.Point(359, 60);
+            this.lblVaccinationProcess.Location = new System.Drawing.Point(314, 45);
             this.lblVaccinationProcess.Name = "lblVaccinationProcess";
-            this.lblVaccinationProcess.Size = new System.Drawing.Size(325, 41);
+            this.lblVaccinationProcess.Size = new System.Drawing.Size(259, 32);
             this.lblVaccinationProcess.TabIndex = 1;
             this.lblVaccinationProcess.Text = "Personas para vacunar";
             // 
@@ -393,23 +387,22 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.dgvPeopleReadyForVaccine.BackgroundColor = System.Drawing.Color.White;
             this.dgvPeopleReadyForVaccine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeopleReadyForVaccine.GridColor = System.Drawing.Color.Black;
-            this.dgvPeopleReadyForVaccine.Location = new System.Drawing.Point(11, 141);
-            this.dgvPeopleReadyForVaccine.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvPeopleReadyForVaccine.Location = new System.Drawing.Point(10, 106);
             this.dgvPeopleReadyForVaccine.Name = "dgvPeopleReadyForVaccine";
             this.dgvPeopleReadyForVaccine.RowHeadersWidth = 51;
             this.dgvPeopleReadyForVaccine.RowTemplate.Height = 25;
             this.dgvPeopleReadyForVaccine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeopleReadyForVaccine.Size = new System.Drawing.Size(1017, 401);
+            this.dgvPeopleReadyForVaccine.Size = new System.Drawing.Size(890, 301);
             this.dgvPeopleReadyForVaccine.TabIndex = 3;
+            this.dgvPeopleReadyForVaccine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeopleReadyForVaccine_CellClick);
             // 
             // frmVaccinationProcess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 661);
+            this.ClientSize = new System.Drawing.Size(920, 496);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmVaccinationProcess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceso de Vacunación - Vacunación Covid";

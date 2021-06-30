@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using PROYECTO_BD_POO_FINAL.Controller;
 
 #nullable disable
 

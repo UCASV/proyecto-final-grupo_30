@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
-using PROYECTO_BD_POO_FINAL.ProjectContext;
+ using PROYECTO_BD_POO_FINAL.Controller;
+ using PROYECTO_BD_POO_FINAL.ProjectContext;
 using PROYECTO_BD_POO_FINAL.View;
 
 namespace PROYECTO_BD_POO_FINAL
@@ -23,27 +24,21 @@ namespace PROYECTO_BD_POO_FINAL
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             var db = new ProjectContext.PROJECTContext();
-            var managerList = db.Employees
-                .Where(m => m.IdType == 1)
-                .ToList();
 
-            var result = managerList.Where(
-                u => u.EmployeeUsername.Equals(txtUser.Text) &&
-                     u.EmployeePassword.Equals(txtPassword.Text) &&
-                     u.IdType.Equals(1)
-            ).ToList();
+            CProxy.RealSubject realSubject = new CProxy.RealSubject();
+            CProxy.Proxy proxy = new CProxy.Proxy(realSubject);
 
-            if (result.Count == 0)
+            if (proxy.CheckAccess(txtUser.Text, txtPassword.Text))
             {
-                MessageBox.Show("El gestor no existe o la contraseña y el usuario no coinciden", "Vacunación Covid",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                txtUser.Text = "";
-                txtPassword.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Bienvenido", "Vacunación Covid",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var managerList = db.Employees
+                    .Where(m => m.IdType == 1)
+                    .ToList();
+
+                var result = managerList.Where(
+                    u => u.EmployeeUsername.Equals(txtUser.Text) &&
+                         u.EmployeePassword.Equals(txtPassword.Text) &&
+                         u.IdType.Equals(1)
+                ).ToList();
 
                 int idEmployee = result[0].IdEmployee;
                 int idBooth = ((Booth)cmbBooth.SelectedItem).IdBooth;
@@ -56,8 +51,6 @@ namespace PROYECTO_BD_POO_FINAL
 
                 frmProcessType window = new frmProcessType(aManagement);
                 window.ShowDialog();
-                txtUser.Text = "";
-                txtPassword.Text = "";
             }
         }
 

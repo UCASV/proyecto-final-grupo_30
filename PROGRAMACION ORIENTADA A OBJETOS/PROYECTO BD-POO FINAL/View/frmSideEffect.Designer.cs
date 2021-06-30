@@ -31,6 +31,12 @@ namespace PROYECTO_BD_POO_FINAL.View
         {
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.nudFever = new System.Windows.Forms.NumericUpDown();
+            this.nudFatigue = new System.Windows.Forms.NumericUpDown();
+            this.nudAnafilaxia = new System.Windows.Forms.NumericUpDown();
+            this.nudMialgia = new System.Windows.Forms.NumericUpDown();
+            this.nudHeadache = new System.Windows.Forms.NumericUpDown();
+            this.nudAltralgia = new System.Windows.Forms.NumericUpDown();
             this.cbAnafilaxia = new System.Windows.Forms.CheckBox();
             this.cbMialgia = new System.Windows.Forms.CheckBox();
             this.nudBlush = new System.Windows.Forms.NumericUpDown();
@@ -42,20 +48,14 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label2 = new System.Windows.Forms.Label();
             this.btnEnterObervation = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.nudAltralgia = new System.Windows.Forms.NumericUpDown();
-            this.nudHeadache = new System.Windows.Forms.NumericUpDown();
-            this.nudMialgia = new System.Windows.Forms.NumericUpDown();
-            this.nudAnafilaxia = new System.Windows.Forms.NumericUpDown();
-            this.nudFatigue = new System.Windows.Forms.NumericUpDown();
-            this.nudFever = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBlush)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAltralgia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHeadache)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMialgia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAnafilaxia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFatigue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFever)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFatigue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAnafilaxia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMialgia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeadache)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAltralgia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBlush)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -106,6 +106,90 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(371, 269);
             this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // nudFever
+            // 
+            this.nudFever.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudFever.BackColor = System.Drawing.Color.White;
+            this.nudFever.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nudFever.ForeColor = System.Drawing.Color.Black;
+            this.nudFever.Location = new System.Drawing.Point(190, 195);
+            this.nudFever.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudFever.Name = "nudFever";
+            this.nudFever.Size = new System.Drawing.Size(175, 29);
+            this.nudFever.TabIndex = 61;
+            // 
+            // nudFatigue
+            // 
+            this.nudFatigue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudFatigue.BackColor = System.Drawing.Color.White;
+            this.nudFatigue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nudFatigue.ForeColor = System.Drawing.Color.Black;
+            this.nudFatigue.Location = new System.Drawing.Point(190, 157);
+            this.nudFatigue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudFatigue.Name = "nudFatigue";
+            this.nudFatigue.Size = new System.Drawing.Size(175, 29);
+            this.nudFatigue.TabIndex = 61;
+            // 
+            // nudAnafilaxia
+            // 
+            this.nudAnafilaxia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudAnafilaxia.BackColor = System.Drawing.Color.White;
+            this.nudAnafilaxia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nudAnafilaxia.ForeColor = System.Drawing.Color.Black;
+            this.nudAnafilaxia.Location = new System.Drawing.Point(190, 119);
+            this.nudAnafilaxia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudAnafilaxia.Name = "nudAnafilaxia";
+            this.nudAnafilaxia.Size = new System.Drawing.Size(175, 29);
+            this.nudAnafilaxia.TabIndex = 61;
+            // 
+            // nudMialgia
+            // 
+            this.nudMialgia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudMialgia.BackColor = System.Drawing.Color.White;
+            this.nudMialgia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nudMialgia.ForeColor = System.Drawing.Color.Black;
+            this.nudMialgia.Location = new System.Drawing.Point(190, 81);
+            this.nudMialgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudMialgia.Name = "nudMialgia";
+            this.nudMialgia.Size = new System.Drawing.Size(175, 29);
+            this.nudMialgia.TabIndex = 61;
+            // 
+            // nudHeadache
+            // 
+            this.nudHeadache.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudHeadache.BackColor = System.Drawing.Color.White;
+            this.nudHeadache.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nudHeadache.ForeColor = System.Drawing.Color.Black;
+            this.nudHeadache.Location = new System.Drawing.Point(190, 43);
+            this.nudHeadache.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudHeadache.Name = "nudHeadache";
+            this.nudHeadache.Size = new System.Drawing.Size(175, 29);
+            this.nudHeadache.TabIndex = 61;
+            // 
+            // nudAltralgia
+            // 
+            this.nudAltralgia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.nudAltralgia.BackColor = System.Drawing.Color.White;
+            this.nudAltralgia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nudAltralgia.ForeColor = System.Drawing.Color.Black;
+            this.nudAltralgia.Location = new System.Drawing.Point(190, 233);
+            this.nudAltralgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudAltralgia.Name = "nudAltralgia";
+            this.nudAltralgia.Size = new System.Drawing.Size(175, 29);
+            this.nudAltralgia.TabIndex = 8;
             // 
             // cbAnafilaxia
             // 
@@ -271,90 +355,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label3.TabIndex = 4;
             this.label3.Text = "Minutos transcurridos:";
             // 
-            // nudAltralgia
-            // 
-            this.nudAltralgia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudAltralgia.BackColor = System.Drawing.Color.White;
-            this.nudAltralgia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nudAltralgia.ForeColor = System.Drawing.Color.Black;
-            this.nudAltralgia.Location = new System.Drawing.Point(190, 233);
-            this.nudAltralgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudAltralgia.Name = "nudAltralgia";
-            this.nudAltralgia.Size = new System.Drawing.Size(175, 29);
-            this.nudAltralgia.TabIndex = 8;
-            // 
-            // nudHeadache
-            // 
-            this.nudHeadache.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudHeadache.BackColor = System.Drawing.Color.White;
-            this.nudHeadache.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nudHeadache.ForeColor = System.Drawing.Color.Black;
-            this.nudHeadache.Location = new System.Drawing.Point(190, 43);
-            this.nudHeadache.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudHeadache.Name = "nudHeadache";
-            this.nudHeadache.Size = new System.Drawing.Size(175, 29);
-            this.nudHeadache.TabIndex = 61;
-            // 
-            // nudMialgia
-            // 
-            this.nudMialgia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudMialgia.BackColor = System.Drawing.Color.White;
-            this.nudMialgia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nudMialgia.ForeColor = System.Drawing.Color.Black;
-            this.nudMialgia.Location = new System.Drawing.Point(190, 81);
-            this.nudMialgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudMialgia.Name = "nudMialgia";
-            this.nudMialgia.Size = new System.Drawing.Size(175, 29);
-            this.nudMialgia.TabIndex = 61;
-            // 
-            // nudAnafilaxia
-            // 
-            this.nudAnafilaxia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudAnafilaxia.BackColor = System.Drawing.Color.White;
-            this.nudAnafilaxia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nudAnafilaxia.ForeColor = System.Drawing.Color.Black;
-            this.nudAnafilaxia.Location = new System.Drawing.Point(190, 119);
-            this.nudAnafilaxia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudAnafilaxia.Name = "nudAnafilaxia";
-            this.nudAnafilaxia.Size = new System.Drawing.Size(175, 29);
-            this.nudAnafilaxia.TabIndex = 61;
-            // 
-            // nudFatigue
-            // 
-            this.nudFatigue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudFatigue.BackColor = System.Drawing.Color.White;
-            this.nudFatigue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nudFatigue.ForeColor = System.Drawing.Color.Black;
-            this.nudFatigue.Location = new System.Drawing.Point(190, 157);
-            this.nudFatigue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudFatigue.Name = "nudFatigue";
-            this.nudFatigue.Size = new System.Drawing.Size(175, 29);
-            this.nudFatigue.TabIndex = 61;
-            // 
-            // nudFever
-            // 
-            this.nudFever.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.nudFever.BackColor = System.Drawing.Color.White;
-            this.nudFever.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nudFever.ForeColor = System.Drawing.Color.Black;
-            this.nudFever.Location = new System.Drawing.Point(190, 195);
-            this.nudFever.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nudFever.Name = "nudFever";
-            this.nudFever.Size = new System.Drawing.Size(175, 29);
-            this.nudFever.TabIndex = 61;
-            // 
             // frmSideEffect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -372,13 +372,13 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.Text = "frmSideEffect";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudBlush)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAltralgia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHeadache)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudMialgia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAnafilaxia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFatigue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFever)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFatigue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAnafilaxia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMialgia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeadache)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAltralgia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudBlush)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

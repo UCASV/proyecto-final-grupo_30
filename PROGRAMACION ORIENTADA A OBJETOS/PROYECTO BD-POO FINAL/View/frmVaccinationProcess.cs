@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,7 +16,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 {
     public partial class frmVaccinationProcess : Form
     {
-
+        private string dgvDui;
         public frmVaccinationProcess()
         {
             InitializeComponent();           
@@ -32,7 +33,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             {
                 DialogResult resultado = formConsent.ShowDialog();
 
-                if(resultado == DialogResult.OK)
+                if (resultado == DialogResult.OK)
                 {
                     tabControl1.SelectTab("tabPage2");
                     addToWaitingList();
@@ -164,7 +165,8 @@ namespace PROYECTO_BD_POO_FINAL.View
                 db.SaveChanges();
 
                 showWaitingList();
-            } else
+            } 
+            else
             {
                 showWaitingList();
             }
@@ -219,6 +221,63 @@ namespace PROYECTO_BD_POO_FINAL.View
 
             dataGridAppointments.DataSource = null;
             dataGridAppointments.DataSource = query.ToList();
+        }
+        private void dgvPeopleReadyForVaccine_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = dgvPeopleReadyForVaccine.Rows[index];
+            dgvDui = selectedRow.Cells[0].Value.ToString();
+
+            var db = new ProjectContext.PROJECTContext();
+
+            var citizen = db.Citizens
+                .Where(c => c.Dui.Equals(dgvDui))
+                .ToList();
+
+            var vaccinationList = db.Vaccinations
+                .Where(v => v.IdCitizen.Equals(citizen[0].IdCitizen))
+                .ToList();
+
+            DateTime dateTimeWait = (Convert.ToDateTime(vaccinationList[0].DateTimeWait1)); 
+            DateTime dateTimeVaccine = DateTime.Now;
+            int idCitizen = vaccinationList[0].IdCitizen;
+            int vaccinationPlace = vaccinationList[0].IdVaccinationPlace;
+            int idVaccination = vaccinationList[0].IdVaccination;
+
+            Vaccination aVaccination = db.Vaccinations.FirstOrDefault(v => v.IdVaccination.Equals(idVaccination));
+
+            aVaccination.DateTimeVaccine1 = dateTimeVaccine;
+
+            db.Update(aVaccination);
+            db.SaveChanges();
+
+            frmSideEffect window = new frmSideEffect(aVaccination);
+            window.ShowDialog();
+        }
+
+        private void btnVaccinate_Click(object sender, EventArgs e)
+        {
+            /*
+            var db = new ProjectContext.PROJECTContext();
+
+            var citizen = db.Citizens
+                .Where(c => c.Dui.Equals(dgvDui))
+                .ToList();
+
+            var vaccinationList = db.Vaccinations
+                .Where(v => v.IdCitizen.Equals(citizen[0].IdCitizen))
+                .ToList();
+
+            DateTime dateTimeWait = vaccinationList[0].DateTimeVaccine1.Value;
+            DateTime dateTimeVaccine = DateTime.Now;
+            int idCitizen = vaccinationList[0].IdCitizen;
+            int vaccinationPlace = vaccinationList[0].IdVaccinationPlace;
+
+            Vaccination aVaccination = new Vaccination(dateTimeWait, idCitizen, vaccinationPlace, dateTimeVaccine);
+
+            db.Update(aVaccination);
+            db.SaveChanges();
+            */
         }
     }
 }
