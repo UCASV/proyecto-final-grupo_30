@@ -2,7 +2,7 @@
 
 ## *Aspectos Técnicos*
 
-Software utilizado para el desarrollo:
+Software utilizado para el desarrollo de la aplicación:
 - Visual Studio 2019
 
 - Entity Framework en su versión 5.0.6
@@ -21,6 +21,8 @@ MVC fuera utilizado para tener un mejor control de las interfaces gráficas y no
 
 - Proxy
 
+Proxy fue utilizado debido a que dentro del programa se cuenta con un login, entonces se vio la necesidad de agregar una capa de seguridad la cual protegerá información de la clase empleado tales como Usuario y Contraseña.  
+
 ## *Paquetes Externos*
 
 - Nugets
@@ -28,8 +30,8 @@ MVC fuera utilizado para tener un mejor control de las interfaces gráficas y no
     - Microsoft.EntityFrameworkCore v5.0.7
     - Microsoft.EntityFrameworkCore.Design v5.0.7
     - Microsoft.EntityFrameworkCore.SqlServer v5.0.7
-    - itext7 v7.1.15)
+    - itext7 v7.1.15
 
 ## *Instalación*
 
-Para poder instalar el software es recomendado contar con .Net Core en su versión 5.0, un motor de base de datos de Sql Server y Microsoft SQL Server Management Studio 18, dicho software es necesario ya que el ejecutable será el encargado de crear la base de datos dentro de la computador donde se este instalando por medio del script llamado "Banco de Datos". Luego de haber instalado el software solamente es necesario ejecutar un acceso directo que será creado en el escritorio para hacer uso de dicho programa
+Para poder instalar el software es recomendado contar con .Net Core en su versión 5.0, un motor de base de datos de Sql Server (Developer o Express) y Microsoft SQL Server Management Studio 18, dicho software es necesario ya que el ejecutable será el encargado de crear la base de datos dentro de la computadora donde se este instalando, por medio del script llamado "Banco de Datos". Luego de haber instalado el software solamente es necesario ejecutar un acceso directo que será creado en el escritorio para hacer uso de dicho programa
