@@ -82,6 +82,7 @@ CREATE TABLE SIDE_EFFECT(
 );
 
 CREATE TABLE VACCINATIONxSIDE_EFFECT(
+	id_reaction INT PRIMARY KEY IDENTITY,
 	id_side_effect INT NOT NULL,
 	id_vaccination INT NOT NULL,
 	minutes_showup INT
@@ -100,7 +101,6 @@ CREATE TABLE CITIZENxCHRONIC_DISEASE(
 
 -- PK/FK section
 -- PK DEFINITION
-ALTER TABLE VACCINATIONxSIDE_EFFECT ADD PRIMARY KEY (id_side_effect, id_vaccination);
 ALTER TABLE CITIZENxCHRONIC_DISEASE ADD PRIMARY KEY (id_chronic_disease, id_citizen);
 
 -- FK Definition
@@ -122,8 +122,8 @@ ALTER TABLE VACCINATIONxSIDE_EFFECT ADD FOREIGN KEY (id_vaccination) REFERENCES 
 -- Seeding Data in Chronic Disease
 INSERT INTO CHRONIC_DISEASE VALUES ('Problemas Pulmonares', 'Tales como EPOC, Cancer de Pulmon, Fibrosis Quistica, Fibrosis Pulmonar, Asma');
 INSERT INTO CHRONIC_DISEASE VALUES ('Enfermedad Cardiaca', 'Tales como Miocardiopatia, Hipertension Pulmonar, Enfermedad Cardiaca Congenita, Insuficiencia Cardiac, Enfermedad de las Arterias Coronoarias');
-INSERT INTO CHRONIC_DISEASE VALUES ('Diabetes', 'Enfermedad en la que los niveles de glucosa (az�car) de la sangre est�n muy altos');
-INSERT INTO CHRONIC_DISEASE VALUES ('Obesidad', 'Estado patol�gico que se caracteriza por un exceso o una acumulaci�n excesiva y general de grasa en el cuerpo');
+INSERT INTO CHRONIC_DISEASE VALUES ('Diabetes', 'Enfermedad en la que los niveles de glucosa (azúcar) de la sangre están muy altos');
+INSERT INTO CHRONIC_DISEASE VALUES ('Obesidad', 'Estado patológico que se caracteriza por un exceso o una acumulación excesiva y general de grasa en el cuerpo');
 INSERT INTO CHRONIC_DISEASE VALUES ('Sistema Inmunitario Debilitado', 'Trasplante de Organos, Tratamientos Oncologicos, Transplante de Medula Osea, VIH/SIDA');
 INSERT INTO CHRONIC_DISEASE VALUES ('Enfermedad Renal o Hepatica', 'Insuficiencia Hepatica Aguda, Hepatitis Alcoholica, Cirrosis, Liquido Abdominal Infectado');
 
@@ -152,18 +152,18 @@ INSERT INTO INSTITUTION VALUES ('Gobierno');
 INSERT INTO INSTITUTION VALUES ('Periodismo');
 
 -- Seeding Data in Booth
-INSERT INTO BOOTH VALUES ('(Galerias) Paseo Gral. Escal�n 3700, San Salvador', 22505300, 'galerias@gmail.com');
+INSERT INTO BOOTH VALUES ('(Galerias) Paseo Gral. Escalón 3700, San Salvador', 22505300, 'galerias@gmail.com');
 INSERT INTO BOOTH VALUES ('(Santa Rosa) Calle Real, Santa Tecla', 22293757, 'santarosa@gmail.com');
 INSERT INTO BOOTH VALUES ('(UCA) Bulevar Los Proceres', 22106600, 'uca@gmail.com');
 INSERT INTO BOOTH VALUES ('(Metrocentro) Calle Los Sisimiles, San Salvador', 25045555, 'metrocentro@gmail.com');
-INSERT INTO BOOTH VALUES ('(Las Cascadas) Avenida Jerusal�n y Carretera Panamericana', 25015400, 'cascadas@gmail.com');
+INSERT INTO BOOTH VALUES ('(Las Cascadas) Avenida Jerusalén y Carretera Panamericana', 25015400, 'cascadas@gmail.com');
 
 -- Seeding Data in Vaccination Place
 INSERT INTO VACCINATION_PLACE VALUES ('UCA', 'Bulevar Los Proceres');
 INSERT INTO VACCINATION_PLACE VALUES ('Megacentro', 'Salon Centro Americano, Avenida De La Revolucion 222, San Salvador');
-INSERT INTO VACCINATION_PLACE VALUES ('La Gran Via', 'Carretera Panamericana y Calle Chiltiupan Antiguo Cuscatl�n, La Libertad Centroam�rica, Cd Merliot');
-INSERT INTO VACCINATION_PLACE VALUES ('Policlinica MQ Santa Ana', '5� Av Norte, entre 4� y, 6a Calle Oriente # 9, Santa Ana');
-INSERT INTO VACCINATION_PLACE VALUES ('Hospital Nacional de La Union', 'Carretera Panamericana Km 180, Cant�n Huisquil, Conchagua');
+INSERT INTO VACCINATION_PLACE VALUES ('La Gran Via', 'Carretera Panamericana y Calle Chiltiupan Antiguo Cuscatlán, La Libertad Centroamérica, Cd Merliot');
+INSERT INTO VACCINATION_PLACE VALUES ('Policlinica MQ Santa Ana', '5ta Av Norte, entre 4ta y, 6a Calle Oriente # 9, Santa Ana');
+INSERT INTO VACCINATION_PLACE VALUES ('Hospital Nacional de La Union', 'Carretera Panamericana Km 180, Cantón Huisquil, Conchagua');
 
 INSERT INTO EMPLOYEE VALUES ('Bruce Wayne', 'imnotbatman@salud.gob.sv', 'Gotham City', 'Batman', 'Joker', 1, 1);
 INSERT INTO EMPLOYEE (employee_name, email, employee_address, id_type) VALUES ('Clark Kent', 'imnotsuperman@salud.gob.sv', 'Metropolis', 2);
