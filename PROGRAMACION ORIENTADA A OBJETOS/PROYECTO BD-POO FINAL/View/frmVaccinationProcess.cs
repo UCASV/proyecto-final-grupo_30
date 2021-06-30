@@ -207,15 +207,15 @@ namespace PROYECTO_BD_POO_FINAL.View
                         join v in db.VaccinationPlaces on a.IdVaccinationPlace equals v.IdVaccinationPlace
                         let DUI = c.Dui
                         let Nombre = c.CitizenName
-                        let Dosis_1 = a.DateTimeAppointment1
-                        let Dosis_2 = a.DateTimeAppointment2
+                        let Cita_1 = a.DateTimeAppointment1
+                        let Cita_2 = a.DateTimeAppointment2
                         let Lugar_Vacunacion = v.VaccinationPlace1
                         select new
                         {
                             DUI,
                             Nombre,
-                            Dosis_1,
-                            Dosis_2,
+                            Cita_1,
+                            Cita_2,
                             Lugar_Vacunacion
                         };
 
@@ -246,13 +246,37 @@ namespace PROYECTO_BD_POO_FINAL.View
 
             Vaccination aVaccination = db.Vaccinations.FirstOrDefault(v => v.IdVaccination.Equals(idVaccination));
 
-            aVaccination.DateTimeVaccine1 = dateTimeVaccine;
+            if (aVaccination.DateTimeVaccine1 == null)
+            {
+                MessageBox.Show("El ciudadano ha recibido la primera dosis", "Vacunación Covid",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            db.Update(aVaccination);
-            db.SaveChanges();
+                aVaccination.DateTimeVaccine1 = dateTimeVaccine;
 
-            frmSideEffect window = new frmSideEffect(aVaccination);
-            window.ShowDialog();
+                db.Update(aVaccination);
+                db.SaveChanges();
+
+                frmSideEffect window = new frmSideEffect(aVaccination);
+                window.ShowDialog();
+            }
+            else if (aVaccination.DateTimeVaccine1 != null && aVaccination.DateTimeVaccine2 == null)
+            {
+                MessageBox.Show("El ciudadano ha recibido la segunda dosis", "Vacunación Covid",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                aVaccination.DateTimeVaccine2 = dateTimeVaccine;
+
+                db.Update(aVaccination);
+                db.SaveChanges();
+
+                frmSideEffect window = new frmSideEffect(aVaccination);
+                window.ShowDialog();
+            }
+            else if (aVaccination.DateTimeVaccine1 != null && aVaccination.DateTimeVaccine2 != null)
+            {
+                MessageBox.Show("El ciudadano ya ha recibido sus dos dosis, no es posible vacunarlo", "Vacunación Covid",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }           
         }
 
         private void btnVaccinate_Click(object sender, EventArgs e)

@@ -44,7 +44,7 @@ namespace PROYECTO_BD_POO_FINAL.Controller
 
             public bool CheckAccess(string user, string password)
             {
-                MessageBox.Show("Verificando datos ingresado por favor espere", "Vacunacion Covid",
+                MessageBox.Show("Verificando datos ingresados por favor espere...", "Vacunacion Covid",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 var db = new ProjectContext.PROJECTContext();
@@ -62,7 +62,6 @@ namespace PROYECTO_BD_POO_FINAL.Controller
                 {
                     MessageBox.Show("El gestor no existe o la contraseña y el usuario no coinciden", "Vacunación Covid",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
                     return false;
                 }
                 else

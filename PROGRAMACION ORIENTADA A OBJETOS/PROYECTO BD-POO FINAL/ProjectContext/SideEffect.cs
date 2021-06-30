@@ -9,13 +9,13 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
     {
         public SideEffect()
         {
-            VaccinationxSideEffects = new HashSet<VaccinationxSideEffect>();
+            Reactions = new HashSet<Reaction>();
         }
 
         public int IdSideEffect { get; set; }
         public string SideEffect1 { get; set; }
         public string SideEffectDescription { get; set; }
 
-        public virtual ICollection<VaccinationxSideEffect> VaccinationxSideEffects { get; set; }
+        public virtual ICollection<Reaction> Reactions { get; set; }
     }
 }

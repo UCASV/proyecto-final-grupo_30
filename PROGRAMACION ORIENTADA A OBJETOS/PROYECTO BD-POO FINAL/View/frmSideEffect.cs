@@ -38,10 +38,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 var minutes = nudBlush.Value;
 
-                VaccinationxSideEffect aVaccinationxSideEffect =
-                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+                Reaction reaction = 
+                    new Reaction(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
 
-                db.Add(aVaccinationxSideEffect);
+                db.Add(reaction);
                 db.SaveChanges();
             }
 
@@ -53,10 +53,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 var minutes = nudFatigue.Value;
 
-                VaccinationxSideEffect aVaccinationxSideEffect =
-                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+                Reaction reaction =
+                    new Reaction(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
 
-                db.Add(aVaccinationxSideEffect);
+                db.Add(reaction);
                 db.SaveChanges();
             }
 
@@ -68,10 +68,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 var minutes = nudHeadache.Value;
 
-                VaccinationxSideEffect aVaccinationxSideEffect =
-                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+                Reaction reaction =
+                    new Reaction(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
 
-                db.Add(aVaccinationxSideEffect);
+                db.Add(reaction);
                 db.SaveChanges();
             }
 
@@ -83,10 +83,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 var minutes = nudFever.Value;
 
-                VaccinationxSideEffect aVaccinationxSideEffect =
-                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+                Reaction reaction =
+                    new Reaction(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
 
-                db.Add(aVaccinationxSideEffect);
+                db.Add(reaction);
                 db.SaveChanges();
             }
 
@@ -98,10 +98,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 var minutes = nudMialgia.Value;
 
-                VaccinationxSideEffect aVaccinationxSideEffect =
-                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+                Reaction reaction =
+                    new Reaction(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
 
-                db.Add(aVaccinationxSideEffect);
+                db.Add(reaction);
                 db.SaveChanges();
             }
 
@@ -113,10 +113,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 var minutes = nudAltralgia.Value;
 
-                VaccinationxSideEffect aVaccinationxSideEffect =
-                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+                Reaction reaction =
+                    new Reaction(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
 
-                db.Add(aVaccinationxSideEffect);
+                db.Add(reaction);
                 db.SaveChanges();
             }
 
@@ -128,12 +128,39 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 var minutes = nudAnafilaxia.Value;
 
-                VaccinationxSideEffect aVaccinationxSideEffect =
-                    new VaccinationxSideEffect(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
+                Reaction reaction =
+                    new Reaction(sideEffect[0].IdSideEffect, aVaccination.IdVaccination, Convert.ToInt32(minutes));
 
-                db.Add(aVaccinationxSideEffect);
+                db.Add(reaction);
                 db.SaveChanges();
             }
+
+            var citizenList = db.Citizens
+                .Where(c => c.IdCitizen.Equals(aVaccination.IdCitizen))
+                .ToList();
+
+            var result = db.Appointments
+                .Where(a => a.IdCitizen.Equals(citizenList[0].IdCitizen))
+                .ToList();
+
+            Appointment appointment = db.Appointments.FirstOrDefault(a => a.IdCitizen.Equals(citizenList[0].IdCitizen));
+
+            var aRandom = new Random();
+
+            var randomHour = aRandom.Next(7, 16);
+            var randomMinute = aRandom.Next(0, 59);
+
+            var ts = new TimeSpan(randomHour, randomMinute, 0);
+
+            DateTime dateTime = Convert.ToDateTime(appointment.DateTimeAppointment1);
+
+            dateTime = dateTime.AddDays(56);
+            dateTime = dateTime.Date + ts;
+
+            appointment.DateTimeAppointment2 = dateTime;
+
+            db.Update(appointment);
+            db.SaveChanges();
             this.Close();
         }
     }
