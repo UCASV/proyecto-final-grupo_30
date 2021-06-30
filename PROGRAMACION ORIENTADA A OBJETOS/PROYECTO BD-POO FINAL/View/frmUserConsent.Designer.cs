@@ -29,6 +29,7 @@ namespace PROYECTO_BD_POO_FINAL.View
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserConsent));
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -76,9 +77,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAccept);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUserConsent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmUserConsent";
+            this.Text = "Vacunación Covid - Aceptar Consentimiento";
             this.ResumeLayout(false);
 
         }
