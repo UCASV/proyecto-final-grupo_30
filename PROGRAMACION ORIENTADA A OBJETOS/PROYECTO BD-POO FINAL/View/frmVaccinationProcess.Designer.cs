@@ -447,7 +447,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceso de Vacunación - Vacunación Covid";
             this.Load += new System.EventHandler(this.frmVaccinationProcess_Load);
-            this.Shown += new System.EventHandler(this.frmVaccinationProcess_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();

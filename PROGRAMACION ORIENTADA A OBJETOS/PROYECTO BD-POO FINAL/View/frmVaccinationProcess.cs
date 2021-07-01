@@ -22,11 +22,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             InitializeComponent();           
         }
 
-        private void frmVaccinationProcess_Shown(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnProceedToStep2_Click(object sender, EventArgs e)
         {
             using (frmUserConsent formConsent = new frmUserConsent())
@@ -102,7 +97,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            frmVaccinationProcess_Shown(sender, e);
+            frmVaccinationProcess_Load(sender, e);
             txtDUI.Text = "";
         }
 
@@ -190,14 +185,15 @@ namespace PROYECTO_BD_POO_FINAL.View
                         join vac in db.Vaccinations on c.IdCitizen equals vac.IdCitizen
                         let DUI = c.Dui
                         let Nombre = c.CitizenName
-                        let Inicio_Tiempo_Espera = vac.DateTimeVaccine2.HasValue ? vac.DateTimeWait2 : vac.DateTimeWait1
-                        let Numero_Dosis = vac.DateTimeVaccine2.HasValue ? "Segunda dosis" : "Primera dosis"
+                        let Inicio_Tiempo_Espera = vac.DateTimeVaccine1.HasValue ? vac.DateTimeWait2 : vac.DateTimeWait1
+                        let Numero_Dosis = vac.DateTimeVaccine1.HasValue ? "Segunda dosis" : "Primera dosis"
+                        group c by c.IdCitizen into ci
                         select new
                         {
-                            DUI,
-                            Nombre,
-                            Inicio_Tiempo_Espera,
-                            Numero_Dosis
+                            DUI = ci.Max(x => x.Dui),
+                            Nombre = ci.Max(y => y.CitizenName)
+                            //Inicio_Tiempo_Espera,
+                            //Numero_Dosis
                         };
 
             dgvPeopleReadyForVaccine.DataSource = null;
@@ -274,6 +270,8 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 frmSideEffect window = new frmSideEffect(aVaccination);
                 window.ShowDialog();
+
+                showWaitingList();
             }
             else if (aVaccination.DateTimeVaccine1 != null && aVaccination.DateTimeVaccine2 == null)
             {
@@ -294,11 +292,22 @@ namespace PROYECTO_BD_POO_FINAL.View
 
                 frmSideEffect window = new frmSideEffect(aVaccination);
                 window.ShowDialog();
+
+                showWaitingList();
             }
             else if (aVaccination.DateTimeVaccine1 != null && aVaccination.DateTimeVaccine2 != null)
             {
                 MessageBox.Show("El ciudadano ya ha recibido sus dos dosis, no es posible vacunarlo", "Vacunación Covid",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Citizen citizen3 = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(idCitizen));
+
+                citizen3.Waiting = false;
+
+                db.Update(citizen3);
+                db.SaveChanges();
+
+                showWaitingList();
             }           
         }
 
