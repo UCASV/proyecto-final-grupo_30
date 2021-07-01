@@ -37,23 +37,24 @@ namespace PROYECTO_BD_POO_FINAL.View
             // picBoxLoadingGif
             // 
             this.picBoxLoadingGif.Dock = System.Windows.Forms.DockStyle.Left;
-            this.picBoxLoadingGif.Image = global::PROYECTO_BD_POO_FINAL.Properties.Resources.icons8_spinner;
+            this.picBoxLoadingGif.Image = global::PROYECTO_BD_POO_FINAL.Properties.Resources.EXfY;
             this.picBoxLoadingGif.Location = new System.Drawing.Point(0, 0);
             this.picBoxLoadingGif.Name = "picBoxLoadingGif";
             this.picBoxLoadingGif.Size = new System.Drawing.Size(128, 128);
+            this.picBoxLoadingGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxLoadingGif.TabIndex = 0;
             this.picBoxLoadingGif.TabStop = false;
             // 
             // lblLoadingText
             // 
-            this.lblLoadingText.AutoSize = true;
             this.lblLoadingText.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLoadingText.Location = new System.Drawing.Point(134, 49);
+            this.lblLoadingText.Location = new System.Drawing.Point(143, 9);
             this.lblLoadingText.MaximumSize = new System.Drawing.Size(150, 0);
             this.lblLoadingText.Name = "lblLoadingText";
-            this.lblLoadingText.Size = new System.Drawing.Size(146, 19);
+            this.lblLoadingText.Size = new System.Drawing.Size(150, 110);
             this.lblLoadingText.TabIndex = 1;
             this.lblLoadingText.Text = "Procesando cita...";
+            this.lblLoadingText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmLoading
             // 
@@ -71,7 +72,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.Shown += new System.EventHandler(this.frmLoading_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLoadingGif)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
