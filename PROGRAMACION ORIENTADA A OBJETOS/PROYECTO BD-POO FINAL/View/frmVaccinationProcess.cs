@@ -278,30 +278,5 @@ namespace PROYECTO_BD_POO_FINAL.View
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }           
         }
-
-        private void btnVaccinate_Click(object sender, EventArgs e)
-        {
-            /*
-            var db = new ProjectContext.PROJECTContext();
-
-            var citizen = db.Citizens
-                .Where(c => c.Dui.Equals(dgvDui))
-                .ToList();
-
-            var vaccinationList = db.Vaccinations
-                .Where(v => v.IdCitizen.Equals(citizen[0].IdCitizen))
-                .ToList();
-
-            DateTime dateTimeWait = vaccinationList[0].DateTimeVaccine1.Value;
-            DateTime dateTimeVaccine = DateTime.Now;
-            int idCitizen = vaccinationList[0].IdCitizen;
-            int vaccinationPlace = vaccinationList[0].IdVaccinationPlace;
-
-            Vaccination aVaccination = new Vaccination(dateTimeWait, idCitizen, vaccinationPlace, dateTimeVaccine);
-
-            db.Update(aVaccination);
-            db.SaveChanges();
-            */
-        }
     }
 }
