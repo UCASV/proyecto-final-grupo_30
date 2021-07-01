@@ -56,10 +56,10 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void btnEnterData_Click(object sender, EventArgs e)
         {
-            bool verify = txtDUI.Text != null &&
-                          txtFullName.Text != null &&
-                          txtAddress.Text != null &&
-                          txtCellphoneNumber.Text != null;
+            bool verify = txtDUI.Text != "" &&
+                          txtFullName.Text != "" &&
+                          txtAddress.Text != "" &&
+                          txtCellphoneNumber.Text != "";
             if (verify)
             {
                 this.dui = txtDUI.Text;

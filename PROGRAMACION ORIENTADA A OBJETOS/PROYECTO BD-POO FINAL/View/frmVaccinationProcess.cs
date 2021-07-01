@@ -149,25 +149,57 @@ namespace PROYECTO_BD_POO_FINAL.View
             var appointment = db.Set<Appointment>()
                 .SingleOrDefault(m => m.IdCitizen == user.IdCitizen);
 
-            /*var isInWaitingRoom = db.Set<Vaccination>()
-                .SingleOrDefault(v => v.IdCitizen == appointment.IdCitizen);*/
+            var vaccinationExist = db.Vaccinations
+                .Where(v => v.IdCitizen.Equals(user.IdCitizen))
+                .ToList();
 
-            if(user.Waiting == false)
+            if (user.Waiting == false)
             {
-                DateTime datetime = DateTime.Now;
+                if (vaccinationExist.Count == 0)
+                {
+                    DateTime datetime = DateTime.Now;
 
-                Vaccination vaccination = new Vaccination(datetime, appointment.IdCitizen, appointment.IdVaccinationPlace);
+                    Vaccination vaccination = new Vaccination(datetime, appointment.IdCitizen, appointment.IdVaccinationPlace);
 
-                db.Add(vaccination);
-                db.SaveChanges();
+                    db.Add(vaccination);
+                    db.SaveChanges();
 
-                Citizen citizen = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(appointment.IdCitizen));
+                    Citizen citizen = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(appointment.IdCitizen));
 
-                citizen.Waiting = true;
+                    citizen.Waiting = true;
 
-                db.Update(citizen);
-                db.SaveChanges();
+                    db.Update(citizen);
+                    db.SaveChanges();
+                }
+                else if (vaccinationExist.Count != 0 && vaccinationExist[0].DateTimeVaccine2 == null)
+                {
+                    Vaccination vaccination = db.Vaccinations.FirstOrDefault(v => v.IdCitizen.Equals(user.IdCitizen));
+                    DateTime dateTime = DateTime.Now;
 
+                    vaccination.DateTimeWait2 = dateTime;
+
+                    db.Update(vaccination);
+                    db.SaveChanges();
+
+                    Citizen citizen = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(appointment.IdCitizen));
+
+                    citizen.Waiting = true;
+
+                    db.Update(citizen);
+                    db.SaveChanges();
+                }
+                else if (vaccinationExist.Count != 0 && vaccinationExist[0].DateTimeWait1 != null && vaccinationExist[0].DateTimeWait2 != null)
+                {
+                    MessageBox.Show("El usuario ya ha recibido sus dos dosis", "Vacunación Covid",
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+                    Citizen citizenn = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(appointment.IdCitizen));
+
+                    citizenn.Waiting = false;
+
+                    db.Update(citizenn);
+                    db.SaveChanges();
+                }
                 showWaitingList();
             } 
             else
@@ -196,7 +228,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                             //Numero_Dosis
                         };
 
-            dgvPeopleReadyForVaccine.DataSource = null;
+            dgvPeopleReadyForVaccine.DataSource = null; 
             dgvPeopleReadyForVaccine.DataSource = query.ToList();
         }
 
