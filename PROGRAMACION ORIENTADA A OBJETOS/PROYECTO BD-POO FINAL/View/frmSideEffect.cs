@@ -13,6 +13,21 @@ namespace PROYECTO_BD_POO_FINAL.View
 {
     public partial class frmSideEffect : Form
     {
+        private string dui;
+        private string fullName;
+        private string address;
+        private string cellphoneNumber;
+        private string email;
+        private string displayDate;
+        private string displayTime;
+        private string displayPlace;
+        private string displayAddress;
+        private DateTime dateTime;
+        private string displayFullName;
+        private string displayGroup;
+        private Citizen aCitizen;
+
+
         private Vaccination aVaccination { get; set; }
         public frmSideEffect(Vaccination aVaccination)
         {
@@ -144,6 +159,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                 .ToList();
 
             Appointment appointment = db.Appointments.FirstOrDefault(a => a.IdCitizen.Equals(citizenList[0].IdCitizen));
+            aCitizen = citizenList[0];
 
             var aRandom = new Random();
 
@@ -159,9 +175,33 @@ namespace PROYECTO_BD_POO_FINAL.View
 
             appointment.DateTimeAppointment2 = dateTime;
 
+            var groupList = db.Institutions
+            .Where(i => i.IdInstitution.Equals(aCitizen.IdInstitution))
+            .ToList();
+
             db.Update(appointment);
             db.SaveChanges();
-            this.Close();
+
+            var vaccinationPlaces = db.VaccinationPlaces
+            .Where(p => p.IdVaccinationPlace == result[0].IdVaccinationPlace)
+            .ToList();
+
+            displayDate = (Convert.ToDateTime((result[0].DateTimeAppointment2).ToString())).ToShortDateString();
+            displayTime = (Convert.ToDateTime((result[0].DateTimeAppointment2).ToString())).ToString("HH:mm:ss tt");
+            displayGroup = groupList[0].Institution1;
+            displayFullName = aCitizen.CitizenName;
+            displayPlace = vaccinationPlaces[0].VaccinationPlace1;
+            displayAddress = vaccinationPlaces[0].VaccinationPlaceAddress;
+            tabControl1.SelectedIndex = 1;
+
+            lblPriorityGroupData.Text = displayGroup;
+            lblName.Text = aCitizen.CitizenName;
+            lblDUI.Text = aCitizen.Dui;
+            lblDateData.Text = displayDate;
+            lblHourData.Text = displayTime;
+            lblPlaceData.Text = displayPlace;
+            lblAddressData.Text = displayAddress;
+            
         }
     }
 }
