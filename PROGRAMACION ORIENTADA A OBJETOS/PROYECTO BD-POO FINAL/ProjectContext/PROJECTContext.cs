@@ -47,7 +47,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Appointment>(entity =>
             {
                 entity.HasKey(e => e.IdAppointment)
-                    .HasName("PK__APPOINTM__F9CC20B76347C5C4");
+                    .HasName("PK__APPOINTM__F9CC20B7402704F9");
 
                 entity.ToTable("APPOINTMENT");
 
@@ -89,11 +89,11 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Booth>(entity =>
             {
                 entity.HasKey(e => e.IdBooth)
-                    .HasName("PK__BOOTH__16D433C14FA649D6");
+                    .HasName("PK__BOOTH__16D433C15F548C04");
 
                 entity.ToTable("BOOTH");
 
-                entity.HasIndex(e => e.Telephone, "UQ__BOOTH__61AE339BD6A2A329")
+                entity.HasIndex(e => e.Telephone, "UQ__BOOTH__61AE339B07BABDFB")
                     .IsUnique();
 
                 entity.Property(e => e.IdBooth).HasColumnName("id_booth");
@@ -116,7 +116,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<ChronicDisease>(entity =>
             {
                 entity.HasKey(e => e.IdChronicDisease)
-                    .HasName("PK__CHRONIC___6BD38E9726272452");
+                    .HasName("PK__CHRONIC___6BD38E97896015A2");
 
                 entity.ToTable("CHRONIC_DISEASE");
 
@@ -137,11 +137,11 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Citizen>(entity =>
             {
                 entity.HasKey(e => e.IdCitizen)
-                    .HasName("PK__CITIZEN__44393B860F1F853F");
+                    .HasName("PK__CITIZEN__44393B860F636F94");
 
                 entity.ToTable("CITIZEN");
 
-                entity.HasIndex(e => e.Dui, "UQ__CITIZEN__D876F1BFA105CA7D")
+                entity.HasIndex(e => e.Dui, "UQ__CITIZEN__D876F1BF9F5CF3CC")
                     .IsUnique();
 
                 entity.Property(e => e.IdCitizen).HasColumnName("id_citizen");
@@ -191,7 +191,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<CitizenxChronicDisease>(entity =>
             {
                 entity.HasKey(e => new { e.IdChronicDisease, e.IdCitizen })
-                    .HasName("PK__CITIZENx__1F901D2F47BA8469");
+                    .HasName("PK__CITIZENx__1F901D2F6797F5DF");
 
                 entity.ToTable("CITIZENxCHRONIC_DISEASE");
 
@@ -215,11 +215,11 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.HasKey(e => e.IdEmployee)
-                    .HasName("PK__EMPLOYEE__F807679CF674989C");
+                    .HasName("PK__EMPLOYEE__F807679CBBB308EB");
 
                 entity.ToTable("EMPLOYEE");
 
-                entity.HasIndex(e => e.Email, "UQ__EMPLOYEE__AB6E61643618ED47")
+                entity.HasIndex(e => e.Email, "UQ__EMPLOYEE__AB6E616420D16493")
                     .IsUnique();
 
                 entity.Property(e => e.IdEmployee).HasColumnName("id_employee");
@@ -271,7 +271,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<EmployeeType>(entity =>
             {
                 entity.HasKey(e => e.IdType)
-                    .HasName("PK__EMPLOYEE__C3F091E093175B1A");
+                    .HasName("PK__EMPLOYEE__C3F091E05D7E9A34");
 
                 entity.ToTable("EMPLOYEE_TYPE");
 
@@ -287,7 +287,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Institution>(entity =>
             {
                 entity.HasKey(e => e.IdInstitution)
-                    .HasName("PK__INSTITUT__512A185C509F65E8");
+                    .HasName("PK__INSTITUT__512A185C0285A597");
 
                 entity.ToTable("INSTITUTION");
 
@@ -303,7 +303,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Management>(entity =>
             {
                 entity.HasKey(e => e.IdManagement)
-                    .HasName("PK__MANAGEME__33C4FBFCF3FFA3A5");
+                    .HasName("PK__MANAGEME__33C4FBFCFF41BCAF");
 
                 entity.ToTable("MANAGEMENT");
 
@@ -333,7 +333,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Reaction>(entity =>
             {
                 entity.HasKey(e => e.IdReaction)
-                    .HasName("PK__REACTION__EC6DF0FF08CCEA1E");
+                    .HasName("PK__REACTION__EC6DF0FF02FF6301");
 
                 entity.ToTable("REACTION");
 
@@ -361,7 +361,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<SideEffect>(entity =>
             {
                 entity.HasKey(e => e.IdSideEffect)
-                    .HasName("PK__SIDE_EFF__1301EE9AB225A670");
+                    .HasName("PK__SIDE_EFF__1301EE9AF91D2E6A");
 
                 entity.ToTable("SIDE_EFFECT");
 
@@ -382,7 +382,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<Vaccination>(entity =>
             {
                 entity.HasKey(e => e.IdVaccination)
-                    .HasName("PK__VACCINAT__6F9C338C6F4C2E98");
+                    .HasName("PK__VACCINAT__6F9C338C1231F4E4");
 
                 entity.ToTable("VACCINATION");
 
@@ -424,7 +424,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             modelBuilder.Entity<VaccinationPlace>(entity =>
             {
                 entity.HasKey(e => e.IdVaccinationPlace)
-                    .HasName("PK__VACCINAT__5C434F1A5439011D");
+                    .HasName("PK__VACCINAT__5C434F1AFA6466AB");
 
                 entity.ToTable("VACCINATION_PLACE");
 
