@@ -203,5 +203,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             lblAddressData.Text = displayAddress;
             
         }
+
+        private void frmSideEffect_Load(object sender, EventArgs e)
+        {
+            tabControl1.ItemSize = new Size(0, 1);
+        }
     }
 }
