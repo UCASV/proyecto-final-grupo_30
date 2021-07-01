@@ -57,7 +57,8 @@ CREATE TABLE CITIZEN(
 	telephone VARCHAR(15) NOT NULL,
 	email VARCHAR(50),
 	id_institution INT NOT NULL,
-	disability BIT DEFAULT(0)
+	disability BIT DEFAULT(0),
+	waiting BIT 
 );
 
 CREATE TABLE INSTITUTION(

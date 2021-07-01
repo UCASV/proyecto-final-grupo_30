@@ -66,9 +66,9 @@ namespace PROYECTO_BD_POO_FINAL.View
                 btnProceedToStep2.Enabled = true;
 
                 var query2 = from a in db.Appointments
-                            join c in db.Citizens.Where(a=> a.Dui == txtDUI.Text) on a.IdCitizen equals c.IdCitizen
-                            join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace
-                            from vac in db.Vaccinations.DefaultIfEmpty()
+                             join c in db.Citizens.Where(a => a.Dui == txtDUI.Text) on a.IdCitizen equals c.IdCitizen
+                             join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace
+                             from vac in db.Vaccinations.DefaultIfEmpty().Where(v => v.IdCitizen.Equals(c.IdCitizen))
                             let DUI = c.Dui
                             let Nombre = c.CitizenName
                             let Cita_1 = a.DateTimeAppointment1
@@ -154,16 +154,23 @@ namespace PROYECTO_BD_POO_FINAL.View
             var appointment = db.Set<Appointment>()
                 .SingleOrDefault(m => m.IdCitizen == user.IdCitizen);
 
-            var isInWaitingRoom = db.Set<Vaccination>()
-                .SingleOrDefault(v => v.IdCitizen == appointment.IdCitizen);
+            /*var isInWaitingRoom = db.Set<Vaccination>()
+                .SingleOrDefault(v => v.IdCitizen == appointment.IdCitizen);*/
 
-            if(isInWaitingRoom == null)
+            if(user.Waiting == false)
             {
                 DateTime datetime = DateTime.Now;
 
                 Vaccination vaccination = new Vaccination(datetime, appointment.IdCitizen, appointment.IdVaccinationPlace);
 
                 db.Add(vaccination);
+                db.SaveChanges();
+
+                Citizen citizen = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(appointment.IdCitizen));
+
+                citizen.Waiting = true;
+
+                db.Update(citizen);
                 db.SaveChanges();
 
                 showWaitingList();
@@ -179,7 +186,7 @@ namespace PROYECTO_BD_POO_FINAL.View
         {
             var db = new ProjectContext.PROJECTContext();
             var query = from a in db.Appointments
-                        join c in db.Citizens.Where(a => a.Dui == txtDUI.Text) on a.IdCitizen equals c.IdCitizen
+                        join c in db.Citizens.Where(c => c.Waiting == true) on a.IdCitizen equals c.IdCitizen
                         join vac in db.Vaccinations on c.IdCitizen equals vac.IdCitizen
                         let DUI = c.Dui
                         let Nombre = c.CitizenName
@@ -195,7 +202,6 @@ namespace PROYECTO_BD_POO_FINAL.View
 
             dgvPeopleReadyForVaccine.DataSource = null;
             dgvPeopleReadyForVaccine.DataSource = query.ToList();
-
         }
 
         private void frmVaccinationProcess_Load(object sender, EventArgs e)
@@ -259,6 +265,13 @@ namespace PROYECTO_BD_POO_FINAL.View
                 db.Update(aVaccination);
                 db.SaveChanges();
 
+                Citizen citizen1 = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(idCitizen));
+
+                citizen1.Waiting = false;
+
+                db.Update(citizen1);
+                db.SaveChanges();
+
                 frmSideEffect window = new frmSideEffect(aVaccination);
                 window.ShowDialog();
             }
@@ -272,6 +285,13 @@ namespace PROYECTO_BD_POO_FINAL.View
                 db.Update(aVaccination);
                 db.SaveChanges();
 
+                Citizen citizen2 = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(idCitizen));
+
+                citizen2.Waiting = false;
+
+                db.Update(citizen2);
+                db.SaveChanges();
+
                 frmSideEffect window = new frmSideEffect(aVaccination);
                 window.ShowDialog();
             }
@@ -280,6 +300,21 @@ namespace PROYECTO_BD_POO_FINAL.View
                 MessageBox.Show("El ciudadano ya ha recibido sus dos dosis, no es posible vacunarlo", "Vacunación Covid",
                 MessageBoxButtons.OK, MessageBoxIcon.Error);
             }           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab("tabPage3");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab("tabPage1");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectTab("tabPage1");
         }
     }
 }
