@@ -483,6 +483,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnExportPDF.TabIndex = 22;
             this.btnExportPDF.Text = "Exportar PDF";
             this.btnExportPDF.UseVisualStyleBackColor = false;
+            this.btnExportPDF.Click += new System.EventHandler(this.btnExportPDF_Click);
             // 
             // lblAddressData
             // 

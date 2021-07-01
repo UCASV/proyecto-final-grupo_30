@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROYECTO_BD_POO_FINAL.Controller;
 using PROYECTO_BD_POO_FINAL.ProjectContext;
 
 namespace PROYECTO_BD_POO_FINAL.View
@@ -217,6 +218,13 @@ namespace PROYECTO_BD_POO_FINAL.View
         private void frmSideEffect_Load(object sender, EventArgs e)
         {
             tabControl1.ItemSize = new Size(0, 1);
+        }
+
+        private void btnExportPDF_Click(object sender, EventArgs e)
+        {
+            CreatePdf.Save("1", this.fullName, this.dui, this.displayPlace, this.displayDate, this.displayTime, this.displayAddress);
+            MessageBox.Show("PDF Exportado con Éxito", "Vacuna COVID-19",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
