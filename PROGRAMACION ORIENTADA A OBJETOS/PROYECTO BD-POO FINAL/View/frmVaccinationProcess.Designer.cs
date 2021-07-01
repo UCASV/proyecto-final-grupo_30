@@ -165,6 +165,10 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             // dataGridAppointments
             // 
+            this.dataGridAppointments.AllowUserToAddRows = false;
+            this.dataGridAppointments.AllowUserToDeleteRows = false;
+            this.dataGridAppointments.AllowUserToResizeColumns = false;
+            this.dataGridAppointments.AllowUserToResizeRows = false;
             this.dataGridAppointments.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridAppointments.BackgroundColor = System.Drawing.Color.White;
             this.dataGridAppointments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -175,6 +179,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.dataGridAppointments.ReadOnly = true;
             this.dataGridAppointments.RowHeadersWidth = 51;
             this.dataGridAppointments.RowTemplate.Height = 29;
+            this.dataGridAppointments.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridAppointments.Size = new System.Drawing.Size(894, 314);
             this.dataGridAppointments.TabIndex = 32;
             // 
