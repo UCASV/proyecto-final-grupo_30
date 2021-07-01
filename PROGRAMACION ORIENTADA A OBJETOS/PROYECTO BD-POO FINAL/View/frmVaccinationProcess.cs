@@ -17,6 +17,7 @@ namespace PROYECTO_BD_POO_FINAL.View
     public partial class frmVaccinationProcess : Form
     {
         private string dgvDui;
+
         public frmVaccinationProcess()
         {
             InitializeComponent();           
@@ -192,6 +193,19 @@ namespace PROYECTO_BD_POO_FINAL.View
                         };
 
             dgvPeopleReadyForVaccine.DataSource = null;
+
+            var test = new List<Object>();
+
+            foreach(var c in query.ToList())
+            {
+                 if(c.Numero_Dosis == "1")
+                {
+                    test.Add(c);
+                }
+            }
+
+            test.Count();
+
             dgvPeopleReadyForVaccine.DataSource = query.ToList();
 
         }
