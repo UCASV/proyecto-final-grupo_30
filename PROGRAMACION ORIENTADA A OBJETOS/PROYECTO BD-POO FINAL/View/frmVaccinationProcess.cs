@@ -191,7 +191,7 @@ namespace PROYECTO_BD_POO_FINAL.View
                 else if (vaccinationExist.Count != 0 && vaccinationExist[0].DateTimeWait1 != null && vaccinationExist[0].DateTimeWait2 != null)
                 {
                     MessageBox.Show("El usuario ya ha recibido sus dos dosis", "Vacunación Covid",
-                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     Citizen citizenn = db.Citizens.FirstOrDefault(c => c.IdCitizen.Equals(appointment.IdCitizen));
 
