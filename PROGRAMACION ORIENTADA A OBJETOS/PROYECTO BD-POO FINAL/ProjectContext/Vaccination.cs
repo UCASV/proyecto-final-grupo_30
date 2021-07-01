@@ -7,6 +7,23 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
 {
     public partial class Vaccination
     {
+
+        public Vaccination(DateTime? dateTimeWait1, int idCitizen, int idVaccinationPlace)
+        {
+            DateTimeWait1 = dateTimeWait1;
+            IdCitizen = idCitizen;
+            IdVaccinationPlace = idVaccinationPlace;
+        }
+
+        public Vaccination(DateTime? dateTimeWait1, int idCitizen, int idVaccinationPlace, DateTime? dateTimeVaccine1)
+        {
+            DateTimeWait1 = dateTimeWait1;
+            IdCitizen = idCitizen;
+            IdVaccinationPlace = idVaccinationPlace;
+            DateTimeVaccine1 = dateTimeVaccine1;
+        }
+
+
         public Vaccination()
         {
             Reactions = new HashSet<Reaction>();
@@ -23,20 +40,5 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
         public virtual Citizen IdCitizenNavigation { get; set; }
         public virtual VaccinationPlace IdVaccinationPlaceNavigation { get; set; }
         public virtual ICollection<Reaction> Reactions { get; set; }
-
-        public Vaccination(DateTime? dateTimeWait1, int idCitizen, int idVaccinationPlace)
-        {
-            DateTimeWait1 = dateTimeWait1;
-            IdCitizen = idCitizen;
-            IdVaccinationPlace = idVaccinationPlace;
-        }
-
-        public Vaccination(DateTime? dateTimeWait1, int idCitizen, int idVaccinationPlace, DateTime? dateTimeVaccine1)
-        {
-            DateTimeWait1 = dateTimeWait1;
-            IdCitizen = idCitizen;
-            IdVaccinationPlace = idVaccinationPlace;
-            DateTimeVaccine1 = dateTimeVaccine1;
-        }
     }
 }

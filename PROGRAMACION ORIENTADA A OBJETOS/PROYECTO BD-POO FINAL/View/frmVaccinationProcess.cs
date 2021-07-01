@@ -63,6 +63,8 @@ namespace PROYECTO_BD_POO_FINAL.View
             }
             else
             {
+                btnProceedToStep2.Enabled = true;
+
                 var query2 = from a in db.Appointments
                             join c in db.Citizens.Where(a=> a.Dui == txtDUI.Text) on a.IdCitizen equals c.IdCitizen
                             join vp in db.VaccinationPlaces on a.IdVaccinationPlace equals vp.IdVaccinationPlace
@@ -198,6 +200,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void frmVaccinationProcess_Load(object sender, EventArgs e)
         {
+            btnProceedToStep2.Enabled = false;
             tabControl1.ItemSize = new Size(0, 1);
 
             var db = new ProjectContext.PROJECTContext();

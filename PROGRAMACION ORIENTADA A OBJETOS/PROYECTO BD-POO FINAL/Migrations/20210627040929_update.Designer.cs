@@ -190,7 +190,7 @@ namespace PROYECTO_BD_POO_FINAL.Migrations
                     b.ToTable("CITIZEN");
                 });
 
-            modelBuilder.Entity("PROYECTO_BD_POO_FINAL.ProjectContext.CitizenxChronicDisease", b =>
+            modelBuilder.Entity("PROYECTO_BD_POO_FINAL.ProjectContext.Reaction", b =>
                 {
                     b.Property<int>("IdChronicDisease")
                         .HasColumnType("int")
@@ -499,7 +499,7 @@ namespace PROYECTO_BD_POO_FINAL.Migrations
                     b.Navigation("IdInstitutionNavigation");
                 });
 
-            modelBuilder.Entity("PROYECTO_BD_POO_FINAL.ProjectContext.CitizenxChronicDisease", b =>
+            modelBuilder.Entity("PROYECTO_BD_POO_FINAL.ProjectContext.Reaction", b =>
                 {
                     b.HasOne("PROYECTO_BD_POO_FINAL.ProjectContext.ChronicDisease", "IdChronicDiseaseNavigation")
                         .WithMany("CitizenxChronicDiseases")
