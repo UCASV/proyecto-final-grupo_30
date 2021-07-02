@@ -22,6 +22,7 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
         public string Email { get; set; }
         public int IdInstitution { get; set; }
         public bool? Disability { get; set; }
+        public bool? Waiting { get; set; }
 
         public virtual Institution IdInstitutionNavigation { get; set; }
         public virtual ICollection<Appointment> Appointments { get; set; }

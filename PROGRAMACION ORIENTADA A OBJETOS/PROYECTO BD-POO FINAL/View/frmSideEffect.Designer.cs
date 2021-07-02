@@ -87,7 +87,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(78, 22);
+            this.label1.Location = new System.Drawing.Point(88, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(275, 32);
             this.label1.TabIndex = 0;
@@ -115,7 +115,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tableLayoutPanel1.Controls.Add(this.cbFever, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.cbArtralgia, 0, 6);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(24, 104);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(34, 146);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -140,6 +140,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.nudFever.ForeColor = System.Drawing.Color.Black;
             this.nudFever.Location = new System.Drawing.Point(190, 195);
             this.nudFever.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudFever.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.nudFever.Name = "nudFever";
             this.nudFever.Size = new System.Drawing.Size(175, 29);
             this.nudFever.TabIndex = 61;
@@ -154,6 +159,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.nudFatigue.ForeColor = System.Drawing.Color.Black;
             this.nudFatigue.Location = new System.Drawing.Point(190, 157);
             this.nudFatigue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudFatigue.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.nudFatigue.Name = "nudFatigue";
             this.nudFatigue.Size = new System.Drawing.Size(175, 29);
             this.nudFatigue.TabIndex = 61;
@@ -168,6 +178,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.nudAnafilaxia.ForeColor = System.Drawing.Color.Black;
             this.nudAnafilaxia.Location = new System.Drawing.Point(190, 119);
             this.nudAnafilaxia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudAnafilaxia.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.nudAnafilaxia.Name = "nudAnafilaxia";
             this.nudAnafilaxia.Size = new System.Drawing.Size(175, 29);
             this.nudAnafilaxia.TabIndex = 61;
@@ -182,6 +197,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.nudMialgia.ForeColor = System.Drawing.Color.Black;
             this.nudMialgia.Location = new System.Drawing.Point(190, 81);
             this.nudMialgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudMialgia.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.nudMialgia.Name = "nudMialgia";
             this.nudMialgia.Size = new System.Drawing.Size(175, 29);
             this.nudMialgia.TabIndex = 61;
@@ -196,6 +216,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.nudHeadache.ForeColor = System.Drawing.Color.Black;
             this.nudHeadache.Location = new System.Drawing.Point(190, 43);
             this.nudHeadache.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudHeadache.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.nudHeadache.Name = "nudHeadache";
             this.nudHeadache.Size = new System.Drawing.Size(175, 29);
             this.nudHeadache.TabIndex = 61;
@@ -210,6 +235,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.nudAltralgia.ForeColor = System.Drawing.Color.Black;
             this.nudAltralgia.Location = new System.Drawing.Point(190, 233);
             this.nudAltralgia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudAltralgia.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.nudAltralgia.Name = "nudAltralgia";
             this.nudAltralgia.Size = new System.Drawing.Size(175, 29);
             this.nudAltralgia.TabIndex = 8;
@@ -256,6 +286,11 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.nudBlush.ForeColor = System.Drawing.Color.Black;
             this.nudBlush.Location = new System.Drawing.Point(190, 5);
             this.nudBlush.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nudBlush.Maximum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.nudBlush.Name = "nudBlush";
             this.nudBlush.Size = new System.Drawing.Size(175, 29);
             this.nudBlush.TabIndex = 3;
@@ -346,7 +381,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(24, 75);
+            this.label2.Location = new System.Drawing.Point(34, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 25);
             this.label2.TabIndex = 2;
@@ -358,7 +393,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnEnterObervation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnterObervation.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnEnterObervation.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnEnterObervation.Location = new System.Drawing.Point(24, 397);
+            this.btnEnterObervation.Location = new System.Drawing.Point(34, 439);
             this.btnEnterObervation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEnterObervation.Name = "btnEnterObervation";
             this.btnEnterObervation.Size = new System.Drawing.Size(371, 32);
@@ -372,7 +407,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(209, 77);
+            this.label3.Location = new System.Drawing.Point(219, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(186, 25);
             this.label3.TabIndex = 4;
@@ -448,6 +483,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.btnExportPDF.TabIndex = 22;
             this.btnExportPDF.Text = "Exportar PDF";
             this.btnExportPDF.UseVisualStyleBackColor = false;
+            this.btnExportPDF.Click += new System.EventHandler(this.btnExportPDF_Click);
             // 
             // lblAddressData
             // 

@@ -11,6 +11,8 @@ Software utilizado para el desarrollo de la aplicación:
 
 - .Net Core 5.0
 
+- .Net Framework 4.8
+
 - Windows 10
 
 ## *Patrones de diseño*
@@ -34,6 +36,8 @@ Proxy fue utilizado debido a que dentro del programa se cuenta con un login, ent
 
 ## *Instalación*
 
-Para poder instalar el software es recomendado contar con .Net Core en su versión 5.0, un motor de base de datos de Sql Server (Developer o Express) y Microsoft SQL Server Management Studio 18, dicho software es necesario ya que el ejecutable será el encargado de crear la base de datos dentro de la computadora donde se este instalando, por medio del script llamado "Banco de Datos". Luego de haber instalado el software solamente es necesario ejecutar un acceso directo que será creado en el escritorio para hacer uso de dicho programa
+Para poder instalar el software es recomendado contar con .Net Core en su versión 5.0 y .Net Framework en su version 4.8, un motor de base de datos de Sql Server (Developer o Express) y Microsoft SQL Server Management Studio 18, dicho software es necesario ya que el ejecutable será el encargado de crear la base de datos dentro de la computadora donde se este instalando, por medio del script llamado "Banco de Datos". Luego de haber instalado el software solamente es necesario ejecutar un acceso directo que será creado en el escritorio para hacer uso de dicho programa
 
 Para más información sobre el proceso de instalación, hacer click [aquí](https://drive.google.com/file/d/1BSjHdyFx2DHxQ6rMALJGs4XyQ4N6QeR5/view?usp=sharing)
+
+Para leer el manual de usuario, hacer click [aquí](https://drive.google.com/file/d/1eDWpRsPLuYqctI8pOVf-ZxiAVe-G-c9y/view?usp=sharing)

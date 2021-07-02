@@ -7,7 +7,6 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
 {
     public partial class Vaccination
     {
-
         public Vaccination(DateTime? dateTimeWait1, int idCitizen, int idVaccinationPlace)
         {
             DateTimeWait1 = dateTimeWait1;
@@ -22,7 +21,6 @@ namespace PROYECTO_BD_POO_FINAL.ProjectContext
             IdVaccinationPlace = idVaccinationPlace;
             DateTimeVaccine1 = dateTimeVaccine1;
         }
-
 
         public Vaccination()
         {

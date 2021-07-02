@@ -32,6 +32,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVaccinationProcess));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBrowse = new System.Windows.Forms.Button();
             this.btnProceedToStep2 = new System.Windows.Forms.Button();
@@ -40,6 +41,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.dataGridAppointments = new System.Windows.Forms.DataGridView();
             this.txtDUI = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button2 = new System.Windows.Forms.Button();
             this.btnAddWaitingInfo = new System.Windows.Forms.Button();
             this.lblName = new System.Windows.Forms.Label();
             this.lblDUI = new System.Windows.Forms.Label();
@@ -55,6 +57,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.lblVaccinationProcess = new System.Windows.Forms.Label();
             this.dgvPeopleReadyForVaccine = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridAppointments)).BeginInit();
@@ -81,6 +84,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.tabPage1.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.vaccine;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Controls.Add(this.btnClear);
             this.tabPage1.Controls.Add(this.btnBrowse);
             this.tabPage1.Controls.Add(this.btnProceedToStep2);
@@ -95,6 +99,20 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(375, 428);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(164, 40);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "Fila de Espera";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnClear
             // 
@@ -197,6 +215,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.tabPage2.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.syringevaccinationg931114934_1435242_860x566;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.btnAddWaitingInfo);
             this.tabPage2.Controls.Add(this.lblName);
             this.tabPage2.Controls.Add(this.lblDUI);
@@ -216,6 +235,20 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(288, 391);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(311, 49);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Regresar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnAddWaitingInfo
             // 
@@ -352,6 +385,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             // 
             this.tabPage3.BackgroundImage = global::PROYECTO_BD_POO_FINAL.Properties.Resources.syringevaccinationg931114934_1435242_860x566;
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage3.Controls.Add(this.button3);
             this.tabPage3.Controls.Add(this.lblVaccinationProcess);
             this.tabPage3.Controls.Add(this.dgvPeopleReadyForVaccine);
             this.tabPage3.Location = new System.Drawing.Point(4, 27);
@@ -384,9 +418,23 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.dgvPeopleReadyForVaccine.RowHeadersWidth = 51;
             this.dgvPeopleReadyForVaccine.RowTemplate.Height = 25;
             this.dgvPeopleReadyForVaccine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeopleReadyForVaccine.Size = new System.Drawing.Size(890, 362);
+            this.dgvPeopleReadyForVaccine.Size = new System.Drawing.Size(890, 307);
             this.dgvPeopleReadyForVaccine.TabIndex = 3;
             this.dgvPeopleReadyForVaccine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPeopleReadyForVaccine_CellClick);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(302, 419);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(311, 49);
+            this.button3.TabIndex = 22;
+            this.button3.Text = "Regresar";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // frmVaccinationProcess
             // 
@@ -399,7 +447,6 @@ namespace PROYECTO_BD_POO_FINAL.View
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Proceso de Vacunación - Vacunación Covid";
             this.Load += new System.EventHandler(this.frmVaccinationProcess_Load);
-            this.Shown += new System.EventHandler(this.frmVaccinationProcess_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -440,5 +487,8 @@ namespace PROYECTO_BD_POO_FINAL.View
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label lblVaccinationProcess;
         private System.Windows.Forms.DataGridView dgvPeopleReadyForVaccine;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

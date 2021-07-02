@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PROYECTO_BD_POO_FINAL.Controller;
 using PROYECTO_BD_POO_FINAL.ProjectContext;
 
 namespace PROYECTO_BD_POO_FINAL.View
@@ -161,6 +162,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             Appointment appointment = db.Appointments.FirstOrDefault(a => a.IdCitizen.Equals(citizenList[0].IdCitizen));
             aCitizen = citizenList[0];
 
+            dui = aCitizen.Dui;
+            fullName = aCitizen.CitizenName;
+           
             var aRandom = new Random();
 
             var randomHour = aRandom.Next(7, 16);
@@ -179,34 +183,51 @@ namespace PROYECTO_BD_POO_FINAL.View
             .Where(i => i.IdInstitution.Equals(aCitizen.IdInstitution))
             .ToList();
 
-            db.Update(appointment);
-            db.SaveChanges();
-
             var vaccinationPlaces = db.VaccinationPlaces
             .Where(p => p.IdVaccinationPlace == result[0].IdVaccinationPlace)
             .ToList();
 
-            displayDate = (Convert.ToDateTime((result[0].DateTimeAppointment2).ToString())).ToShortDateString();
-            displayTime = (Convert.ToDateTime((result[0].DateTimeAppointment2).ToString())).ToString("HH:mm:ss tt");
-            displayGroup = groupList[0].Institution1;
-            displayFullName = aCitizen.CitizenName;
-            displayPlace = vaccinationPlaces[0].VaccinationPlace1;
-            displayAddress = vaccinationPlaces[0].VaccinationPlaceAddress;
-            tabControl1.SelectedIndex = 1;
+            db.Update(appointment);
+            db.SaveChanges();
 
-            lblPriorityGroupData.Text = displayGroup;
-            lblName.Text = aCitizen.CitizenName;
-            lblDUI.Text = aCitizen.Dui;
-            lblDateData.Text = displayDate;
-            lblHourData.Text = displayTime;
-            lblPlaceData.Text = displayPlace;
-            lblAddressData.Text = displayAddress;
-            
+            var vaccinationResult = db.Vaccinations
+                .Where(v => v.IdCitizen.Equals(result[0].IdCitizen))
+                .ToList();
+
+            if (vaccinationResult[0].DateTimeVaccine1 != null && vaccinationResult[0].DateTimeVaccine2 == null)
+            {
+                displayDate = (Convert.ToDateTime((result[0].DateTimeAppointment2).ToString())).ToShortDateString();
+                displayTime = (Convert.ToDateTime((result[0].DateTimeAppointment2).ToString())).ToString("HH:mm:ss tt");
+                displayGroup = groupList[0].Institution1;
+                displayFullName = aCitizen.CitizenName;
+                displayPlace = vaccinationPlaces[0].VaccinationPlace1;
+                displayAddress = vaccinationPlaces[0].VaccinationPlaceAddress;
+                tabControl1.SelectedIndex = 1;
+
+                lblPriorityGroupData.Text = displayGroup;
+                lblName.Text = aCitizen.CitizenName;
+                lblDUI.Text = aCitizen.Dui;
+                lblDateData.Text = displayDate;
+                lblHourData.Text = displayTime;
+                lblPlaceData.Text = displayPlace;
+                lblAddressData.Text = displayAddress;
+            }
+            else
+            {
+                this.Close();
+            }
         }
 
         private void frmSideEffect_Load(object sender, EventArgs e)
         {
             tabControl1.ItemSize = new Size(0, 1);
+        }
+
+        private void btnExportPDF_Click(object sender, EventArgs e)
+        {
+            CreatePdf.Save("2", this.fullName, this.dui, this.displayPlace, this.displayDate, this.displayTime, this.displayAddress);
+            MessageBox.Show("PDF Exportado con Éxito", "Vacuna COVID-19",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

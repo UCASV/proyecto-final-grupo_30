@@ -37,6 +37,7 @@ namespace PROYECTO_BD_POO_FINAL.Controller
                 newCitizen.Email = email;
                 newCitizen.IdInstitution = institution.IdInstitution;
                 newCitizen.Disability = disability;
+                newCitizen.Waiting = false;
                 db.Add(newCitizen);
                 db.SaveChanges();
                 return true;
