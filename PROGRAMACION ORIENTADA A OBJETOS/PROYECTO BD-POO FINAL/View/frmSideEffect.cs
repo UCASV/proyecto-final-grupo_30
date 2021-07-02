@@ -162,6 +162,9 @@ namespace PROYECTO_BD_POO_FINAL.View
             Appointment appointment = db.Appointments.FirstOrDefault(a => a.IdCitizen.Equals(citizenList[0].IdCitizen));
             aCitizen = citizenList[0];
 
+            dui = aCitizen.Dui;
+            fullName = aCitizen.CitizenName;
+           
             var aRandom = new Random();
 
             var randomHour = aRandom.Next(7, 16);

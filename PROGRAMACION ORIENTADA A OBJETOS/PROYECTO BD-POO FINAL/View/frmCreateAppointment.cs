@@ -192,7 +192,7 @@ namespace PROYECTO_BD_POO_FINAL.View
             else
             {
                 MessageBox.Show("Los campos requeridos no han sido llenados", "Vacuna COVID-19",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
