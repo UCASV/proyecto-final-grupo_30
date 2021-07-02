@@ -222,7 +222,7 @@ namespace PROYECTO_BD_POO_FINAL.View
 
         private void btnExportPDF_Click(object sender, EventArgs e)
         {
-            CreatePdf.Save("1", this.fullName, this.dui, this.displayPlace, this.displayDate, this.displayTime, this.displayAddress);
+            CreatePdf.Save("2", this.fullName, this.dui, this.displayPlace, this.displayDate, this.displayTime, this.displayAddress);
             MessageBox.Show("PDF Exportado con Éxito", "Vacuna COVID-19",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
