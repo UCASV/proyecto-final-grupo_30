@@ -33,8 +33,8 @@ namespace PROYECTO_BD_POO_FINAL.Controller
             Document document = new Document(pdf);
 
             Paragraph header = new Paragraph("VACUNA COVID-19")
-               .SetTextAlignment(TextAlignment.CENTER)
-               .SetFontSize(20);
+                .SetTextAlignment(TextAlignment.CENTER)
+                .SetFontSize(20);
             document.Add(header);
 
             Paragraph subheader = new Paragraph($"Dosis #{numDosis}")
